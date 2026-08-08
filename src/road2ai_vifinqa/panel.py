@@ -72,6 +72,28 @@ ALIASES: dict[str, str] = {
 }
 
 
+# The MSR consolidated statements from 2020 through 2025 declare ``Nghìn
+# VND`` for the complete statement set.  The prebuilt panel snapshot retained
+# the printed numbers but recorded scale=1, shrinking every money value by
+# 1,000.  Keep the correction next to panel loading so both calculations and
+# emitted provenance receive the same normalized VND value.
+_PANEL_VALUE_MULTIPLIERS: dict[tuple[str, int, str], float] = {
+    (
+        "MSR",
+        year,
+        f"MSR_financial_statements_{year}_consolidated",
+    ): 1_000.0
+    for year in range(2020, 2026)
+}
+
+
+def _panel_value_multiplier(ticker: str, year: int, item: dict[str, object]) -> float:
+    return _PANEL_VALUE_MULTIPLIERS.get(
+        (ticker, int(year), str(item.get("doc_id", ""))),
+        1.0,
+    )
+
+
 @dataclass(frozen=True, slots=True)
 class PanelCell:
     value: float
@@ -152,7 +174,12 @@ class FinancialPanel:
                 record: dict[str, object] = {"ticker": ticker, "year": int(year)}
                 for column, key in RAW_COLUMNS.items():
                     cell = metrics.get(key)
-                    record[column] = float(cell["value"]) if cell is not None else math.nan
+                    record[column] = (
+                        float(cell["value"])
+                        * _panel_value_multiplier(ticker, int(year), cell)
+                        if cell is not None
+                        else math.nan
+                    )
                 records.append(record)
         self.frame = enrich_panel(pd.DataFrame.from_records(records))
         self.tickers = frozenset(self.raw)
@@ -163,7 +190,8 @@ class FinancialPanel:
         if item is None:
             return None
         return PanelCell(
-            value=float(item["value"]),
+            value=float(item["value"])
+            * _panel_value_multiplier(ticker, int(year), item),
             doc_id=str(item["doc_id"]),
             table_id=int(item["table_id"]),
             row_idx=int(item["row_idx"]),

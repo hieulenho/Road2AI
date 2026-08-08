@@ -200,6 +200,68 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
             _ac("BAF", 2022, "BAF_financial_statements_2022_separate", 5, 11, 3),
         ),
     ),
+    582: _AuditedOverride(
+        "growth",
+        (
+            _ac("MCH", 2021, "MCH_financial_statements_2021_consolidated", 45, 2, 5),
+            _ac("MCH", 2023, "MCH_financial_statements_2023_consolidated", 42, 2, 5),
+        ),
+        kind="percentage",
+    ),
+    616: _AuditedOverride(
+        "difference",
+        (
+            _ac("VJC", 2018, "VJC_financial_statements_2018_consolidated", 10, 25, 3),
+            _ac("VJC", 2015, "VJC_financial_statements_2015_consolidated", 3, 5, 3),
+        ),
+    ),
+    635: _AuditedOverride(
+        "growth",
+        (
+            _ac("ABB", 2020, "ABB_financial_statements_2020_separate", 106, 6, 3, 1e6),
+            _ac("ABB", 2023, "ABB_financial_statements_2023_separate", 109, 6, 3, 1e6),
+        ),
+        kind="percentage",
+    ),
+    641: _AuditedOverride(
+        "difference",
+        (
+            _ac("DLG", 2018, "DLG_financial_statements_2018_consolidated", 40, 3, 8),
+            _ac("DLG", 2020, "DLG_financial_statements_2020_consolidated", 36, 3, 8),
+        ),
+    ),
+    701: _AuditedOverride(
+        "ratio",
+        (
+            _ac("IJC", 2020, "IJC_financial_statements_2020_separate", 8, 9, 3),
+            _ac("IJC", 2020, "IJC_financial_statements_2020_separate", 71, 4, 7),
+        ),
+        kind="percentage",
+        output_multiplier=100.0,
+        numerator_groups=((0,),),
+        denominator_groups=((1,),),
+    ),
+    923: _AuditedOverride(
+        "sum",
+        (
+            _ac("OGC", 2016, "OGC_financial_statements_2016_consolidated", 58, 3, 1),
+            _ac("OGC", 2017, "OGC_financial_statements_2017_consolidated", 61, 3, 1),
+            _ac("OGC", 2018, "OGC_financial_statements_2018_consolidated", 61, 3, 1),
+            _ac("OGC", 2019, "OGC_financial_statements_2019_consolidated", 63, 3, 1),
+        ),
+    ),
+    929: _AuditedOverride(
+        "extrema",
+        (
+            _ac("MBB", 2015, "MBB_financial_statements_2015_consolidated", 40, 3, 1, 1e6),
+            _ac("MBB", 2016, "MBB_financial_statements_2016_consolidated", 40, 3, 1, 1e6),
+            _ac("MBB", 2017, "MBB_financial_statements_2017_consolidated", 39, 3, 1, 1e6),
+            _ac("MBB", 2018, "MBB_financial_statements_2018_consolidated", 34, 2, 1, 1e6),
+            _ac("MBB", 2022, "MBB_financial_statements_2022_consolidated", 41, 2, 1, 1e6),
+        ),
+        kind="number",
+        extrema_years=(2015, 2016, 2017, 2018, 2022),
+    ),
     593: _AuditedOverride(
         "difference",
         (

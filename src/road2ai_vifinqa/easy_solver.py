@@ -127,6 +127,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("ACB_financial_statements_2022_separate", 35, 1, 1),),
         "closing parent-bank customer loans to the trade sector in the industry disclosure",
     ),
+    16: (
+        "value",
+        (("CEO_financial_statements_2025_separate", 34, 3, 2),),
+        "closing short-term borrowings from the borrowings note, not a generic current bucket in other receivables",
+    ),
     17: (
         "value",
         (("SHB_financial_statements_2018_consolidated", 5, 6, 3),),
@@ -136,6 +141,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("HHV_financial_statements_2023_separate", 15, 2, 5),),
         "direct current voting-right percentage; easy gold is one source cell",
+    ),
+    35: (
+        "value",
+        (("BVH_financial_statements_2015_separate", 28, 2, 1),),
+        "closing total receivable from Bao Viet Life, not only its profit-receivable component",
     ),
     48: (
         "value",
@@ -192,6 +202,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("HPX_financial_statements_2024_consolidated", 43, 4, 1),),
         "total cost of sales across all activities, not the real-estate segment alone",
     ),
+    89: (
+        "value",
+        (("MSN_financial_statements_2018_consolidated", 6, 2, 3),),
+        "income-statement current tax expense after the prior-year adjustment",
+    ),
     91: (
         "value",
         (("VRE_financial_statements_2024_separate", 3, 12, 4),),
@@ -227,6 +242,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("VCB_financial_statements_2022_separate", 7, 7, 3),),
         "closing total customer deposits, not demand deposits alone",
     ),
+    111: (
+        "value",
+        (("VGC_financial_statements_2025_consolidated", 40, 16, 6),),
+        "closing total carrying value of intangible fixed assets, not land-use rights alone",
+    ),
     114: (
         "value",
         (("HHS_financial_statements_2015_consolidated", 5, 22, 4),),
@@ -256,6 +276,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("DBC_financial_statements_2024_consolidated", 63, 4, 5),),
         "company-wide total net revenue column after segment eliminations",
+    ),
+    135: (
+        "value",
+        (("GAS_financial_statements_2021_separate", 18, 1, 1),),
+        "closing short-term third-party trade receivables, not the recoverable overdue subtotal",
     ),
     137: (
         "value",
@@ -307,6 +332,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("GVR_financial_statements_2018_consolidated", 5, 11, 3),),
         "closing total short-term vendor advances, not one construction component",
     ),
+    166: (
+        "value",
+        (("HBC_financial_statements_2016_separate", 71, 1, 3),),
+        "closing loan balance, not the carrying value of an investment in a subsidiary",
+    ),
     168: (
         "value",
         (("CRE_financial_statements_2025_separate", 4, 2, 3),),
@@ -321,6 +351,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("FIT_financial_statements_2018_consolidated", 4, 2, 3),),
         "closing cash and cash equivalents from the balance sheet",
+    ),
+    182: (
+        "value",
+        (("CEO_financial_statements_2022_consolidated", 51, 1, 1),),
+        "current-year closing value, not the adjusted comparative-year amount",
     ),
     185: (
         "value",
@@ -337,10 +372,20 @@ EASY_AUDITED_OVERRIDES: dict[
         (("MBB_financial_statements_2022_consolidated", 21, 6, 1),),
         "closing VND term deposits at other credit institutions, not a related-party transaction flow",
     ),
+    194: (
+        "value",
+        (("VRE_financial_statements_2019_consolidated", 39, 5, 1),),
+        "closing balance of the requested item, not its allocation during the year",
+    ),
     195: (
         "value",
         (("VCB_financial_statements_2025_separate", 14, 1, 3),),
         "closing foreign-exchange transaction commitments",
+    ),
+    206: (
+        "value",
+        (("GEX_financial_statements_2021_consolidated", 5, 29, 4),),
+        "statement total assets, replacing the identically valued segment-table total",
     ),
     207: (
         "value",
@@ -366,6 +411,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("BID_financial_statements_2023_separate", 85, 2, 1),),
         "domestic loan balance requested directly; easy gold is one source cell",
+    ),
+    221: (
+        "value",
+        (("CEO_financial_statements_2017_consolidated", 4, 32, 4),),
+        "original cost of finance-leased fixed assets, not their carrying amount",
     ),
     226: (
         "value",
