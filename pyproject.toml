@@ -20,3 +20,5 @@ package-dir = {"" = "src"}
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+road2ai_vifinqa = ["easy_reranker_v2.json"]

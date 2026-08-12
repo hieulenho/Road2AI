@@ -33,8 +33,9 @@ import pandas as pd
 from . import local_llm
 from .corpus import Corpus, DocumentRef, RowAsset, TableAsset
 from .direct import _column_year_score, _source_scale_for_hit
+from .easy_reranker import EASY_RERANKER_NAME, score_easy_candidates
 from .paths import ARTIFACT_ROOT
-from .retrieval import RowHit, STOPWORDS, metric_phrase
+from .retrieval import RowHit, STOPWORDS, metric_phrase, retrieve_rows
 from .submission import evaluate_expression
 from .text import fold_text, parse_vn_number, requested_scale, source_scale
 
@@ -142,6 +143,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("HHV_financial_statements_2023_separate", 15, 2, 5),),
         "direct current voting-right percentage; easy gold is one source cell",
     ),
+    29: (
+        "value",
+        (("OGC_financial_statements_2019_consolidated", 29, 10, 1),),
+        "direct closing total for long-term vendor advances; exclude the bad-debt-only disclosure",
+    ),
     35: (
         "value",
         (("BVH_financial_statements_2015_separate", 28, 2, 1),),
@@ -167,6 +173,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("SAB_financial_statements_2020_consolidated", 30, 2, 1),),
         "current-year provision charge in the doubtful-receivables movement table",
     ),
+    59: (
+        "value",
+        (("VCB_financial_statements_2017_consolidated", 11, 15, 3),),
+        "closing statement balance of available-for-sale investment securities, not the equity-securities subtotal",
+    ),
     69: (
         "value",
         (("SHB_financial_statements_2019_consolidated", 3, 6, 3),),
@@ -186,6 +197,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("BVH_financial_statements_2019_separate", 15, 1, 1),),
         "Bao Viet's direct capital contribution to BVIF",
+    ),
+    80: (
+        "value",
+        (("NVL_financial_statements_2020_consolidated", 45, 4, 1),),
+        "closing total short-term other receivables in the value column, not the allowance or a component",
     ),
     82: (
         "value",
@@ -212,6 +228,16 @@ EASY_AUDITED_OVERRIDES: dict[
         (("VRE_financial_statements_2024_separate", 3, 12, 4),),
         "closing original cost of investment property, not its carrying value",
     ),
+    94: (
+        "value",
+        (("DBC_financial_statements_2021_consolidated", 8, 18, 3),),
+        "current-year company-wide net profit after tax from the income statement, not one segment result",
+    ),
+    95: (
+        "value",
+        (("HDG_financial_statements_2015_consolidated", 52, 2, 1),),
+        "current-period current-income-tax expense from the note, excluding the prior-period underprovision adjustment",
+    ),
     97: (
         "value",
         (("HPG_financial_statements_2023_consolidated", 9, 2, 3),),
@@ -222,6 +248,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("HUT_financial_statements_2024_separate", 25, 9, 1),),
         "explicit gross inventory total in the detailed inventory table",
     ),
+    102: (
+        "value",
+        (("MBB_financial_statements_2018_consolidated", 44, 19, 1),),
+        "2018 closing carrying value of land-use rights, not the preceding 2017 movement table",
+    ),
     105: (
         "value",
         (("EIB_financial_statements_2020_consolidated", 9, 6, 2),),
@@ -231,6 +262,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("PLX_financial_statements_2016_separate", 17, 14, 3),),
         "ownership percentage for the specifically named PTN subsidiary",
+    ),
+    108: (
+        "value",
+        (("HAG_financial_statements_2023_consolidated", 57, 7, 1),),
+        "closing total ordinary bonds, not only their long-term portion",
     ),
     109: (
         "value",
@@ -252,6 +288,16 @@ EASY_AUDITED_OVERRIDES: dict[
         (("HHS_financial_statements_2015_consolidated", 5, 22, 4),),
         "opening total liabilities and equity for Hoang Huy Investment Services; fuzzy issuer matching had selected DIG",
     ),
+    115: (
+        "value",
+        (("CTG_financial_statements_2019_separate", 7, 14, 2),),
+        "total operating expenses from the separate income statement, preserving the parenthesized expense sign",
+    ),
+    118: (
+        "value",
+        (("VCB_financial_statements_2015_separate", 32, 4, 1),),
+        "ending general loan-loss provision balance, not the opening balance",
+    ),
     120: (
         "value",
         (("KLB_financial_statements_2019_consolidated", 75, 3, 3),),
@@ -267,6 +313,21 @@ EASY_AUDITED_OVERRIDES: dict[
         (("SSI_financial_statements_2016_consolidated", 18, 19, 9),),
         "closing total equity, not owner contributed capital alone",
     ),
+    124: (
+        "value",
+        (("DIG_financial_statements_2024_consolidated", 9, 2, 2),),
+        "beginning total cash and cash equivalents, not only the cash-equivalent component",
+    ),
+    126: (
+        "value",
+        (("SAB_financial_statements_2023_consolidated", 2, 3, 4),),
+        "opening 1 January 2023 cash and cash equivalents, not the 31 December 2023 closing column",
+    ),
+    127: (
+        "value",
+        (("VIB_financial_statements_2024_consolidated", 57, 13, 5),),
+        "closing carrying value of other tangible fixed assets, not total tangible fixed assets",
+    ),
     128: (
         "value",
         (("IJC_financial_statements_2015_separate", 62, 3, 1),),
@@ -276,6 +337,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("DBC_financial_statements_2024_consolidated", 63, 4, 5),),
         "company-wide total net revenue column after segment eliminations",
+    ),
+    133: (
+        "value",
+        (("NLG_financial_statements_2024_separate", 65, 9, 2),),
+        "total remuneration of the Board of Management and other managers, excluding the Board of Directors",
     ),
     135: (
         "value",
@@ -327,6 +393,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("VPB_financial_statements_2025_consolidated", 85, 1, 1),),
         "current-year provision balance with the row-level million-VND unit",
     ),
+    161: (
+        "value",
+        (("EIB_financial_statements_2020_consolidated", 29, 2, 1),),
+        "closing loans to economic organisations, not the broader organisations-and-individuals balance",
+    ),
     163: (
         "value",
         (("GVR_financial_statements_2018_consolidated", 5, 11, 3),),
@@ -351,6 +422,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("FIT_financial_statements_2018_consolidated", 4, 2, 3),),
         "closing cash and cash equivalents from the balance sheet",
+    ),
+    181: (
+        "value",
+        (("VRE_financial_statements_2020_separate", 1, 3, 2),),
+        "parent-company net profit after tax from the separate-company disclosure, not consolidated profit",
     ),
     182: (
         "value",
@@ -382,6 +458,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("VCB_financial_statements_2025_separate", 14, 1, 3),),
         "closing foreign-exchange transaction commitments",
     ),
+    202: (
+        "value",
+        (("CEO_financial_statements_2025_consolidated", 3, 9, 3),),
+        "closing short-term vendor advances, not short-term customer advances on the liability side",
+    ),
     206: (
         "value",
         (("GEX_financial_statements_2021_consolidated", 5, 29, 4),),
@@ -402,6 +483,11 @@ EASY_AUDITED_OVERRIDES: dict[
         (("ACV_financial_statements_2018_consolidated", 43, 1, 1),),
         "closing USD foreign-currency balance converted to the requested million-USD unit",
     ),
+    214: (
+        "value",
+        (("DTK_financial_statements_2024_consolidated", 9, 1, 4),),
+        "current-year total revenue from the income statement, not electricity revenue alone",
+    ),
     217: (
         "value",
         (("DCM_financial_statements_2022_consolidated", 5, 4, 4),),
@@ -416,6 +502,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("CEO_financial_statements_2017_consolidated", 4, 32, 4),),
         "original cost of finance-leased fixed assets, not their carrying amount",
+    ),
+    222: (
+        "value",
+        (("VIC_financial_statements_2025_separate", 17, 3, 1),),
+        "closing short-term related-party loans, not interest and deposit payables",
     ),
     226: (
         "value",
@@ -457,6 +548,16 @@ EASY_AUDITED_OVERRIDES: dict[
         (("VIC_financial_statements_2016_consolidated", 44, 50, 1),),
         "closing 2016 total contractual commitments, not the opening comparative column",
     ),
+    248: (
+        "value",
+        (("MPC_financial_statements_2021_consolidated", 69, 2, 1),),
+        "current-period current-tax charge, excluding the prior-period underprovision adjustment",
+    ),
+    249: (
+        "value",
+        (("HDG_financial_statements_2016_separate", 38, 2, 2),),
+        "closing approved share capital, not total equity",
+    ),
     253: (
         "value",
         (("MBB_financial_statements_2016_consolidated", 47, 4, 2),),
@@ -466,6 +567,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("VNM_financial_statements_2015_consolidated", 39, 2, 5),),
         "closing corporate-income-tax payable, not a deferred-tax liability",
+    ),
+    256: (
+        "value",
+        (("MCH_financial_statements_2019_consolidated", 5, 19, 3),),
+        "2019 consolidated net profit after tax, not the 2018 comparative segment table",
     ),
     257: (
         "value",
@@ -501,6 +607,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("GEG_financial_statements_2025_consolidated", 7, 13, 3),),
         "closing total inventory from the VND-denominated balance sheet",
+    ),
+    272: (
+        "value",
+        (("MBB_financial_statements_2020_separate", 5, 35, 2),),
+        "parent-bank total assets from the separate balance sheet, not an interest-rate-risk exposure total",
     ),
     275: (
         "value",
@@ -611,6 +722,11 @@ EASY_AUDITED_OVERRIDES: dict[
         "value",
         (("CEO_financial_statements_2017_consolidated", 46, 1, 1),),
         "deposit and loan interest income, not cash proceeds from loan recovery",
+    ),
+    349: (
+        "value",
+        (("TTF_financial_statements_2020_consolidated", 40, 1, 1),),
+        "closing short-term borrowings, not a total accrued-expense balance",
     ),
     351: (
         "value",
@@ -1048,12 +1164,37 @@ def build_easy_candidates(corpus: Corpus, question: str) -> list[EasyCandidate]:
 
 
 def shortlist_easy_candidates(
-    candidates: list[EasyCandidate], *, max_candidates: int = 64, max_rows: int = 28
+    candidates: list[EasyCandidate],
+    *,
+    max_candidates: int = 64,
+    max_rows: int = 28,
+    question: str | None = None,
+    bm25_row_scores: dict[tuple[str, int, int], float] | None = None,
+    use_learned_reranker: bool = False,
 ) -> list[EasyCandidate]:
-    """Keep complete high-ranking rows so the model can compare all periods."""
+    """Keep complete high-ranking rows so the model can compare all periods.
+
+    The legacy lexical order remains available for diagnostics and backwards
+    compatibility.  Production passes the question plus exhaustive BM25 row
+    scores and enables the checked-in deterministic reranker.
+    """
+
+    ranked_candidates = candidates
+    if use_learned_reranker:
+        if question is None or bm25_row_scores is None:
+            raise ValueError(
+                "Learned Easy reranking requires question and bm25_row_scores"
+            )
+        learned_scores = score_easy_candidates(question, candidates, bm25_row_scores)
+        # Keep the immutable candidate schema and reuse downstream confidence /
+        # audit logic by exposing the learned rank score in shortlisted copies.
+        ranked_candidates = [
+            replace(candidate, retrieval_score=learned_scores[candidate.candidate_id])
+            for candidate in candidates
+        ]
 
     by_row: dict[tuple[str, int, int], list[EasyCandidate]] = defaultdict(list)
-    for candidate in candidates:
+    for candidate in ranked_candidates:
         by_row[(candidate.doc_id, candidate.table_id, candidate.row_idx)].append(candidate)
     ranked_rows = sorted(
         by_row.values(),
@@ -1231,6 +1372,64 @@ def _best_competitor_score(
     )
 
 
+def _selection_has_total_marker(selected: tuple[EasyCandidate, ...]) -> bool:
+    """Return whether a selection explicitly denotes a total/aggregate cell."""
+
+    for candidate in selected:
+        evidence = fold_text(
+            f"{candidate.row_label} {candidate.section} {candidate.column_header}"
+        )
+        tokens = set(evidence.split())
+        row = fold_text(candidate.row_label).strip(" .:-|")
+        if "tong" in tokens or row == "cong" or row.startswith("cong "):
+            return True
+    return False
+
+
+def _audit_change_guard(
+    question: str,
+    selected: tuple[EasyCandidate, ...],
+    audit_selected: tuple[EasyCandidate, ...],
+) -> str | None:
+    """Reject compact-audit changes with deterministic semantic regressions."""
+
+    if len(selected) == len(audit_selected) == 1:
+        first = selected[0]
+        audited = audit_selected[0]
+        if math.isclose(
+            first.raw_number,
+            audited.raw_number,
+            rel_tol=1e-12,
+            abs_tol=1e-9,
+        ) and not math.isclose(
+            first.answer_value,
+            audited.answer_value,
+            rel_tol=1e-12,
+            abs_tol=1e-9,
+        ):
+            return "same_raw_value_conflicting_normalized_scale"
+
+    metric_tokens = set(metric_phrase(question).split())
+    if (
+        "tong" in metric_tokens
+        and _selection_has_total_marker(selected)
+        and not _selection_has_total_marker(audit_selected)
+    ):
+        return "audit_drops_explicit_total"
+
+    folded_question = fold_text(question)
+    if (
+        re.search(r"\b20\d{2}\b", folded_question)
+        and "nam truoc" not in folded_question
+        and any(
+            "nam truoc" in fold_text(candidate.column_header)
+            for candidate in audit_selected
+        )
+    ):
+        return "audit_switches_to_previous_period"
+    return None
+
+
 def _needs_compact_audit(
     question: str,
     operation: Operation,
@@ -1321,13 +1520,24 @@ def solve_easy(
     exhaustive = build_easy_candidates(corpus, question)
     if not exhaustive:
         raise EasySolveError("No numeric cells in the constrained reports")
-    shortlist = shortlist_easy_candidates(exhaustive)
+    bm25_hits = retrieve_rows(corpus, question, limit=100_000, include_prior=False)
+    bm25_row_scores = {
+        (hit.row.doc_id, hit.row.table_id, hit.row.row_idx): float(hit.score)
+        for hit in bm25_hits
+    }
+    shortlist = shortlist_easy_candidates(
+        exhaustive,
+        question=question,
+        bm25_row_scores=bm25_row_scores,
+        use_learned_reranker=True,
+    )
     preview = _preview(shortlist)
     by_id = {candidate.candidate_id: candidate for candidate in shortlist}
     frame = easy_candidate_frame(shortlist)
     log = _load_log(log_path, int(question_id), question)
     log.update(
         model={"source": EASY_MODEL_SOURCE, "path": str(EASY_MODEL)},
+        reranker={"name": EASY_RERANKER_NAME, "bm25_rows": len(bm25_row_scores)},
         exhaustive_candidates=len(exhaustive),
         shortlisted_candidates=len(shortlist),
         prompted_candidates=len(preview),
@@ -1454,6 +1664,9 @@ def solve_easy(
                     if audit_ids == selected_ids and audit_operation == operation:
                         audit_status = "agreed"
                     else:
+                        audit_guard = _audit_change_guard(
+                            question, selected, audit_selected
+                        )
                         first_topic = all(
                             _candidate_topic_match(question, candidate) for candidate in selected
                         )
@@ -1472,7 +1685,7 @@ def solve_easy(
                             or
                             (audit_topic and not first_topic)
                             or _selection_score(audit_selected) >= _selection_score(selected) - 1.0
-                        ) and audit_period
+                        ) and audit_period and audit_guard is None
                         if accept_audit:
                             selected_ids = audit_ids
                             operation = audit_operation
@@ -1483,6 +1696,8 @@ def solve_easy(
                             audit_status = "changed"
                         else:
                             audit_status = "disagreed_kept"
+                            if audit_guard is not None:
+                                audit_entry["acceptance_guard"] = audit_guard
                 except Exception as audit_exc:
                     audit_status = "audit_failed"
                     audit_entry = {"error": f"{type(audit_exc).__name__}: {audit_exc}"}
