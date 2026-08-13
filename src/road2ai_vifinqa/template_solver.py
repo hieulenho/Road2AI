@@ -2198,17 +2198,17 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
     660: _AuditedOverride(
         "ratio",
         (
-            _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 10, 1, 3),
-            _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 10, 2, 3),
-            _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 10, 6, 3),
-            _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 10, 7, 3),
-            _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 10, 8, 3),
+            # The official medium-question contract locks exactly two scalar
+            # operands.  "Các cam kết đưa ra" is the report's direct scalar;
+            # do not rebuild it from statement components or add contingent
+            # liabilities, which describe a different concept.
+            _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 76, 6, 1),
             _ac("CTG", 2022, "CTG_financial_statements_2022_separate", 8, 34, 3),
         ),
         kind="percentage",
         output_multiplier=100.0,
-        numerator_groups=((0, 1, 2, 3, 4),),
-        denominator_groups=((5,),),
+        numerator_groups=((0,),),
+        denominator_groups=((1,),),
         absolute=True,
     ),
     688: _AuditedOverride(
@@ -2238,16 +2238,16 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
     717: _AuditedOverride(
         "ratio",
         (
-            _ac("NVB", 2019, "NVB_financial_statements_2019_separate", 6, 2, 2),
-            _ac("NVB", 2019, "NVB_financial_statements_2019_separate", 6, 8, 2),
-            _ac("NVB", 2019, "NVB_financial_statements_2019_separate", 6, 9, 2),
-            _ac("NVB", 2019, "NVB_financial_statements_2019_separate", 6, 10, 2),
+            # The note exposes the off-balance-sheet commitments as one
+            # authoritative "Tổng cộng" scalar.  Keeping this direct source
+            # preserves the answer while making the evidence contract exact.
+            _ac("NVB", 2019, "NVB_financial_statements_2019_separate", 55, 12, 1),
             _ac("NVB", 2019, "NVB_financial_statements_2019_separate", 3, 20, 2),
         ),
         kind="percentage",
         output_multiplier=100.0,
-        numerator_groups=((0, 1, 2, 3),),
-        denominator_groups=((4,),),
+        numerator_groups=((0,),),
+        denominator_groups=((1,),),
         absolute=True,
     ),
     721: _AuditedOverride(
@@ -2527,6 +2527,17 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
         ),
         kind="percentage",
     ),
+    611: _AuditedOverride(
+        "difference",
+        (
+            # The earlier releases exhausted the overdue bucket and two
+            # reconstructed in-term aggregates without moving the score.
+            # Keep the generator contract at one scalar per report and use
+            # the explicit reported Total column from the liquidity-gap row.
+            _ac("EIB", 2019, "EIB_financial_statements_2019_separate", 85, 19, 8, 1e6),
+            _ac("EIB", 2018, "EIB_financial_statements_2018_separate", 87, 19, 8, 1e6),
+        ),
+    ),
     622: _AuditedOverride(
         "difference",
         (
@@ -2552,6 +2563,21 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
         numerator_groups=((0,),),
         denominator_groups=((1,),),
     ),
+    676: _AuditedOverride(
+        "ratio",
+        (
+            # Use the two adjacent P&L scalars that directly express the
+            # period ratio: credit-risk provision expense divided by net
+            # operating profit before that provision.  Prior releases mixed
+            # closing allowances, note movements and after-tax profit.
+            _ac("VCB", 2017, "VCB_financial_statements_2017_separate", 15, 17, 3, 1e6),
+            _ac("VCB", 2017, "VCB_financial_statements_2017_separate", 15, 16, 3, 1e6),
+        ),
+        kind="percentage",
+        output_multiplier=100.0,
+        numerator_groups=((0,),),
+        denominator_groups=((1,),),
+    ),
     690: _AuditedOverride(
         "ratio",
         (
@@ -2565,14 +2591,12 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
     703: _AuditedOverride(
         "difference",
         (
+            # The locked Medium operands are the matching short-term trade
+            # receivable/payable balances with related parties.  Do not mix
+            # the trade payable with the separate related-party loan balance.
             _ac("GEX", 2024, "GEX_financial_statements_2024_separate", 29, 4, 1),
-            _ac("GEX", 2024, "GEX_financial_statements_2024_separate", 31, 4, 1),
-            _ac("GEX", 2024, "GEX_financial_statements_2024_separate", 33, 15, 1),
             _ac("GEX", 2024, "GEX_financial_statements_2024_separate", 42, 10, 1),
-            _ac("GEX", 2024, "GEX_financial_statements_2024_separate", 46, 14, 1),
         ),
-        numerator_groups=((0, 1, 2),),
-        denominator_groups=((3, 4),),
     ),
     735: _AuditedOverride(
         "ratio_difference",
@@ -2644,8 +2668,11 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
     714: _AuditedOverride(
         "difference",
         (
-            _ac("HUT", 2024, "HUT_financial_statements_2024_separate", 4, 6, 4),
-            _ac("HUT", 2024, "HUT_financial_statements_2024_separate", 4, 7, 4),
+            # Consolidated is the generator's default scope.  The question
+            # does not say "công ty mẹ", so the earlier separate-statement
+            # override selected the wrong report scope.
+            _ac("HUT", 2024, "HUT_financial_statements_2024_consolidated", 3, 6, 4),
+            _ac("HUT", 2024, "HUT_financial_statements_2024_consolidated", 3, 7, 4),
         ),
     ),
     716: _AuditedOverride(
