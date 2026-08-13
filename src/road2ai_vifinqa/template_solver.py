@@ -2530,13 +2530,20 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
     611: _AuditedOverride(
         "difference",
         (
-            # The earlier releases exhausted the overdue bucket and two
-            # reconstructed in-term aggregates without moving the score.
-            # Keep the generator contract at one scalar per report and use
-            # the explicit reported Total column from the liquidity-gap row.
-            _ac("EIB", 2019, "EIB_financial_statements_2019_separate", 85, 19, 8, 1e6),
-            _ac("EIB", 2018, "EIB_financial_statements_2018_separate", 87, 19, 8, 1e6),
+            # The HTML groups the maturity buckets under ``Trong han`` but
+            # also places the grand-total cell at the end of that colspan.
+            # Sum only the actual in-term maturity buckets; including the
+            # total would count every bucket twice.
+            _ac("EIB", 2019, "EIB_financial_statements_2019_separate", 85, 19, 5, 1e6),
+            _ac("EIB", 2019, "EIB_financial_statements_2019_separate", 85, 19, 6, 1e6),
+            _ac("EIB", 2019, "EIB_financial_statements_2019_separate", 85, 19, 7, 1e6),
+            _ac("EIB", 2018, "EIB_financial_statements_2018_separate", 87, 19, 4, 1e6),
+            _ac("EIB", 2018, "EIB_financial_statements_2018_separate", 87, 19, 5, 1e6),
+            _ac("EIB", 2018, "EIB_financial_statements_2018_separate", 87, 19, 6, 1e6),
+            _ac("EIB", 2018, "EIB_financial_statements_2018_separate", 87, 19, 7, 1e6),
         ),
+        numerator_groups=((0, 1, 2),),
+        denominator_groups=((3, 4, 5, 6),),
     ),
     622: _AuditedOverride(
         "difference",
@@ -2566,12 +2573,12 @@ _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
     676: _AuditedOverride(
         "ratio",
         (
-            # Use the two adjacent P&L scalars that directly express the
-            # period ratio: credit-risk provision expense divided by net
-            # operating profit before that provision.  Prior releases mixed
-            # closing allowances, note movements and after-tax profit.
-            _ac("VCB", 2017, "VCB_financial_statements_2017_separate", 15, 17, 3, 1e6),
-            _ac("VCB", 2017, "VCB_financial_statements_2017_separate", 15, 16, 3, 1e6),
+            # Medium ratios lock one scalar per operand.  Use the reported
+            # period-total provision expense and the exact ``Loi nhuan thuan
+            # trong nam`` cell, instead of summing provision components or
+            # mixing the period charge with a closing allowance balance.
+            _ac("VCB", 2017, "VCB_financial_statements_2017_separate", 78, 5, 1, 1e6),
+            _ac("VCB", 2017, "VCB_financial_statements_2017_separate", 66, 4, 5, 1e6),
         ),
         kind="percentage",
         output_multiplier=100.0,
