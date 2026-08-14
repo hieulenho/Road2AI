@@ -1,87 +1,120 @@
-# ViFinQA competition solution
+# Road2AI ViFinQA
 
-Pipeline tái lập cho cuộc thi **R2AI2026 Financial Table Retrieval &
-Text-to-Pandas**. Kết quả nộp cuối nằm tại `submission.zip`; toàn bộ dữ liệu
-trung gian, checkpoint theo câu hỏi, log suy luận và báo cáo kiểm định được giữ
-lại để có thể kiểm tra hoặc tiếp tục chạy.
+Pipeline có thể tái lập cho bài thi **Financial Table Retrieval & Text-to-Pandas**.
+Mục tiêu của dự án không chỉ là tạo một số đúng, mà là tạo đồng thời:
 
-## Phương pháp
+- đáp án số;
+- tài liệu và bảng nguồn;
+- CSV bằng chứng;
+- biểu thức Pandas chạy lại được và sinh đúng đáp án.
 
-- Lập chỉ mục 146.246 bảng trong báo cáo tài chính vào
-  `artifacts/tables.sqlite3` và chuẩn hoá các chỉ tiêu phổ biến vào
-  `artifacts/financial_panel.json`.
-- Định tuyến 1.012 câu hỏi qua các bộ giải deterministic theo loại câu hỏi;
-  những trường hợp cần hiểu ngôn ngữ dùng Qwen3-8B cục bộ ở nhiệt độ 0.
-- Mỗi đáp án dẫn chiếu tài liệu/bảng tồn tại trong kho chính thức, có một CSV
-  riêng và một `pandas_query` có thể chạy lại để sinh ra `answer`.
-- Không fine-tune hay huấn luyện có giám sát. Snapshot model, nguồn model,
-  prompt/response, cache và checkpoint đều được lưu trong workspace.
+## Kiến trúc
 
-## Môi trường đã dùng
+1. `build_index`: đọc 1.973 báo cáo, bung `rowspan`/`colspan` và lập chỉ mục SQLite.
+2. `table_semantics`: phục hồi header nhiều tầng, section, kỳ, đơn vị, dòng tổng/thành phần và loại báo cáo.
+3. `build_panel`: gom các chỉ tiêu chuẩn; chấm điểm mọi ô ứng viên rồi mới giải quyết bảng trùng.
+4. Các solver chuyên biệt:
+   - Easy/direct: truy hồi theo công ty–năm–scope, rank bảng rồi rank dòng/ô;
+   - Hard: công thức tài chính deterministic trên panel;
+   - Note: truy hồi disclosure chuyên biệt;
+   - Template: khóa toán hạng và thực thi phép tính deterministic.
+5. `solve`: checkpoint theo câu, ghép ZIP và replay lại toàn bộ Pandas query.
+6. `release_audit`: kiểm tra độc lập schema, nguồn, table reference, CSV và thực thi.
 
-- Python 3.12, pandas 3.0.3, NumPy 2.5.1, Windows 11.
-- Dataset ViFinQA revision:
-  `0450088ab22ec946f04f097586967ca405955b3b`.
-- Mã tham chiếu `DSKT-NOWJ/ViFinQA` commit:
-  `9a046de2f2daea4d2be0a05d4a5f3f1220e6922a`.
-- Model:
-  `artifacts/models/Qwen3-8B-GGUF/Qwen3-8B-Q4_K_M.gguf`.
-- Nguồn model:
-  `Qwen/Qwen3-8B-GGUF@main:Qwen3-8B-Q4_K_M.gguf`.
-- Runtime cục bộ: `tools/llama.cpp/runtime/llama-server.exe`.
+Các submission lịch sử không bị ghi đè. Artifact mới nên luôn được dựng song song,
+benchmark và audit trước khi promote.
 
-## Chạy lại
-
-Các lệnh dưới đây chạy từ thư mục gốc dự án trong PowerShell:
+## Cài đặt
 
 ```powershell
 python -m pip install -e .
-$env:PYTHONPATH = "src"
-$env:PYTHONIOENCODING = "utf-8"
-$env:VIFINQA_MODEL = (Resolve-Path "artifacts/models/Qwen3-8B-GGUF/Qwen3-8B-Q4_K_M.gguf").Path
-$env:VIFINQA_MODEL_SOURCE = "Qwen/Qwen3-8B-GGUF@main:Qwen3-8B-Q4_K_M.gguf"
-
-python -m road2ai_vifinqa.build_index
-python -m road2ai_vifinqa.build_panel
-python -m road2ai_vifinqa.solve --iteration 3 --run-dir runs/iteration_3 --ids 1-1012 --fail-fast --publish
-python tools/release_audit.py --zip submission.zip --model "$env:VIFINQA_MODEL" --run-dir runs/iteration_3 --report runs/iteration_3/final_release_audit.json --replays 3
+$env:PYTHONPATH = (Resolve-Path "src").Path
 ```
 
-Lệnh `solve` tự tiếp tục từ checkpoint. Nếu cần giải lại độc lập từ đầu, dùng
-`--no-resume` với một run mới (ví dụ `--iteration 4 --run-dir
-runs/reproduction_clean`) để không ghi đè bản phát hành đã kiểm định.
+Python 3.11+ được hỗ trợ. Model cục bộ mặc định là Qwen3-8B GGUF tại
+`artifacts/models/Qwen3-8B-GGUF/Qwen3-8B-Q4_K_M.gguf`.
 
-## Kết quả và nhật ký
+## Dựng artifact an toàn
 
-- `runs/iteration_1`, `runs/iteration_2`, `runs/iteration_3`: lịch sử ba vòng
-  giải, kiểm tra và cải thiện liên tiếp; đây không phải ba vòng tự động của một
-  lệnh `solve`.
-- `runs/iteration_3/cache`: 1.012 checkpoint `.pkl` dùng để tiếp tục an toàn;
-  chỉ nạp pickle do chính workspace tin cậy này tạo ra.
-- `runs/iteration_3/checkpoints`: 1.012 bản tóm tắt JSON để kiểm tra thủ công.
-- `runs/iteration_3/llm`: log suy luận cục bộ cho các câu dùng mô hình.
-- `runs/iteration_3/manifest.json`: cấu hình và thống kê của vòng cuối.
-- `runs/iteration_3/release_audit.json`: kiểm định độc lập ZIP vòng 3.
-- `runs/iteration_3/final_release_audit.json`: kiểm định lại file đã xuất bản
-  tại thư mục gốc.
-- `submission.zip`: tệp duy nhất cần tải lên dashboard cuộc thi.
+Dựng index/panel mới sang đường dẫn riêng:
 
-Kiểm định phát hành yêu cầu đủ 1.012 ID đúng thứ tự, đúng schema, đúng câu hỏi
-gốc, mọi tài liệu/bảng/CSV đều tồn tại, không có CSV mồ côi, và mỗi
-`pandas_query` phải chạy lại độc lập ba lần với kết quả hữu hạn, deterministic
-và khớp `answer`.
+```powershell
+python -m road2ai_vifinqa.build_index `
+  --force `
+  --output artifacts/tables_v2.sqlite3 `
+  --manifest artifacts/index_v2_manifest.json
 
-Kết quả vòng cuối: 1.012 dòng, 1.012 CSV, 1.013 thành viên ZIP, ba lượt replay
-mới và 0 lỗi. SHA-256 của `submission.zip` là
-`786adf2f5840562e698d3e39cbd53b056534d7bbba5c03f79b659d5dc2c79f2d`;
-SHA-256 của model là
-`d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785`.
+python -m road2ai_vifinqa.build_panel `
+  --force `
+  --index artifacts/tables_v2.sqlite3 `
+  --output artifacts/financial_panel_v2.json `
+  --manifest artifacts/financial_panel_v2_manifest.json
+```
 
-Kiểm định này bảo đảm tính toàn vẹn, khả năng chạy lại và tính hợp lệ của hồ
-sơ nộp. Vì đáp án chuẩn của bộ kiểm thử không được công bố, nó không thể bảo
-đảm trước điểm số trên leaderboard ẩn.
+So sánh panel mới với baseline và replay toàn bộ Hard/Template:
 
-Lưu ý: `.gitignore` loại trừ các snapshot và sản phẩm dung lượng lớn
-(`data/source`, `external`, `artifacts`, `runs`, `submission.zip`). Vì vậy một
-Git clone sạch không tự chứa các payload này; khi bàn giao cần sao chép cả các
-thư mục trên hoặc tái tạo chúng từ đúng snapshot nguồn.
+```powershell
+python tools/benchmark_preprocessing.py `
+  --baseline artifacts/financial_panel.json `
+  --candidate artifacts/financial_panel_v2.json `
+  --report runs/optimization/panel_v2_benchmark.json
+
+python tools/audit_artifacts.py `
+  --index artifacts/tables_v2.sqlite3 `
+  --panel artifacts/financial_panel_v2.json `
+  --integrity `
+  --report runs/optimization/artifact_audit.json
+```
+
+Không promote nếu có coordinate lỗi, raw/value không replay được, kỳ nguồn lệch năm
+hoặc solver regression chưa được source-audit.
+
+## Chạy solver
+
+```powershell
+python -m road2ai_vifinqa.solve `
+  --iteration 1 `
+  --run-dir runs/release_candidate `
+  --index artifacts/tables_v2.sqlite3 `
+  --panel artifacts/financial_panel_v2.json `
+  --ids 1-1012 `
+  --fail-fast
+```
+
+Checkpoint chứa chữ ký của index và panel. Khi một artifact thay đổi, checkpoint cũ
+bị từ chối tự động thay vì âm thầm tái sử dụng kết quả lỗi thời.
+
+## Kiểm thử và phát hành
+
+```powershell
+$env:PYTHONPATH = (Resolve-Path "src").Path
+python -m unittest discover -s tests -v
+python -m compileall -q src tools tests
+
+python tools/release_audit.py `
+  --zip runs/release_candidate/submission.zip `
+  --run-dir runs/release_candidate `
+  --table-ref-mode one-based `
+  --replays 3 `
+  --report runs/release_candidate/final_release_audit.json
+```
+
+Release gate yêu cầu đủ 1.012 câu và 1.012 CSV; tất cả tài liệu/bảng phải tồn tại;
+mọi query phải chạy deterministic nhiều lần và khớp trường `answer`.
+
+## Nguyên tắc tối ưu điểm
+
+- Không dùng leaderboard để dò từng đáp án.
+- Không đổi nguồn chỉ vì một số ở bảng khác có vẻ “hợp lý hơn”; bộ Easy khóa bảng
+  trước khi sinh câu hỏi nên nguồn tương đương vẫn có thể khác gold.
+- Tách rõ lỗi retrieval, table, row, column, unit, period, scope và formula.
+- Chỉ merge correction có tọa độ nguồn, công thức và replay; giữ regression suite cho
+  các thay đổi đã được leaderboard xác nhận dương.
+- Answer Accuracy bằng Execution Accuracy khi query chỉ đọc scalar đã tính sẵn. Muốn
+  tăng hai điểm này phải sửa semantic grounding/toán hạng, không phải chỉ sửa cú pháp Pandas.
+
+Gold chi tiết không được công bố, vì vậy kiểm định cục bộ bảo đảm tính hợp lệ và giảm
+hồi quy nhưng không thể cam kết trước một mức điểm leaderboard cụ thể.
+
+Kết quả benchmark, quyết định bật/tắt từng tầng retrieval và promotion gate của
+artifact v2 được ghi tại [`docs/optimization.md`](docs/optimization.md).

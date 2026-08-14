@@ -67,6 +67,9 @@ class TableAsset:
     page: int
     context: str
     rows: list[list[str]]
+    statement_kind: str = "unknown"
+    unit_scale: float = 1.0
+    header_rows: tuple[int, ...] = ()
 
     @property
     def competition_ref(self) -> str:
@@ -80,6 +83,8 @@ class RowAsset:
     row_idx: int
     cells: list[str]
     folded_text: str
+    row_label: str = ""
+    section: str = ""
 
 
 def load_questions() -> list[dict[str, object]]:
@@ -92,11 +97,23 @@ class Corpus:
         self.conn = sqlite3.connect(f"file:{path.as_posix()}?mode=ro", uri=True)
         self.conn.row_factory = sqlite3.Row
         self._documents = [DocumentRef(**dict(row)) for row in self.conn.execute("SELECT * FROM documents")]
+        self._doc_by_id = {doc.doc_id: doc for doc in self._documents}
         self._by_ticker: dict[str, list[DocumentRef]] = {}
         for doc in self._documents:
             self._by_ticker.setdefault(doc.ticker, []).append(doc)
         self.tickers = frozenset(self._by_ticker)
         self.company_names = self._load_company_names()
+        table_columns = {
+            str(row[1]) for row in self.conn.execute("PRAGMA table_info(tables)")
+        }
+        row_columns = {
+            str(row[1]) for row in self.conn.execute("PRAGMA table_info(rows)")
+        }
+        self._semantic_tables = {
+            "statement_kind", "unit_scale", "header_rows_json"
+        }.issubset(table_columns)
+        self._semantic_rows = {"row_label", "section"}.issubset(row_columns)
+        self._table_cache: dict[tuple[str, int], TableAsset] = {}
 
     def close(self) -> None:
         self.conn.close()
@@ -215,8 +232,9 @@ class Corpus:
             return []
         ids = [doc.doc_id for doc in documents]
         placeholders = ",".join("?" for _ in ids)
+        semantic = ", row_label, section" if self._semantic_rows else ""
         query = (
-            "SELECT doc_id, table_id, row_idx, cells_json, folded_text FROM rows "
+            f"SELECT doc_id, table_id, row_idx, cells_json, folded_text{semantic} FROM rows "
             f"WHERE doc_id IN ({placeholders})"
         )
         return [
@@ -226,24 +244,36 @@ class Corpus:
                 row_idx=row["row_idx"],
                 cells=json.loads(row["cells_json"]),
                 folded_text=row["folded_text"],
+                row_label=row["row_label"] if self._semantic_rows else "",
+                section=row["section"] if self._semantic_rows else "",
             )
             for row in self.conn.execute(query, ids)
         ]
 
     def table(self, doc_id: str, table_id: int) -> TableAsset:
+        key = (doc_id, table_id)
+        if key in self._table_cache:
+            return self._table_cache[key]
+        semantic = ", statement_kind, unit_scale, header_rows_json" if self._semantic_tables else ""
         row = self.conn.execute(
-            "SELECT doc_id, table_id, page, context, rows_json FROM tables WHERE doc_id=? AND table_id=?",
+            f"SELECT doc_id, table_id, page, context, rows_json{semantic} "
+            "FROM tables WHERE doc_id=? AND table_id=?",
             (doc_id, table_id),
         ).fetchone()
         if row is None:
             raise KeyError((doc_id, table_id))
-        return TableAsset(
+        asset = TableAsset(
             doc_id=row["doc_id"],
             table_id=row["table_id"],
             page=row["page"],
             context=row["context"],
             rows=json.loads(row["rows_json"]),
+            statement_kind=row["statement_kind"] if self._semantic_tables else "unknown",
+            unit_scale=float(row["unit_scale"]) if self._semantic_tables else 1.0,
+            header_rows=tuple(json.loads(row["header_rows_json"])) if self._semantic_tables else (),
         )
+        self._table_cache[key] = asset
+        return asset
 
     def document(self, doc_id: str) -> DocumentRef:
-        return next(doc for doc in self._documents if doc.doc_id == doc_id)
+        return self._doc_by_id[doc_id]

@@ -88,10 +88,15 @@ _PANEL_VALUE_MULTIPLIERS: dict[tuple[str, int, str], float] = {
 
 
 def _panel_value_multiplier(ticker: str, year: int, item: dict[str, object]) -> float:
-    return _PANEL_VALUE_MULTIPLIERS.get(
+    multiplier = _PANEL_VALUE_MULTIPLIERS.get(
         (ticker, int(year), str(item.get("doc_id", ""))),
         1.0,
     )
+    # Panel v2 resolves the source unit during construction.  Apply the
+    # historical repair only to legacy cells which still claim base VND.
+    if multiplier != 1.0 and float(item.get("scale", 1.0)) != 1.0:
+        return 1.0
+    return multiplier
 
 
 @dataclass(frozen=True, slots=True)

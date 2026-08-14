@@ -10,6 +10,7 @@ every pandas expression.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -26,7 +27,7 @@ from typing import Iterable
 
 from .corpus import Corpus, load_questions
 from .panel import FinancialPanel
-from .paths import PROJECT_ROOT, RUNS_ROOT
+from .paths import INDEX_PATH, PANEL_PATH, PROJECT_ROOT, RUNS_ROOT
 from .pipeline import (
     solve_easy_submission,
     solve_hard_submission,
@@ -42,7 +43,7 @@ from .submission import (
 from .template_solver import TemplateSolver
 
 
-CHECKPOINT_SCHEMA = 1
+CHECKPOINT_SCHEMA = 2
 DIRECT_IDS = frozenset(range(1, 362))
 HARD_IDS = frozenset((*range(362, 427), *range(440, 495), *range(539, 578)))
 NOTE_IDS = frozenset((*range(427, 440), *range(495, 539)))
@@ -112,7 +113,9 @@ def parse_id_spec(spec: str | None, available: Iterable[int]) -> list[int]:
 class _Resources:
     """Lazily construct the large read-only resources needed by each route."""
 
-    def __init__(self) -> None:
+    def __init__(self, *, index_path: Path = INDEX_PATH, panel_path: Path = PANEL_PATH) -> None:
+        self.index_path = index_path
+        self.panel_path = panel_path
         self._corpus: Corpus | None = None
         self._panel: FinancialPanel | None = None
         self._template: TemplateSolver | None = None
@@ -120,13 +123,13 @@ class _Resources:
     @property
     def corpus(self) -> Corpus:
         if self._corpus is None:
-            self._corpus = Corpus()
+            self._corpus = Corpus(self.index_path)
         return self._corpus
 
     @property
     def panel(self) -> FinancialPanel:
         if self._panel is None:
-            self._panel = FinancialPanel()
+            self._panel = FinancialPanel(self.panel_path)
         return self._panel
 
     @property
@@ -205,6 +208,7 @@ def _load_checkpoint(
     question_id: int,
     question: str,
     route: str,
+    resource_signature: str,
 ) -> SubmissionSolution | None:
     path = _checkpoint_path(run_dir, question_id)
     if not path.exists():
@@ -216,6 +220,8 @@ def _load_checkpoint(
         raise ValueError("checkpoint schema mismatch")
     if payload.get("route") != route:
         raise ValueError("checkpoint route mismatch")
+    if payload.get("resource_signature") != resource_signature:
+        raise ValueError("checkpoint artifact signature mismatch")
     solution = payload.get("solution")
     _verify_solution(solution, question_id, question)
     if route == "direct" and not str(solution.method).startswith("easy_llm:"):
@@ -244,6 +250,7 @@ def _save_checkpoint(
     run_dir: Path,
     solution: SubmissionSolution,
     route: str,
+    resource_signature: str,
 ) -> None:
     _verify_solution(solution, solution.id, solution.question)
     _atomic_pickle(
@@ -253,6 +260,7 @@ def _save_checkpoint(
             "route": route,
             "question": solution.question,
             "created_at": _now(),
+            "resource_signature": resource_signature,
             "solution": solution,
         },
     )
@@ -298,6 +306,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--iteration", type=int, default=1, help="run number used in runs/iteration_N")
     parser.add_argument("--run-dir", type=Path, help="override the run directory")
     parser.add_argument("--ids", help="optional comma/range selection, e.g. 1-10,362,578")
+    parser.add_argument("--index", type=Path, default=INDEX_PATH, help="read-only table index")
+    parser.add_argument("--panel", type=Path, default=PANEL_PATH, help="financial panel JSON")
     parser.add_argument(
         "--max-attempts",
         type=int,
@@ -314,6 +324,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="final archive path used with --publish",
     )
     return parser
+
+
+def _artifact_signature(*paths: Path) -> str:
+    """Cheap cache key which changes whenever a generated artifact changes."""
+
+    digest = hashlib.sha256()
+    for path in paths:
+        resolved = path.resolve()
+        stat = resolved.stat()
+        digest.update(str(resolved).encode("utf-8"))
+        digest.update(f"\0{stat.st_size}\0{stat.st_mtime_ns}\n".encode("ascii"))
+    return digest.hexdigest()
 
 
 def run(args: argparse.Namespace) -> int:
@@ -335,7 +357,10 @@ def run(args: argparse.Namespace) -> int:
     solutions: dict[int, SubmissionSolution] = {}
     failures: dict[int, str] = {}
     cache_hits = 0
-    resources = _Resources()
+    index_path = args.index.resolve()
+    panel_path = args.panel.resolve()
+    resource_signature = _artifact_signature(index_path, panel_path)
+    resources = _Resources(index_path=index_path, panel_path=panel_path)
     started_at = _now()
     print(f"ViFinQA iteration {args.iteration}: {len(selected)} questions -> {run_dir}", flush=True)
     try:
@@ -346,7 +371,13 @@ def run(args: argparse.Namespace) -> int:
             cache_hit = False
             if not args.no_resume:
                 try:
-                    solution = _load_checkpoint(run_dir, question_id, question, route)
+                    solution = _load_checkpoint(
+                        run_dir,
+                        question_id,
+                        question,
+                        route,
+                        resource_signature,
+                    )
                     cache_hit = solution is not None
                 except Exception as exc:
                     # A stale/corrupt checkpoint is never fatal; record why it
@@ -365,7 +396,7 @@ def run(args: argparse.Namespace) -> int:
                         run_dir,
                         args.max_attempts,
                     )
-                    _save_checkpoint(run_dir, solution, route)
+                    _save_checkpoint(run_dir, solution, route, resource_signature)
                 else:
                     cache_hits += 1
                 solutions[question_id] = solution
@@ -429,6 +460,11 @@ def run(args: argparse.Namespace) -> int:
             ),
         },
         "model": _model_manifest(),
+        "artifacts": {
+            "index": str(index_path),
+            "panel": str(panel_path),
+            "signature": resource_signature,
+        },
     }
 
     if failures or len(solutions) != len(selected):
