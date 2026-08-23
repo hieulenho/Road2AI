@@ -118,6 +118,8 @@ def _header_for(hit: RowHit, col_idx: int) -> str:
             values.append(value)
     return " | ".join(values[-3:])
 
+    
+
 
 def plan_lookup_phrases(question: str) -> tuple[list[str], str]:
     completion = chat(system=PHRASE_SYSTEM, user=question, max_tokens=384, temperature=0.0)
