@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000025,NVL,2019,consolidated,NVL_financial_statements_2019_consolidated,2,21,9,3,Phải thu ngắn hạn của khách hàng,,Tại ngày 31 tháng 12 năm | 2019 VND,===== PAGE 7 ===== CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ÓC NO VA Mẫu số B 01 – DN/HN BÀNG CÂN ĐỐI KẾ TOÁN HỢP NHẤT,1.076.689.087.366,1076689087366.0,1.0,1000000000.0,1076.689087366,29.466287878787877

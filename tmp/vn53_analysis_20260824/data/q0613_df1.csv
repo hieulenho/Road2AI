@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+IJC,2022,-115274660827.0,IJC_financial_statements_2022_separate,13,8,3,(115.274.660.827),Lưu chuyển tiền thuần từ hoạt động tài chính,1.0,s1,186259.45083
+IJC,2018,-301534111657.0,IJC_financial_statements_2018_separate,11,8,3,(301.534.111.657),Lưu chuyển tiền thuần từ hoạt động tài chính,1.0,s2,

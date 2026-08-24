@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+GEX,2024,1500290822832.0,GEX_financial_statements_2024_consolidated,9,6,4,1.500.290.822.832,Doanh thu hoạt động tài chính,1.0,s1,-189.61175644
+GEX,2024,1689902579272.0,GEX_financial_statements_2024_consolidated,9,7,4,1.689.902.579.272,Chi phí tài chính,1.0,s2,

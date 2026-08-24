@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+TTF,2016,-602515304.0,TTF_financial_statements_2016_consolidated,8,15,3,(602.515.304),14. (Lỗ) lợi nhuận khác,1.0,s1,2025.0
+TTF,2017,-14555567878.0,TTF_financial_statements_2017_consolidated,9,15,3,(14.555.567.878),14. Lỗ khác,1.0,s2,
+TTF,2023,-69981712952.0,TTF_financial_statements_2023_consolidated,57,10,1,(69.981.712.952),(Lỗ) LỢI NHUẬN KHÁC,1.0,s3,
+TTF,2025,43934748741.0,TTF_financial_statements_2025_consolidated,47,14,1,43.934.748.741,LỢI NHUẬN KHÁC,1.0,s4,

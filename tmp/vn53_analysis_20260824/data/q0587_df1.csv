@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+STB,2016,7267614000000.0,STB_financial_statements_2016_consolidated,17,2,1,7.267.614,- Bằng VND,1000000.0,s1,44.68988033761838
+STB,2022,10515502000000.0,STB_financial_statements_2022_consolidated,20,2,1,10.515.502,- Bằng VND,1000000.0,s2,

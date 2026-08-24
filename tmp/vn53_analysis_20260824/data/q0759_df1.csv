@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SCR,2025,174131397722.0,SCR_financial_statements_2025_consolidated,5,9,3,174.131.397.722,1. Phải thu ngắn hạn của khách hàng,1.0,s1,3.100151474578
+NVL,2025,3274282872300.0,NVL_financial_statements_2025_consolidated,7,8,3,3.274.282.872.300,1. Phải thu ngắn hạn của khách hàng,1.0,s2,

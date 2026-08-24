@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+QNS,2019,22820769751.0,QNS_financial_statements_2019_consolidated,5,28,4,22.820.769.751,Tài sản cố định vô hình,1.0,s1,22.820769751
+QNS,2020,16413623740.0,QNS_financial_statements_2020_consolidated,4,28,4,16.413.623.740,Tài sản cố định vô hình,1.0,s2,
+QNS,2021,11720950899.0,QNS_financial_statements_2021_consolidated,4,28,3,11.720.950.899,2. Tài sản cố định vô hình,1.0,s3,
+QNS,2023,16052366337.0,QNS_financial_statements_2023_consolidated,6,28,4,16.052.366.337,Tài sản cố định vô hình,1.0,s4,
+QNS,2024,17144652072.0,QNS_financial_statements_2024_consolidated,8,28,3,17.144.652.072,2. Tài sản cố định vô hình,1.0,s5,

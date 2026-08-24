@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MBB,2015,18919916000000.0,MBB_financial_statements_2015_consolidated,40,3,1,18.919.916,• Trái phiếu Chính phủ,1000000.0,s1,2022.0
+MBB,2016,22017624000000.0,MBB_financial_statements_2016_consolidated,40,3,1,22.017.624,• Trái phiếu Chính phủ,1000000.0,s2,
+MBB,2017,23334935000000.0,MBB_financial_statements_2017_consolidated,39,3,1,23.334.935,Trái phiếu Chính phủ,1000000.0,s3,
+MBB,2018,43802956000000.0,MBB_financial_statements_2018_consolidated,34,2,1,43.802.956,Trái phiếu Chính phủ,1000000.0,s4,
+MBB,2022,44620225000000.0,MBB_financial_statements_2022_consolidated,41,2,1,44.620.225,Trải phiếu Chính phủ,1000000.0,s5,

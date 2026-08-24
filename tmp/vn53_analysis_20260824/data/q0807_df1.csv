@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SHB,2021,41917000000.0,SHB_financial_statements_2021_separate,44,1,1,41.917,Dự phòng rủi ro chứng khoán sẵn sàng để bán (i),1000000.0,s1,986.0
+SSB,2021,40931000000.0,SSB_financial_statements_2021_separate,41,1,1,40.931,Dự phòng rủi ro chứng khoán sẵn sàng để bán (i),1000000.0,s2,

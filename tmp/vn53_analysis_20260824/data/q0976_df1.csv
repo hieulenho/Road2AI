@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MSN,2022,5071225625.0,MSN_financial_statements_2022_separate,35,1,1,5.071.225.625,Chi phí khấu hao và phân bổ,1.0,s1,3.997725707546522
+MSN,2022,322099246913.0,MSN_financial_statements_2022_separate,35,3,1,322.099.246.913,,1.0,s2,
+MPC,2022,9276739197.0,MPC_financial_statements_2022_separate,57,3,1,9.276.739.197,Chi phí khấu hao và phân bổ,1.0,s3,
+MPC,2022,104792026944.0,MPC_financial_statements_2022_separate,57,8,1,104.792.026.944,,1.0,s4,
+VNM,2022,45698243760.0,VNM_financial_statements_2022_separate,54,3,1,45.698.243.760,Chi phí khấu hao,1.0,s5,
+VNM,2022,859560797485.0,VNM_financial_statements_2022_separate,54,13,1,859.560.797.485,,1.0,s6,
+MML,2022,276480503.0,MML_financial_statements_2022_separate,40,4,1,276.480.503,Chi phí khấu hao và phân bổ,1.0,s7,
+MML,2022,111716043665.0,MML_financial_statements_2022_separate,40,7,1,111.716.043.665,,1.0,s8,

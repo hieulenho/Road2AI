@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DXG,2021,662693888918.0,DXG_financial_statements_2021_consolidated,5,16,3,662.693.888.918,1. Chi phí xây dựng cơ bản dở dang,1.0,s1,742.761050904
+DXS,2021,59957958239.0,DXS_financial_statements_2021_consolidated,7,16,3,59.957.958.239,1. Chi phí xây dựng cơ bản dở dang,1.0,s2,
+NLG,2021,20109203747.0,NLG_financial_statements_2021_consolidated,7,16,3,20.109.203.747,1. Chi phí xây dựng cơ bản dở dang,1.0,s3,

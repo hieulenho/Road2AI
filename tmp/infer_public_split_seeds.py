@@ -12,8 +12,10 @@ N = 1012
 HALF = 506
 
 # Membership constraints inferred from score deltas and source-backed changes.
-REQUIRED_PUBLIC = {755, 821, 659, 169}
-LIKELY_PRIVATE = {50, 59, 95, 298, 671, 787}
+REQUIRED_PUBLIC = {81, 89, 169, 580, 659, 703, 755, 821}
+# These questions have a source-audited VN53 answer and a demonstrably wrong
+# alternate, while swapping to that alternate left the public score unchanged.
+LIKELY_PRIVATE = {19, 29, 49, 50, 59, 95, 244, 248, 298, 318}
 XOR_PAIRS = [(67, 115), (587, 639), (660, 714)]
 CORE18 = {
     16, 35, 89, 111, 135, 166, 182, 194, 221,
@@ -35,6 +37,7 @@ def valid(mask: set[int], strict_private: bool) -> bool:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--start-seed", type=int, default=0)
     ap.add_argument("--max-seed", type=int, default=200_000)
     ap.add_argument("--strict-private", action="store_true")
     ap.add_argument("--method", choices=["numpy", "python"], default="numpy")
@@ -44,7 +47,7 @@ def main() -> None:
     matches: list[dict[str, object]] = []
     counts = Counter()
     universe = list(range(1, N + 1))
-    for seed in range(args.max_seed):
+    for seed in range(args.start_seed, args.max_seed):
         if args.method == "numpy":
             order = np.random.RandomState(seed).permutation(N) + 1
             halves = (set(order[:HALF].tolist()), set(order[HALF:].tolist()))
@@ -63,6 +66,7 @@ def main() -> None:
             matches.append(row)
     print(json.dumps({
         "method": args.method,
+        "start_seed": args.start_seed,
         "max_seed": args.max_seed,
         "strict_private": args.strict_private,
         "matches": matches[:200],

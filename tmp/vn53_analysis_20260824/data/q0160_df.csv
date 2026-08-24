@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001304,VPB,2025,consolidated,VPB_financial_statements_2025_consolidated,85,4,1,1,Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông của Ngân hàng (Triệu đồng),Năm 2025 | Năm 2024,Năm 2025,Mệnh giá của mỗi cổ phiếu của Ngân hàng là 10.000 VND. 26. THU NHẬP TRÊN CÓ PHIÉU,23.989.930,23989930.0,1000000.0,1000000.0,23989930.0,49.295913848631244

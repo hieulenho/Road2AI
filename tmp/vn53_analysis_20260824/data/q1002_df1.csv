@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+AAA,2016,23874478344.0,AAA_financial_statements_2016_separate,5,9,2,23.874.478.344,Chỉ phí lãi vay,1.0,s1,2.0
+NKG,2016,141639235578.0,NKG_financial_statements_2016_separate,12,8,3,141.639.235.578,- Chi phí lãi vay,1.0,s2,
+DCM,2016,203937110047.0,DCM_financial_statements_2016_separate,8,8,2,203.937.110.047,Chi phí lãi vay,1.0,s3,
+DPM,2016,4473655664.0,DPM_financial_statements_2016_separate,44,2,1,4.473.655.664,Chi phí lãi vay,1.0,s4,

@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BID,2022,196743000000.0,BID_financial_statements_2022_separate,5,11,4,196.743,V.,1000000.0,s1,427.778879045252
+BID,2022,1038368000000.0,BID_financial_statements_2022_separate,5,11,3,1.038.368,V.,1000000.0,s2,

@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+PNJ,2022,-433046785694.0,PNJ_financial_statements_2022_consolidated,4,8,3,(433.046.785.694),Giá trị khấu hao lũy kế,1.0,s1,45.07731447704258
+PNJ,2022,672781337441.0,PNJ_financial_statements_2022_consolidated,4,7,3,672.781.337.441,Nguyên giá,1.0,s2,
+MWG,2022,-11188183603219.0,MWG_financial_statements_2022_consolidated,6,26,3,(11.188.183.603.219),Giá trị khấu hao lũy kế,1.0,s3,
+MWG,2022,20841513609195.0,MWG_financial_statements_2022_consolidated,6,25,3,20.841.513.609.195,Nguyên giá,1.0,s4,
+HHS,2022,-12059071393.0,HHS_financial_statements_2022_consolidated,2,24,3,(12.059.071.393),- Giá trị hao mòn lũy kế (*),1.0,s5,
+HHS,2022,31692909172.0,HHS_financial_statements_2022_consolidated,2,23,3,31.692.909.172,- Nguyên giá,1.0,s6,
+HUT,2022,-1812165288740.0,HUT_financial_statements_2022_consolidated,5,27,4,(1.812.165.288.740),Giá trị hao mòn lũy kế,1.0,s7,
+HUT,2022,7484988382760.0,HUT_financial_statements_2022_consolidated,5,26,4,7.484.988.382.760,Nguyên giá,1.0,s8,

@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DNH,2016,2280531555036.0,DNH_financial_statements_2016_separate,4,2,3,2.280.531.555.036,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s1,0.377706766887543
+DNH,2016,5326969042531.0,DNH_financial_statements_2016_separate,4,16,3,5.326.969.042.531,Vốn chủ sở hữu,1.0,s2,
+DNH,2017,1810499391834.0,DNH_financial_statements_2017_separate,4,2,3,1.810.499.391.834,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s3,
+DNH,2017,5520036984658.0,DNH_financial_statements_2017_separate,4,17,3,5.520.036.984.658,Vốn chủ sở hữu,1.0,s4,
+DNH,2018,2889648547677.0,DNH_financial_statements_2018_separate,4,2,3,2.889.648.547.677,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s5,
+DNH,2018,5778724423586.0,DNH_financial_statements_2018_separate,4,18,3,5.778.724.423.586,Vốn chủ sở hữu,1.0,s6,
+DNH,2021,2173243309692.0,DNH_financial_statements_2021_separate,4,2,3,2.173.243.309.692,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s7,
+DNH,2021,6415089923086.0,DNH_financial_statements_2021_separate,4,15,3,6.415.089.923.086,Vốn chủ sở hữu,1.0,s8,
+DNH,2022,1874024056226.0,DNH_financial_statements_2022_separate,3,2,3,1.874.024.056.226,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s9,
+DNH,2022,6382558876724.0,DNH_financial_statements_2022_separate,3,15,3,6.382.558.876.724,Vốn chủ sở hữu,1.0,s10,

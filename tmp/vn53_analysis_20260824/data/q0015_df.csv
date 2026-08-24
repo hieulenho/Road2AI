@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001098,MPC,2021,parent,MPC_financial_statements_2021_separate,61,12,2,1,Chu Thị Bình,2021VND | 2020VND > Hội đồng Quản trị,2021VND | Hội đồng Quản trị,"Các nghiệp vụ với nhân sự chủ chốt Tổng lương, thường và trợ cấp trả cho các nhân sự chủ chốt trong năm như sau:",150.000.000,150000000.0,1.0,1000000.0,150.0,15.752884615384614

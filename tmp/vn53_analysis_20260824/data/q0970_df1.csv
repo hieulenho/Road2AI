@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+ACB,2015,1641434000000.0,ACB_financial_statements_2015_consolidated,88,14,4,1.641.434,Số dư tại ngày 31 tháng 12 năm 2015,1000000.0,s1,11.3467582392665
+ACB,2015,12787542000000.0,ACB_financial_statements_2015_consolidated,88,14,7,12.787.542,Số dư tại ngày 31 tháng 12 năm 2015,1000000.0,s2,
+ACB,2021,4744306000000.0,ACB_financial_statements_2021_consolidated,66,12,5,4.744.306,Tại ngày 31 tháng 12 năm 2021,1000000.0,s3,
+ACB,2021,44900909000000.0,ACB_financial_statements_2021_consolidated,66,12,8,44.900.909,Tại ngày 31 tháng 12 năm 2021,1000000.0,s4,
+ACB,2023,7660332000000.0,ACB_financial_statements_2023_consolidated,67,14,4,7.660.332,Tại ngày 31 tháng 12 năm 2023,1000000.0,s5,
+ACB,2023,70955961000000.0,ACB_financial_statements_2023_consolidated,67,14,7,70.955.961,Tại ngày 31 tháng 12 năm 2023,1000000.0,s6,
+ACB,2025,10575595000000.0,ACB_financial_statements_2025_consolidated,77,13,4,10.575.595,Tại ngày 31 tháng 12 năm 2025,1000000.0,s7,
+ACB,2025,94519719000000.0,ACB_financial_statements_2025_consolidated,77,13,7,94.519.719,Tại ngày 31 tháng 12 năm 2025,1000000.0,s8,

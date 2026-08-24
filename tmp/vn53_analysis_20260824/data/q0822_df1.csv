@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+ASM,2016,3188673987.0,ASM_financial_statements_2016_separate,9,12,3,3.188.673.987,11. Thu nhập khác,1.0,s1,2021.0
+ASM,2021,180044077757.0,ASM_financial_statements_2021_separate,8,12,3,180.044.077.757,11. Thu nhập khác,1.0,s2,
+ASM,2022,3734568921.0,ASM_financial_statements_2022_separate,10,12,3,3.734.568.921,11. Thu nhập khác,1.0,s3,
+ASM,2024,120796333431.0,ASM_financial_statements_2024_separate,92,12,4,120.796.333.431,Thu nhập khác,1.0,s4,

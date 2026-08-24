@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001101,DIG,2023,consolidated,DIG_financial_statements_2023_consolidated,51,8,6,1,Giá vốn hàng hóa,Năm nayVND | Năm trướcVND,Năm nayVND,4. Giá vốn hàng bán,37.015.620.950,37015620950.0,1.0,1000000000.0,37.01562095,41.64407894736842

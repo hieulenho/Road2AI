@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+FOX,2016,654643132429.0,FOX_financial_statements_2016_separate,22,2,5,654.643.132.429,Vay dài hạn (VND),1.0,s1,654.643132429
+FOX,2017,174997959102.0,FOX_financial_statements_2017_separate,24,2,5,174.997.959.102,Vay dài hạn (VND),1.0,s2,
+FOX,2018,237714628160.0,FOX_financial_statements_2018_separate,23,2,5,237.714.628.160,Vay dài hạn,1.0,s3,
+FOX,2019,499997472295.0,FOX_financial_statements_2019_separate,24,3,5,499.997.472.295,Vay dài hạn,1.0,s4,
+FOX,2020,530883851240.0,FOX_financial_statements_2020_separate,24,10,6,530.883.851.240,Vay dài hạn,1.0,s5,

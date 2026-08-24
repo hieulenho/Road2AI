@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HAG,2018,6130524711000.0,HAG_financial_statements_2018_consolidated,25,6,2,6.130.524.711,Cho vay dài hạn bên liên quan (TM số 34.2),1000.0,s1,94.89880825834054
+HAG,2018,329540303000.0,HAG_financial_statements_2018_consolidated,28,17,1,329.540.303,Phải thu dài hạn các bên liên quan (TM số 34.2),1000.0,s2,

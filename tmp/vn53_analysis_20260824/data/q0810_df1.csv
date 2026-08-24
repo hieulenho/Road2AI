@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VCB,2025,44283911000000.0,VCB_financial_statements_2025_separate,73,1,1,44.283.911,Chi phí lãi tiền gửi,1000000.0,s1,15531993.0
+VPB,2025,28751918000000.0,VPB_financial_statements_2025_separate,78,1,1,28.751.918,Trả lãi tiền gửi,1000000.0,s2,

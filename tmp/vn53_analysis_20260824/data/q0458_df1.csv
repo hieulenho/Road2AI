@@ -1,0 +1,15 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+1467663040362.0,CEO_financial_statements_2022_consolidated,3,12,3,IV Hàng tồn kho,1.467.663.040.362,CEO,2022,inventory,s1,5.238051562723994
+2426012282336.0,CEO_financial_statements_2022_consolidated,4,2,4,Nợ ngắn hạn,2.426.012.282.336,CEO,2022,current_liabilities,s2,
+3777947515921.0,HPX_financial_statements_2022_consolidated,5,14,3,IV. Hàng tồn kho,3.777.947.515.921,HPX,2022,inventory,s3,
+3831578569730.0,HPX_financial_statements_2022_consolidated,6,2,4,Nợ ngắn hạn,3.831.578.569.730,HPX,2022,current_liabilities,s4,
+12330243270680.0,KBC_financial_statements_2022_consolidated,6,15,3,IV. Hàng tồn kho,12.330.243.270.680,KBC,2022,inventory,s5,
+10684165020680.0,KBC_financial_statements_2022_consolidated,8,2,3,I. Nợ ngắn hạn,10.684.165.020.680,KBC,2022,current_liabilities,s6,
+1793556155482.0,SNZ_financial_statements_2022_consolidated,9,13,3,IV. Hàng tồn kho,1.793.556.155.482,SNZ,2022,inventory,s7,
+3643136405687.0,SNZ_financial_statements_2022_consolidated,11,2,3,I. Nợ ngắn hạn,3.643.136.405.687,SNZ,2022,current_liabilities,s8,
+98587507000000.0,VIC_financial_statements_2022_consolidated,4,14,3,IV. Hàng tồn kho,98.587.507,VIC,2022,inventory,s9,
+298411509000000.0,VIC_financial_statements_2022_consolidated,6,2,3,I. Nợ ngắn hạn,298.411.509,VIC,2022,current_liabilities,s10,
+1925600120529.0,VPI_financial_statements_2022_consolidated,5,13,3,IV. Hàng tồn kho,1.925.600.120.529,VPI,2022,inventory,s11,
+2636373189554.0,VPI_financial_statements_2022_consolidated,7,2,3,I. Nợ ngắn hạn,2.636.373.189.554,VPI,2022,current_liabilities,s12,
+1178127000000.0,VRE_financial_statements_2022_consolidated,4,14,3,Hàng tồn kho,1.178.127,VRE,2022,inventory,s13,
+5819458000000.0,VRE_financial_statements_2022_consolidated,6,3,3,Nợ ngắn hạn,5.819.458,VRE,2022,current_liabilities,s14,

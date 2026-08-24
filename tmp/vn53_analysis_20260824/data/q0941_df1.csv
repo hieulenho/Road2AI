@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NLG,2017,130863796545.0,NLG_financial_statements_2017_separate,55,5,3,130.863.796.545,,1.0,s1,1150.344202519
+NLG,2018,208863028787.0,NLG_financial_statements_2018_separate,56,4,3,208.863.028.787,,1.0,s2,
+NLG,2021,1150344202519.0,NLG_financial_statements_2021_separate,59,5,3,1.150.344.202.519,,1.0,s3,
+NLG,2025,523787255020.0,NLG_financial_statements_2025_separate,63,5,3,523.787.255.020,,1.0,s4,

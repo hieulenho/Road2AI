@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+16072701797984.0,GEE_financial_statements_2020_consolidated,11,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,16.072.701.797.984,GEE,2020,net_revenue,s1,1.0
+18714205861145.0,GEE_financial_statements_2021_consolidated,6,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),18.714.205.861.145,GEE,2021,net_revenue,s2,
+17948712922436.0,GEX_financial_statements_2020_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,17.948.712.922.436,GEX,2020,net_revenue,s3,
+28578398634449.0,GEX_financial_statements_2021_consolidated,9,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),28.578.398.634.449,GEX,2021,net_revenue,s4,
+1919268958670.0,SAM_financial_statements_2020_consolidated,8,3,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,1.919.268.958.670,SAM,2020,net_revenue,s5,
+1888696538007.0,SAM_financial_statements_2021_consolidated,7,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,1.888.696.538.007,SAM,2021,net_revenue,s6,
+1954969996675.0,GEE_financial_statements_2020_consolidated,11,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,1.954.969.996.675,GEE,2020,gross_profit,s7,
+1830122129216.0,GEE_financial_statements_2021_consolidated,6,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),1.830.122.129.216,GEE,2021,gross_profit,s8,
+2627189865989.0,GEX_financial_statements_2020_consolidated,8,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,2.627.189.865.989,GEX,2020,gross_profit,s9,
+4373021295399.0,GEX_financial_statements_2021_consolidated,9,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),4.373.021.295.399,GEX,2021,gross_profit,s10,
+138129870242.0,SAM_financial_statements_2020_consolidated,8,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,138.129.870.242,SAM,2020,gross_profit,s11,
+80755846505.0,SAM_financial_statements_2021_consolidated,7,6,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,80.755.846.505,SAM,2021,gross_profit,s12,

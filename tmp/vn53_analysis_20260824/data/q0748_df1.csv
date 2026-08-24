@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MBB,2018,2160451381.0,MBB_financial_statements_2018_consolidated,68,5,1,2.160.451.381,Số lượng cổ phiếu đang lưu hành,1.0,s1,913.286251
+ACB,2018,1247165130.0,ACB_financial_statements_2018_consolidated,64,4,1,1.247.165.130,Cổ phiếu phổ thông đang lưu hành,1.0,s2,

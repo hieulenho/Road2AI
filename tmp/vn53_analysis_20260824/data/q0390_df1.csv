@@ -1,0 +1,10 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+86674276272995.0,HPG_financial_statements_2024_consolidated,3,2,3,Tài sản ngắn hạn\( (100 = 110 + 120 + 130 + 140 + 150) \),86.674.276.272.995,HPG,2024,current_assets,s1,6.690482934519
+46091222189472.0,HPG_financial_statements_2024_consolidated,3,15,3,Hàng tồn kho,46.091.222.189.472,HPG,2024,inventory,s2,
+75225243262689.0,HPG_financial_statements_2024_consolidated,5,3,3,Nợ ngắn hạn,75.225.243.262.689,HPG,2024,current_liabilities,s3,
+14174354519923.0,HSG_financial_statements_2024_consolidated,2,2,3,TÀI SẢN NGĂN HẠN,14.174.354.519.923,HSG,2024,current_assets,s4,
+9712417100426.0,HSG_financial_statements_2024_consolidated,2,13,3,Hàng tồn kho,9.712.417.100.426,HSG,2024,inventory,s5,
+8632413967195.0,HSG_financial_statements_2024_consolidated,3,3,3,Nợ ngắn hạn,8.632.413.967.195,HSG,2024,current_liabilities,s6,
+10202370500547.0,NKG_financial_statements_2024_consolidated,2,2,3,TÀI SẢN NGẮN HẠN,10.202.370.500.547,NKG,2024,current_assets,s7,
+6690482934519.0,NKG_financial_statements_2024_consolidated,2,14,3,Hàng tồn kho,6.690.482.934.519,NKG,2024,inventory,s8,
+7620886731385.0,NKG_financial_statements_2024_consolidated,4,3,3,Nợ ngắn hạn,7.620.886.731.385,NKG,2024,current_liabilities,s9,

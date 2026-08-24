@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000029,NVL,2016,parent,NVL_financial_statements_2016_separate,8,19,10,3,Trả trước cho người bán ngắn hạn,,Tại ngày 31 tháng 12 năm | 2016 VND,===== PAGE 8 ===== CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ÓC NO VA Mẫu số B 01 – DN BÀNG CÂN ĐỐI KÉ TOÁN RIÊNG,168.329.639.170,168329639170.0,1.0,100000000000.0,1.6832963917,37.607155521783184

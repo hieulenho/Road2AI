@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SGB,2021,868118000000.0,SGB_financial_statements_2021_consolidated,45,1,1,868.118,Trả lãi tiền gửi,1000000.0,s1,3.3248491487626666
+SGB,2021,944998000000.0,SGB_financial_statements_2021_consolidated,10,2,2,944.998,2. Chi phí lãi và các chi phí tương tự,1000000.0,s2,
+NVB,2021,4077243000000.0,NVB_financial_statements_2021_consolidated,37,1,1,4.077.243,Trả lãi tiền gửi,1000000.0,s3,
+NVB,2021,4283296000000.0,NVB_financial_statements_2021_consolidated,7,2,2,4.283.296,2. Chỉ phí lãi và các chỉ phí tương tự,1000000.0,s4,

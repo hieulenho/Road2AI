@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+QNS,2019,785326185604.0,QNS_financial_statements_2019_consolidated,7,9,4,785.326.185.604,Chi phí bán hàng,1.0,s1,868.29700264
+QNS,2020,654113883340.0,QNS_financial_statements_2020_consolidated,6,9,3,654.113.883.340,8. Chi phí bán hàng,1.0,s2,
+QNS,2021,693932847200.0,QNS_financial_statements_2021_consolidated,6,9,4,693.932.847.200,Chi phí bán hàng,1.0,s3,
+QNS,2022,868297002640.0,QNS_financial_statements_2022_consolidated,8,9,4,868.297.002.640,Chi phí bán hàng,1.0,s4,
+QNS,2023,805491960579.0,QNS_financial_statements_2023_consolidated,8,9,4,805.491.960.579,Chi phí bán hàng,1.0,s5,

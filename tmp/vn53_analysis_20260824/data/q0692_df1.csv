@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BID,2018,-11493795000000.0,BID_financial_statements_2018_separate,3,13,2,(11.493.795),Dự phòng rủi ro cho vay khách hàng,1000000.0,s1,1.2029640327423596
+BID,2018,955456247000000.0,BID_financial_statements_2018_separate,3,12,2,955.456.247,Cho vay khách hàng,1000000.0,s2,

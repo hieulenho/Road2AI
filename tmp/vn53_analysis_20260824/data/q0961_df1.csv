@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BAF,2020,988720909873.0,BAF_financial_statements_2020_separate,4,18,4,988.720.909.873,IV.,1.0,s1,1721.356683254
+BAF,2022,730673889982.0,BAF_financial_statements_2022_separate,5,16,3,730.673.889.982,IV. Hàng tồn kho,1.0,s2,
+BAF,2024,1508776640729.0,BAF_financial_statements_2024_separate,4,13,3,1.508.776.640.729,IV. Hàng tồn kho,1.0,s3,
+BAF,2025,1721356683254.0,BAF_financial_statements_2025_separate,5,13,3,1.721.356.683.254,IV. Hàng tồn kho,1.0,s4,

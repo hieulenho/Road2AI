@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001299,VNM,2023,consolidated,VNM_financial_statements_2023_consolidated,73,13,2,1,Ông Nguyễn Hạnh Phúc – Chủ tịch,2023Triệu VND | 2022Triệu VND > Thành viên Hội đồng quản trịTổng thù lao,2023Triệu VND | Thành viên Hội đồng quản trịTổng thù lao,Thù lao và lương của người quản lý chủ chốt,3.123,3123.0,1000000.0,1000000.0,3123.0,29.891291982665223

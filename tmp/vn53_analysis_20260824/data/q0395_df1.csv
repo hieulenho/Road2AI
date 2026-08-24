@@ -1,0 +1,10 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+4245981967388.0,KBC_financial_statements_2021_consolidated,9,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,4.245.981.967.388,KBC,2021,net_revenue,s1,-128.1281827024962
+950266163499.0,KBC_financial_statements_2022_consolidated,10,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,950.266.163.499,KBC,2022,net_revenue,s2,
+5618475347527.0,KBC_financial_statements_2023_consolidated,10,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,5.618.475.347.527,KBC,2023,net_revenue,s3,
+2775773466955.0,KBC_financial_statements_2024_consolidated,5,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,2.775.773.466.955,KBC,2024,net_revenue,s4,
+6687125604053.0,KBC_financial_statements_2025_consolidated,8,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,6.687.125.604.053,KBC,2025,net_revenue,s5,
+-1217558766128.0,KBC_financial_statements_2022_consolidated,11,15,3,Lưu chuyển tiền thuần sử dụng vào hoạt động kinh doanh,(1.217.558.766.128),KBC,2022,cfo,s6,
+3002355856007.0,KBC_financial_statements_2023_consolidated,11,14,3,Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh,3.002.355.856.007,KBC,2023,cfo,s7,
+1151833148407.0,KBC_financial_statements_2024_consolidated,6,14,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.151.833.148.407,KBC,2024,cfo,s8,
+-17343896115028.0,KBC_financial_statements_2025_consolidated,11,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(17.343.896.115.028),KBC,2025,cfo,s9,

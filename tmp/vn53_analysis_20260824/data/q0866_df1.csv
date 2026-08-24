@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SJG,2018,386945215579.0,SJG_financial_statements_2018_consolidated,8,5,4,386.945.215.579,Thuế và các khoản phải nộp Nhà nước,1.0,s1,2018.0
+SJG,2019,307749988310.0,SJG_financial_statements_2019_consolidated,8,5,4,307.749.988.310,Thuế và các khoản phải nộp Nhà nước,1.0,s2,
+SJG,2020,249462096512.0,SJG_financial_statements_2020_consolidated,8,6,4,249.462.096.512,Thuế và các khoản phải nộp Nhà nước,1.0,s3,
+SJG,2021,249374016597.0,SJG_financial_statements_2021_consolidated,8,5,4,249.374.016.597,Thuế và các khoản phải nộp Nhà nước,1.0,s4,

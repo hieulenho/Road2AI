@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HPG,2016,1741764867.0,HPG_financial_statements_2016_separate,3,21,3,1.741.764.867,Chi phí trả trước dài hạn,1.0,s1,31.2965103712
+HPG,2017,6481123161.0,HPG_financial_statements_2017_separate,3,23,3,6.481.123.161,Chi phí trả trước dài hạn,1.0,s2,
+HPG,2018,93422647632.0,HPG_financial_statements_2018_separate,4,20,3,93.422.647.632,Chi phí trả trước dài hạn,1.0,s3,
+HPG,2020,51392217827.0,HPG_financial_statements_2020_separate,3,22,3,51.392.217.827,Chi phí trả trước dài hạn,1.0,s4,
+HPG,2024,3444798369.0,HPG_financial_statements_2024_separate,3,20,3,3.444.798.369,Chi phí trả trước dài hạn,1.0,s5,

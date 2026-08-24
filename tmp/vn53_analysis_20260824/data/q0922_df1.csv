@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KHG,2025,80410688295.0,KHG_financial_statements_2025_consolidated,7,7,3,80.410.688.295,7. Chi phí tài chính,1.0,s1,7.08302047856
+PDR,2025,349041455934.0,PDR_financial_statements_2025_consolidated,7,7,3,349.041.455.934,Chi phí tài chính,1.0,s2,
+HPX,2025,175167439806.0,HPX_financial_statements_2025_consolidated,7,7,4,175.167.439.806,7.,1.0,s3,
+DXS,2025,-103682463821.0,DXS_financial_statements_2025_consolidated,7,7,3,(103.682.463.821)(96.217.032.272),7. Chi phí tài chính Trong đó: Chi phí lãi vay,1.0,s4,

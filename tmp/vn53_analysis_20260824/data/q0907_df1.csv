@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NVB,2016,298.0,NVB_financial_statements_2016_consolidated,39,8,1,298,- Số lượng cổ phiếu đang lưu hành,1.0,s1,2019.0
+NVB,2019,407.0,NVB_financial_statements_2019_consolidated,36,8,1,407,- Số lượng cổ phiếu đang lưu hành,1.0,s2,
+NVB,2020,407.0,NVB_financial_statements_2020_consolidated_1,38,8,1,407,- Số lượng cổ phiếu đang lưu hành,1.0,s3,
+NVB,2021,407.0,NVB_financial_statements_2021_consolidated,35,8,1,407,- Số lượng cổ phiếu đang lưu hành,1.0,s4,

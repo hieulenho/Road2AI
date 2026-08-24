@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VCB,2015,1495741000000.0,VCB_financial_statements_2015_consolidated,89,3,2,1.495.741,Thuế TNDN hiện hành,1000000.0,s1,8407.108
+VCB,2017,2234430000000.0,VCB_financial_statements_2017_consolidated,86,3,2,2.234.430,Thuế TNDN hiện hành,1000000.0,s2,
+VCB,2018,3652243000000.0,VCB_financial_statements_2018_consolidated,83,3,2,3.652.243,Thuế TNDN hiện hành,1000000.0,s3,
+VCB,2022,8407108000000.0,VCB_financial_statements_2022_consolidated,90,3,2,8.407.108,Thuế TNDN hiện hành,1000000.0,s4,
+VCB,2023,8083645000000.0,VCB_financial_statements_2023_consolidated,101,3,2,8.083.645,Thuế TNDN,1000000.0,s5,

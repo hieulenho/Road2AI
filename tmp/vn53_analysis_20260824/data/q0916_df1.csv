@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+FOX,2016,505128057529.0,FOX_financial_statements_2016_separate,4,15,3,505.128.057.529,1. Chi phí trả trước ngắn hạn,1.0,s1,816.145049381
+FOX,2018,816145049381.0,FOX_financial_statements_2018_separate,4,14,4,816.145.049.381,1.,1.0,s2,
+FOX,2019,508408558838.0,FOX_financial_statements_2019_separate,4,14,4,508.408.558.838,1.,1.0,s3,
+FOX,2020,428415558326.0,FOX_financial_statements_2020_separate,1,16,4,428.415.558.326,1.,1.0,s4,

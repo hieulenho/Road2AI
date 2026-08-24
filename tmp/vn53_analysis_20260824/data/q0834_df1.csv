@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+GAS,2015,64300204038285.0,GAS_financial_statements_2015_consolidated,6,3,3,64.300.204.038.285,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s1,135.129055328395
+GAS,2016,59076193175661.0,GAS_financial_statements_2016_consolidated,6,3,3,59.076.193.175.661,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s2,
+GAS,2017,64522440976234.0,GAS_financial_statements_2017_consolidated,6,3,3,64.522.440.976.234,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s3,
+GAS,2025,135129055328395.0,GAS_financial_statements_2025_consolidated,6,3,4,135.129.055.328.395,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s4,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000623,SSH,2023,consolidated,SSH_financial_statements_2023_consolidated,27,16,10,3,Trích khấu hao trong năm,GIÁ TRỊ HAO MÒN LỦY KẾ,Tổng | VND | NGUYÊN GIÁ | GIÁ TRỊ HAO MÒN LỦY KẾ,"15. TĂNG, GIẢM BẮT ĐỘNG SẢN ĐẦU TƯ BẮT ĐỘNG SẢN ĐẦU TƯ' CHO THUÊ",4.900.612.861,4900612861.0,1.0,1000000000.0,4.900612861,24.79910862354892

@@ -1,0 +1,17 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+4901426673890.0,MWG_financial_statements_2021_consolidated,7,19,3,18. Lợi nhuận sau thuế TNDN,4.901.426.673.890,MWG,2021,npat,s1,1.7145059397391298
+4101714424939.0,MWG_financial_statements_2022_consolidated,8,19,3,18. Lợi nhuận sau thuế TNDN,4.101.714.424.939,MWG,2022,npat,s2,
+167829154939.0,MWG_financial_statements_2023_consolidated,7,18,3,17. Lợi nhuận sau thuế TNDN,167.829.154.939,MWG,2023,npat,s3,
+3733288228720.0,MWG_financial_statements_2024_consolidated,7,19,3,18. Lợi nhuận sau thuế TNDN,3.733.288.228.720,MWG,2024,npat,s4,
+171390435922.0,MWG_financial_statements_2021_consolidated,8,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,171.390.435.922,MWG,2021,cfo,s5,
+7976298801645.0,MWG_financial_statements_2022_consolidated,9,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,7.976.298.801.645,MWG,2022,cfo,s6,
+3435827176070.0,MWG_financial_statements_2023_consolidated,8,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,3.435.827.176.070,MWG,2023,cfo,s7,
+8517332706742.0,MWG_financial_statements_2024_consolidated,8,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,8.517.332.706.742,MWG,2024,cfo,s8,
+51955257770657.0,MWG_financial_statements_2021_consolidated,5,1,3,A. TÀI SẢN NGĂN HẠN,51.955.257.770.657,MWG,2021,current_assets,s9,
+42593158815096.0,MWG_financial_statements_2021_consolidated,6,2,3,I. Nợ ngắn hạn,42.593.158.815.096,MWG,2021,current_liabilities,s10,
+44577607228189.0,MWG_financial_statements_2022_consolidated,6,1,3,A. TÀI SẢN NGẮN HẠN,44.577.607.228.189,MWG,2022,current_assets,s11,
+26000264096473.0,MWG_financial_statements_2022_consolidated,7,2,3,I. Nợ ngắn hạn,26.000.264.096.473,MWG,2022,current_liabilities,s12,
+51950337976047.0,MWG_financial_statements_2023_consolidated,5,1,3,A. TÀI SẢN NGẮN HẠN,51.950.337.976.047,MWG,2023,current_assets,s13,
+30765260553972.0,MWG_financial_statements_2023_consolidated,6,2,3,I. Nợ ngắn hạn,30.765.260.553.972,MWG,2023,current_liabilities,s14,
+65836422620040.0,MWG_financial_statements_2024_consolidated,5,1,3,A. TÀI SẢN NGẮN HẠN,65.836.422.620.040,MWG,2024,current_assets,s15,
+42316198897749.0,MWG_financial_statements_2024_consolidated,6,2,3,I. Nợ ngắn hạn,42.316.198.897.749,MWG,2024,current_liabilities,s16,

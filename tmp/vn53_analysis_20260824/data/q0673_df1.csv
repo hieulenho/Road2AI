@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SCR,2025,4340015118010.0,SCR_financial_statements_2025_separate,4,1,3,4.340.015.118.010,A. TÀI SẢN NGĂN HẠN,1.0,s1,39.18741975141434
+SCR,2025,11075021385794.0,SCR_financial_statements_2025_separate,7,11,3,11.075.021.385.794,TỔNG CỘNG NGUỒN VỐN,1.0,s2,

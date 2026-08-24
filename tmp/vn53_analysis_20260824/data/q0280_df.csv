@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000403,HDB,2022,consolidated,HDB_financial_statements_2022_consolidated,19,10,2,1,- Bằng VND | -,31.12.2022Triệu đồng | 31.12.2021Triệu đồng > Cho vay tái tài trợ về nghiệp vụ UPAS L/C (*),31.12.2022Triệu đồng,5.2 Cho vay các TCTD khác,8.634.940,8634940.0,1000000.0,1000000.0,8634940.0,23.533622320302648

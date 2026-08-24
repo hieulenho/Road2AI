@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BSR,2017,-96412876496.0,BSR_financial_statements_2017_consolidated,2,15,3,(96.412.876.496),2. Dự phòng giảm giá hàng tồn kho,1.0,s1,0.5242336800515837
+BSR,2017,8139311457689.0,BSR_financial_statements_2017_consolidated,2,14,3,8.139.311.457.689,1. Hàng tồn kho,1.0,s2,
+BSR,2019,-20033774981.0,BSR_financial_statements_2019_consolidated,3,15,4,(20.033.774.981),2.,1.0,s3,
+BSR,2019,8535271500226.0,BSR_financial_statements_2019_consolidated,3,14,4,8.535.271.500.226,1.,1.0,s4,
+BSR,2021,-18489988587.0,BSR_financial_statements_2021_consolidated,4,15,4,(18.489.988.587),2.,1.0,s5,
+BSR,2021,10376585353744.0,BSR_financial_statements_2021_consolidated,4,14,4,10.376.585.353.744,1.,1.0,s6,
+BSR,2024,0.0,BSR_financial_statements_2024_consolidated,5,15,4,-,2.,1.0,s7,
+BSR,2024,15890950395456.0,BSR_financial_statements_2024_consolidated,5,14,4,15.890.950.395.456,1.,1.0,s8,
+BSR,2025,-131015917907.0,BSR_financial_statements_2025_consolidated,4,13,4,(131.015.917.907),2.,1.0,s9,
+BSR,2025,12797925022543.0,BSR_financial_statements_2025_consolidated,4,12,4,12.797.925.022.543,1.,1.0,s10,

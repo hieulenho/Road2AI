@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000574,NKG,2017,consolidated,NKG_financial_statements_2017_consolidated,29,5,4,1,Số dư cuối năm,2017VNĐ | 2016VNĐ,2017VNĐ,Biến động chi phí xây dựng cơ bản đồ dang trong năm như sau:,132.823.233.933,132823233933.0,1.0,100000000000.0,1.32823233933,25.21388888888889

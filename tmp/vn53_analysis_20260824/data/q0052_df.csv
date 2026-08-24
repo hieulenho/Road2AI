@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000705,NAB,2024,consolidated,NAB_financial_statements_2024_consolidated,52,10,1,1,Phải thu trong nghiệp vụ chuyển tiền nhanh,Số cuối nămTriệu đồng | Số đầu nămTriệu đồng,Số cuối nămTriệu đồng,16. TÀI SẢN CÓ KHÁC 16.1 Các khoản phải thu,440.883,440883.0,1000000.0,1000000.0,440883.0,23.790277777777774

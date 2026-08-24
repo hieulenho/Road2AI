@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000307,SCR,2023,parent,SCR_financial_statements_2023_separate,8,19,15,3,14. Tổng lợi nhuận kế toán trước thuế TNDN,,Năm nay,===== PAGE 11 ===== Công ty Cổ phần Địa ốc Sài Gòn Thương Tín B02-DN BÁO CÁO KÊT QUẢ HOẠT ĐỘNG KINH DOANH RIÊNG cho năm tài chính kết thúc ngày 31 tháng 12 năm 2023 VND,142.590.606.684,142590606684.0,1.0,1000000000.0,142.590606684,38.26338357588357

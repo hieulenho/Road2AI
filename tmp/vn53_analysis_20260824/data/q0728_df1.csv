@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DBC,2018,80843120486.0,DBC_financial_statements_2018_separate,52,2,1,80.843.120.486,Các khoản chi phí bán hàng phát sinh trong năm,1.0,s1,4.096700060870241
+DBC,2018,150135325192.0,DBC_financial_statements_2018_separate,52,8,1,150.135.325.192,Các khoản chi phí quản lý doanh nghiệp phát sinh trong năm,1.0,s2,
+DBC,2018,5638158572657.0,DBC_financial_statements_2018_separate,49,11,1,5.638.158.572.657,Doanh thu thuần,1.0,s3,

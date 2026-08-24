@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000306,BAF,2023,parent,BAF_financial_statements_2023_separate,10,10,9,3,Tiền và các khoản tương đương tiền cuối năm,,Năm nay,===== PAGE 13 ===== Công ty Cổ phần Nông nghiệp BAF Việt Nam B03-DN BÁO CÁO LƯU CHUYÊN TIÊN TỆ RIÊNG (tiếp theo) cho năm tài chính kết thúc ngày 31 tháng 12 năm 2023 VND,81.566.921.890,81566921890.0,1.0,1000000000.0,81.56692189,22.678144645451106

@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NVB,2016,2709225000000.0,NVB_financial_statements_2016_separate,32,1,1,2.709.225,- Các khoản phải thu bên ngoài,1000000.0,s1,6949.0
+VIB,2016,2702276000000.0,VIB_financial_statements_2016_separate,46,3,1,2.702.276,Các khoản phải thu bên ngoài,1000000.0,s2,

@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MSR,2015,-417067012000.0,MSR_financial_statements_2015_separate,6,19,4,(417.067.012),Lưu chuyển tiền thuần từhoạt động kinh doanh,1000.0,s1,-106.069040067
+HPG,2015,-45061179652.0,HPG_financial_statements_2015_separate,7,18,3,(45.061.179.652),Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s2,
+AAA,2015,29663853542.0,AAA_financial_statements_2015_separate,5,18,2,29.663.853.542,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s3,
+DCM,2015,326395298043.0,DCM_financial_statements_2015_separate,7,19,2,326.395.298.043,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s4,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001692,KLB,2019,consolidated,KLB_financial_statements_2019_consolidated,75,8,3,3,Chi phí hoạt động,STT | Chỉ tiêu | Năm 2018 | Năm 2019 | Tăng/giảm (+/-) năm 2019 so với năm 2018 > STT | Chỉ tiêu | Năm 2018 | Năm 2019 | Số dư | Tỷ lệ (%),Năm 2019,===== PAGE 58 =====,1.041.601,1041601.0,1000000.0,1000000.0,1041601.0,50.24903846153846

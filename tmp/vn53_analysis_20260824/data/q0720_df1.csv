@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SGB,2017,373198000000.0,SGB_financial_statements_2017_separate,6,8,2,373.198,3. Tài sản cố định vô hình,1000000.0,s1,6.6176667613438545
+SGB,2018,397895000000.0,SGB_financial_statements_2018_separate,6,8,2,397.895,3. Tài sản cố định vô hình,1000000.0,s2,

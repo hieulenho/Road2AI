@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+ACB,2016,521862000000.0,ACB_financial_statements_2016_consolidated,67,2,1,521.862,▪ Chi phí xây dựng cơ bản dở dang (i),1000000.0,s1,1.174974
+ACB,2017,667965000000.0,ACB_financial_statements_2017_consolidated,55,1,1,667.965,Xây dựng cơ bản dở dang (i),1000000.0,s2,
+ACB,2019,104225000000.0,ACB_financial_statements_2019_consolidated,47,1,1,104.225,Xây dựng cơ bản dở dang (i),1000000.0,s3,
+ACB,2023,1174974000000.0,ACB_financial_statements_2023_consolidated,49,2,1,1.174.974,Xây dựng cơ bản dở dang (ii),1000000.0,s4,
+ACB,2025,806530000000.0,ACB_financial_statements_2025_consolidated,56,2,1,806.530,Xây dựng cơ bản dở dang (ii),1000000.0,s5,

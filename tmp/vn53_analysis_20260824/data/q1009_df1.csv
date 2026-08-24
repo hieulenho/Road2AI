@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+OCB,2018,402217551245.0,OCB_financial_statements_2018_consolidated,26,1,1,402.217.551.245,Dự phòng chung (i),1.0,s1,54.15693186602453
+OCB,2018,565344903505.0,OCB_financial_statements_2018_consolidated,26,3,1,565.344.903.505,,1.0,s2,
+EIB,2018,764325000000.0,EIB_financial_statements_2018_consolidated,27,1,1,764.325,Dự phòng chung (i),1000000.0,s3,
+EIB,2018,1071367000000.0,EIB_financial_statements_2018_consolidated,27,3,1,1.071.367,,1000000.0,s4,
+MSB,2018,311886000000.0,MSB_financial_statements_2018_consolidated,33,1,1,311.886,Dự phòng chung (i),1000000.0,s5,
+MSB,2018,993899000000.0,MSB_financial_statements_2018_consolidated,33,3,1,993.899,,1000000.0,s6,
+VPB,2018,1525190000000.0,VPB_financial_statements_2018_consolidated,30,1,1,1.525.190,Dự phòng chung,1000000.0,s7,
+VPB,2018,3566773000000.0,VPB_financial_statements_2018_consolidated,30,3,1,3.566.773,,1000000.0,s8,

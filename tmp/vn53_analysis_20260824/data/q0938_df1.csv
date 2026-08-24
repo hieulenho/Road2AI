@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MSB,2018,48762243000000.0,MSB_financial_statements_2018_consolidated,1,12,3,48.762.243,Cho vay khách hàng,1000000.0,s1,409427573.0
+EIB,2018,104042577000000.0,EIB_financial_statements_2018_consolidated,5,9,3,104.042.577,Cho vay khách hàng,1000000.0,s2,
+STB,2018,256622753000000.0,STB_financial_statements_2018_consolidated,3,12,3,256.622.753,Cho vay khách hàng,1000000.0,s3,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000522,VCB,2015,parent,VCB_financial_statements_2015_separate,32,5,4,1,Số dư cuối kỳ,Nămkết thúc31/12/2015Triệu VND | Nămkết thúc31/12/2014Triệu VND(Trình bày lại),Nămkết thúc31/12/2015Triệu VND,Biến động dự phòng chung cho các khoản cho vay khách hàng như sau:,2.688.909,2688909.0,1000000.0,1000000.0,2688909.0,26.70337837837838

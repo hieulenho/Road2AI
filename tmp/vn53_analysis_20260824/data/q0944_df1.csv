@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DLG,2020,417852299548.0,DLG_financial_statements_2020_consolidated,4,37,4,417.852.299.548,2.,1.0,s1,417.852299548
+DLG,2021,32436436566.0,DLG_financial_statements_2021_consolidated,8,38,3,32.436.436.566,2. Chi phí xây dựng cơ bản dở dang,1.0,s2,
+DLG,2022,40860898048.0,DLG_financial_statements_2022_consolidated,7,37,3,40.860.898.048,1. Chi phí xây dựng cơ bản dở dang,1.0,s3,
+DLG,2023,34957889850.0,DLG_financial_statements_2023_consolidated,7,37,3,34.957.889.850,1. Chi phí xây dựng cơ bản dở dang,1.0,s4,

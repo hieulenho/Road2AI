@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000987,NLG,2021,consolidated,NLG_financial_statements_2021_consolidated,48,10,2,1,Vay ngắn hạn từ ngân hàng (TM số 24.1),Số cuối năm | VND Số đầu năm > Vay ngắn hạn,Số cuối năm | Vay ngắn hạn,24. VAY VÀ NỘ,648.022.262.375,648022262375.0,1.0,1000000000.0,648.022262375,23.14861111111111

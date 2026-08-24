@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001165,SSI,2016,parent,SSI_financial_statements_2016_separate,35,12,11,1,Tổng cộng,,Số cuối năm VND,Đây là khoản dự phòng suy giảm giá trị các khoản cho vay giao dịch ký quỹ. 9. CÁC KHOÀN PHẢI THU,76.038.454.529,76038454529.0,1.0,1000000000.0,76.038454529,26.228716216216217

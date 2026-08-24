@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+OCB,2017,112060694398.0,OCB_financial_statements_2017_separate,74,2,1,112.060.694.398,Trích lập dự phòng cụ thể cho vay khách hàng(Thuyết minh 10(ii)),1.0,s1,2025.0
+OCB,2018,633084224721.0,OCB_financial_statements_2018_separate,71,2,1,633.084.224.721,Trích lập dự phòng cụ thể cho vay khách hàng(Thuyết minh 9(ii)),1.0,s2,
+OCB,2019,822479834736.0,OCB_financial_statements_2019_separate,72,2,1,822.479.834.736,Trích lập dự phòng cụ thể cho vay khách hàng(Thuyết minh 10(ii)),1.0,s3,
+OCB,2025,2163777088772.0,OCB_financial_statements_2025_separate,92,2,1,2.163.777.088.772,Trích lập dự phòng cụ thể cho vay khách hàng(Thuyết minh 9),1.0,s4,

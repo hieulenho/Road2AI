@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001323,VNM,2020,consolidated,VNM_financial_statements_2020_consolidated,73,5,4,1,Số lượng bình quân gia quyền của cổ phiếu phổ thông cho năm kết thúc ngày 31 tháng 12,2020Số cổ phiếu | 2019Số cổ phiếu(Điều chỉnh lại),2020Số cổ phiếu | -,(b) Số cổ phiếu phổ thông bình quân gia quyền,2.089.651.574,2089651574.0,1.0,1.0,2089651574.0,43.14642857142857

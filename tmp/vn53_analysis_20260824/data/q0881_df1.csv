@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HND,2016,-8001667854893.0,HND_financial_statements_2016,2,19,3,(8.001.667.854.893),Giá trị hao mòn lũy kế,1.0,s1,58.9716577875093
+HND,2016,22141526552885.0,HND_financial_statements_2016,2,18,3,22.141.526.552.885,Nguyên giá,1.0,s2,
+HND,2018,-11731433309660.0,HND_financial_statements_2018,2,18,3,(11.731.433.309.660),Giá trị hao mòn lũy kế,1.0,s3,
+HND,2018,22058473317440.0,HND_financial_statements_2018,2,17,3,22.058.473.317.440,Nguyên giá,1.0,s4,
+HND,2019,-13520488721292.0,HND_financial_statements_2019,1,19,3,(13.520.488.721.292),Giá trị hao mòn lũy kế,1.0,s5,
+HND,2019,22079164840230.0,HND_financial_statements_2019,1,18,3,22.079.164.840.230,Nguyên giá,1.0,s6,
+HND,2020,-15298798199853.0,HND_financial_statements_2020,3,20,3,(15.298.798.199.853),Giá trị hao mòn lũy kế,1.0,s7,
+HND,2020,22083494486346.0,HND_financial_statements_2020,3,19,3,22.083.494.486.346,Nguyên giá,1.0,s8,
+HND,2021,-16599466811506.0,HND_financial_statements_2021,2,22,3,(16.599.466.811.506),Giá trị hao mòn lũy kế,1.0,s9,
+HND,2021,22125917998980.0,HND_financial_statements_2021,2,21,3,22.125.917.998.980,Nguyên giá,1.0,s10,

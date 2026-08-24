@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+10538742407968.0,DCM_financial_statements_2023_consolidated,6,4,4,Giá vốn hàng bán,10.538.742.407.968,DCM,2023,cogs,s1,366.7425789984991
+2160588161856.0,DCM_financial_statements_2023_consolidated,4,12,4,Hàng tồn kho,2.160.588.161.856,DCM,2023,inventory,s2,
+10942100894031.0,DCM_financial_statements_2024_consolidated,8,4,4,Giá vốn hàng bán,10.942.100.894.031,DCM,2024,cogs,s3,
+2950300636844.0,DCM_financial_statements_2024_consolidated,6,13,4,Hàng tồn kho,2.950.300.636.844,DCM,2024,inventory,s4,
+17175504672774.0,GVR_financial_statements_2023_consolidated,8,4,3,4. Giá vốn hàng bán,17.175.504.672.774,GVR,2023,cogs,s5,
+3360240302718.0,GVR_financial_statements_2023_consolidated,4,16,3,IV. Hàng tồn kho,3.360.240.302.718,GVR,2023,inventory,s6,
+19276896067715.0,GVR_financial_statements_2024_consolidated,8,5,3,4. Giá vốn hàng bán,19.276.896.067.715,GVR,2024,cogs,s7,
+4351510470326.0,GVR_financial_statements_2024_consolidated,4,17,3,IV. Hàng tồn kho,4.351.510.470.326,GVR,2024,inventory,s8,
+6445081350234.0,HT1_financial_statements_2023_consolidated,6,5,4,Giá vốn hàng bán và dịch vụ đã cung cấp,6.445.081.350.234,HT1,2023,cogs,s9,
+846615468085.0,HT1_financial_statements_2023_consolidated,3,13,4,Hàng tồn kho,846.615.468.085,HT1,2023,inventory,s10,
+6238997893894.0,HT1_financial_statements_2024_consolidated,7,4,4,Giá vốn hàng bán và dịch vụ đã cung cấp,6.238.997.893.894,HT1,2024,cogs,s11,
+646113879205.0,HT1_financial_statements_2024_consolidated,4,11,4,Hàng tồn kho,646.113.879.205,HT1,2024,inventory,s12,

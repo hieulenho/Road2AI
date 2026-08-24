@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+ABB,2024,1698436000000.0,ABB_financial_statements_2024_separate,85,12,1,1.698.436,Cam kết trong nghiệp vụ thư tín dụng,1000000.0,s1,23822490.5
+SSB,2024,2343582000000.0,SSB_financial_statements_2024_separate,90,7,1,2.343.582,Cam kết trong nghiệp vụ L/C,1000000.0,s2,
+BID,2024,62109504000000.0,BID_financial_statements_2024_separate,91,4,1,62.109.504,2. Cam kết thanh toán LC,1000000.0,s3,
+MBB,2024,29138440000000.0,MBB_financial_statements_2024_separate,86,7,1,29.138.440,Cam kết trong nghiệp vụ L/C,1000000.0,s4,

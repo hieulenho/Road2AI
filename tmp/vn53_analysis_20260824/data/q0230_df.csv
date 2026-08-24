@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001226,ACB,2015,parent,ACB_financial_statements_2015_separate,92,6,1,1,Lãi tiền gửi,2015Triệu VND | 2014Triệu VND,2015Triệu VND,26. Chi phí lãi và các chi phí tương tự,7.508.188,7508188.0,1000000.0,1000000.0,7508188.0,42.42554347826087

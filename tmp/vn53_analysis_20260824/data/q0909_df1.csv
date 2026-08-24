@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+GEE,2022,400000000000.0,GEE_financial_statements_2022_separate,19,2,1,400.000.000.000,Công ty Dây đồng Việt Nam CFT (i),1.0,s1,400.0
+GEE,2023,30000000000.0,GEE_financial_statements_2023_separate,19,3,1,30.000.000.000,Công ty Dây đồng Việt Nam CFT,1.0,s2,
+GEE,2024,200000000000.0,GEE_financial_statements_2024_separate,19,2,1,200.000.000.000,Công ty Dây đồng Việt Nam CFT,1.0,s3,
+GEE,2025,0.0,GEE_financial_statements_2025_separate,17,3,1,-,Công ty Dây đồng Việt Nam CFT,1.0,s4,

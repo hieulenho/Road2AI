@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SNZ,2018,332725166810.0,SNZ_financial_statements_2018_separate,7,6,3,332.725.166.810,6. Doanh thu hoạt động tài chính,1.0,s1,4.069037099374
+SNZ,2019,404835614882.0,SNZ_financial_statements_2019_separate,10,6,3,404.835.614.882,6. Doanh thu hoạt động tài chính,1.0,s2,
+SNZ,2020,398906844211.0,SNZ_financial_statements_2020_separate,9,5,3,398.906.844.211,5. Doanh thu hoạt động tài chính,1.0,s3,
+SNZ,2021,380622060146.0,SNZ_financial_statements_2021_separate,7,5,3,380.622.060.146,5. Doanh thu hoạt động tài chính,1.0,s4,
+SNZ,2022,517428863638.0,SNZ_financial_statements_2022_separate,8,5,3,517.428.863.638,5. Doanh thu hoạt động tài chính,1.0,s5,

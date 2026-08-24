@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+FIT,2016,118316572252.0,FIT_financial_statements_2016_separate,4,10,3,118.316.572.252,8. Vay và nợ thuê tài chính ngắn hạn,1.0,s1,2021.0
+FIT,2017,123121918268.0,FIT_financial_statements_2017_separate,5,10,3,123.121.918.268,8. Vay và nợ thuê tài chính ngắn hạn,1.0,s2,
+FIT,2019,147418354639.0,FIT_financial_statements_2019_separate,5,10,3,147.418.354.639,8. Vay và nợ thuê tài chính ngắn hạn,1.0,s3,
+FIT,2020,92535209286.0,FIT_financial_statements_2020_separate,6,10,3,92.535.209.286,Vay và nợ thuê tài chính ngắn hạn,1.0,s4,
+FIT,2021,164343717448.0,FIT_financial_statements_2021_separate,6,10,3,164.343.717.448,Vay và nợ thuê tài chính ngắn hạn,1.0,s5,

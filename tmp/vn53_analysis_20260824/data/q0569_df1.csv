@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+141409274460632.0,HPG_financial_statements_2022_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),141.409.274.460.632,HPG,2022,net_revenue,s1,9.973893840562413
+8444429054516.0,HPG_financial_statements_2022_consolidated,6,19,3,Lợi nhuận sau thuế TNDN (mang sang trang sau) (60 = 50 - 51 - 52),8.444.429.054.516,HPG,2022,npat,s2,
+49710635951467.0,HSG_financial_statements_2022_consolidated,5,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),49.710.635.951.467,HSG,2022,net_revenue,s3,
+251320306484.0,HSG_financial_statements_2022_consolidated,5,19,3,Lợi nhuận thuần sau thuế TNDN (60 = 50 - 51 - 52) (mang sang trang sau),251.320.306.484,HSG,2022,npat,s4,
+15549547654.0,MSR_financial_statements_2022_consolidated,4,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),15.549.547.654,MSR,2022,net_revenue,s5,
+105151058.0,MSR_financial_statements_2022_consolidated,4,19,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52) (chuyển sang trang sau),105.151.058,MSR,2022,npat,s6,
+23071247285247.0,NKG_financial_statements_2022_consolidated,11,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,23.071.247.285.247,NKG,2022,net_revenue,s7,
+-124684837727.0,NKG_financial_statements_2022_consolidated,11,19,3,(Lỗ)/lợi nhuận sau thuế TNDN,(124.684.837.727),NKG,2022,npat,s8,
+16763426239552.0,HPG_financial_statements_2022_consolidated,6,5,3,Lợi nhuận gộp (20 = 10 - 11),16.763.426.239.552,HPG,2022,gross_profit,s9,
+4938691161756.0,HSG_financial_statements_2022_consolidated,5,6,3,Lợi nhuận gộp (20 = 10 - 11),4.938.691.161.756,HSG,2022,gross_profit,s10,
+2376854110.0,MSR_financial_statements_2022_consolidated,4,5,3,Lợi nhuận gộp (20 = 10 - 11),2.376.854.110,MSR,2022,gross_profit,s11,
+1481360765765.0,NKG_financial_statements_2022_consolidated,11,6,3,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,1.481.360.765.765,NKG,2022,gross_profit,s12,

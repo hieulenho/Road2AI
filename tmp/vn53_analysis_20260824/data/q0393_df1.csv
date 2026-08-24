@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+118953027893654.0,HPG_financial_statements_2023_consolidated,5,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),118.953.027.893.654,HPG,2023,net_revenue,s1,1.1867151595354084
+138855112131387.0,HPG_financial_statements_2024_consolidated,7,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),138.855.112.131.387,HPG,2024,net_revenue,s2,
+31650660956650.0,HSG_financial_statements_2023_consolidated,5,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),31.650.660.956.650,HSG,2023,net_revenue,s3,
+39271893738448.0,HSG_financial_statements_2024_consolidated,4,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,39.271.893.738.448,HSG,2024,net_revenue,s4,
+18595974253087.0,NKG_financial_statements_2023_consolidated,10,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,18.595.974.253.087,NKG,2023,net_revenue,s5,
+20609022190077.0,NKG_financial_statements_2024_consolidated,5,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,20.609.022.190.077,NKG,2024,net_revenue,s6,
+12937840695572.0,HPG_financial_statements_2023_consolidated,5,5,3,Lợi nhuận gộp (20 = 10 - 11),12.937.840.695.572,HPG,2023,gross_profit,s7,
+18497549127684.0,HPG_financial_statements_2024_consolidated,7,5,3,Lợi nhuận gộp (20 = 10 - 11),18.497.549.127.684,HPG,2024,gross_profit,s8,
+3060642089644.0,HSG_financial_statements_2023_consolidated,5,6,3,Lợi nhuận gộp (20 = 10 - 11),3.060.642.089.644,HSG,2023,gross_profit,s9,
+4263666396467.0,HSG_financial_statements_2024_consolidated,4,6,3,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,4.263.666.396.467,HSG,2024,gross_profit,s10,
+1112263016047.0,NKG_financial_statements_2023_consolidated,10,6,3,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,1.112.263.016.047,NKG,2023,gross_profit,s11,
+1831773954930.0,NKG_financial_statements_2024_consolidated,5,6,3,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,1.831.773.954.930,NKG,2024,gross_profit,s12,

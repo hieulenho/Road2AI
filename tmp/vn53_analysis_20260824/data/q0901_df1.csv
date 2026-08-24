@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KLB,2016,729864000000.0,KLB_financial_statements_2016_separate,1,21,3,729.864,Tài sản cố định vô hình,1000000.0,s1,729864.0
+KLB,2017,711549000000.0,KLB_financial_statements_2017_separate,1,20,3,711.549,Tài sản cố định vô hình,1000000.0,s2,
+KLB,2018,705602000000.0,KLB_financial_statements_2018_separate,3,21,3,705.602,Tài sản cố định vô hình,1000000.0,s3,
+KLB,2019,718399000000.0,KLB_financial_statements_2019_separate,5,34,2,718.399,3. Tài sản cố định vô hình,1000000.0,s4,
+KLB,2020,711902000000.0,KLB_financial_statements_2020_separate,4,34,2,711.902,3. Tài sản cố định vô hình,1000000.0,s5,

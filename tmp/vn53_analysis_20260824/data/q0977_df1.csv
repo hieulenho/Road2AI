@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DPM,2017,670766831617.0,DPM_financial_statements_2017_separate,6,11,3,670.766.831.617,II. Nợ dài hạn,1.0,s1,23.368073301789234
+DPM,2017,7892597404695.0,DPM_financial_statements_2017_separate,6,16,3,7.892.597.404.695,D. VỐN CHỦ SỞ HỮU,1.0,s2,
+AAA,2017,761575328352.0,AAA_financial_statements_2017_separate,3,11,3,761.575.328.352,II. Nợ dài hạn,1.0,s3,
+AAA,2017,1362971011485.0,AAA_financial_statements_2017_separate,3,13,3,1.362.971.011.485,D. VỐN CHỦ SỞ HỮU,1.0,s4,
+MSR,2017,541074175000.0,MSR_financial_statements_2017_separate,7,12,5,541.074.175,Nợ dài hạn,1000.0,s5,
+MSR,2017,9443792507000.0,MSR_financial_statements_2017_separate,7,17,5,9.443.792.507,VỐN CHỦ SỞ HỮU (400 = 410),1000.0,s6,

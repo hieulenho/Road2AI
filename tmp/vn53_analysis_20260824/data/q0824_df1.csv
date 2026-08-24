@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VJC,2016,300000000.0,VJC_financial_statements_2016_consolidated,47,2,1,300.000.000,Vốn cổ phần được duyệt/đã phát hànhCổ phiếu phổ thông,1.0,s1,455.149976
+VJC,2019,523838594.0,VJC_financial_statements_2019_consolidated,44,5,1,523.838.594,Số cổ phiếu đang lưu hànhCổ phiếu phổ thông,1.0,s2,
+VJC,2021,541611334.0,VJC_financial_statements_2021_consolidated,47,5,1,541.611.334,Số lượng cổ phiếu đang lưu hành,1.0,s3,

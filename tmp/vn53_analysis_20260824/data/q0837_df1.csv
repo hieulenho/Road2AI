@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VSF,2018,11760421000.0,VSF_financial_statements_2018_consolidated,46,3,1,11.760.421.000,"- Doanh thu nhà số 02 Điện Biên Phù, Thành phố Trà Vính (*)",1.0,s1,5.0
+VSF,2019,11760421000.0,VSF_financial_statements_2019_consolidated,58,1,1,11.760.421.000,"Doanh thu nhà số 2 Điện Biên Phủ, Thành phố Trà Vinh (*)",1.0,s2,
+VSF,2021,11760421000.0,VSF_financial_statements_2021_consolidated,52,1,1,11.760.421.000,"Doanh thu nhà số 2 Điện Biên Phù, Thành phố Trà Vinh (*)",1.0,s3,
+VSF,2022,11760421000.0,VSF_financial_statements_2022_consolidated,38,2,1,11.760.421.000,"Doanh thu nhà số 2 Điện Biên Phủ, Thành phố",1.0,s4,
+VSF,2023,11760421000.0,VSF_financial_statements_2023_consolidated,38,2,1,11.760.421.000,"Doanh thu nhà số 2 Điện Biên Phù, Thành phố Trà Vinh (*)",1.0,s5,

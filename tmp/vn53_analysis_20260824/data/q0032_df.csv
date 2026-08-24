@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000033,FPT,2025,consolidated,FPT_financial_statements_2025_consolidated,5,22,11,3,Phải thu theo tiến độ kế hoạch hợp đồng,,Tại ngày 31 tháng 12 năm | 2025 VND,===== PAGE 8 ===== 1 CÔNG TY CỔ PHẦN FPT Mẫu số B 01 – DN/HN BÀNG CÂN ĐỐI KẾ TOÁN HỢP NHẤT,200.405.269.967,200405269967.0,1.0,1000000000.0,200.405269967,32.6362012987013

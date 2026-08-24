@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+STB,2017,22399323000000.0,STB_financial_statements_2017_consolidated,62,1,1,22.399.323,Lãi từ cho vay khách hàng (i),1000000.0,s1,2017.0
+STB,2022,3370271000000.0,STB_financial_statements_2022_consolidated,59,1,1,3.370.271,Lãi từ cho vay khách hàng (*),1000000.0,s2,
+STB,2024,3390704000000.0,STB_financial_statements_2024_consolidated,55,1,1,3.390.704,Lãi dự thu từ cho vay khách hàng,1000000.0,s3,

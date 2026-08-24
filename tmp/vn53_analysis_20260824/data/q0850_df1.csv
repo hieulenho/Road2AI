@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+TTF,2017,1087317361943.0,TTF_financial_statements_2017_consolidated,9,4,3,(1.087.317.361.943),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s1,2022.0
+TTF,2018,1458421289537.0,TTF_financial_statements_2018_consolidated,7,4,3,(1.458.421.289.537),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s2,
+TTF,2020,952289765259.0,TTF_financial_statements_2020_consolidated,7,4,3,(952.289.765.259),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s3,
+TTF,2022,1693691936714.0,TTF_financial_statements_2022_consolidated,7,4,3,(1.693.691.936.714),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s4,
+TTF,2024,1096895134278.0,TTF_financial_statements_2024_consolidated,4,4,3,(1.096.895.134.278),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s5,

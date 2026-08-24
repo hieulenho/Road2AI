@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DNH,2022,6382558876724.0,DNH_financial_statements_2022_separate,3,15,3,6.382.558.876.724,Vốn chủ sở hữu,1.0,s1,66.38826084914893
+DNH,2022,8256582932950.0,DNH_financial_statements_2022_separate,3,22,3,8.256.582.932.950,TỔNG CỘNG NGUỒN VỐN(440 = 300 + 400),1.0,s2,
+GEG,2022,4308097469512.0,GEG_financial_statements_2022_separate,6,16,3,4.308.097.469.512,VỐN CHỦ SỞ HỮU,1.0,s3,
+GEG,2022,7017287244652.0,GEG_financial_statements_2022_separate,6,26,3,7.017.287.244.652,TỔNG NGUỒN VỐN,1.0,s4,
+POW,2022,27880543773286.0,POW_financial_statements_2022_separate,4,17,4,27.880.543.773.286,VỐN CHỦ SỞ HỮU,1.0,s5,
+POW,2022,46106801970338.0,POW_financial_statements_2022_separate,4,23,4,46.106.801.970.338,TỔNG CỘNG NGUỒN VỐN(440=300+400),1.0,s6,

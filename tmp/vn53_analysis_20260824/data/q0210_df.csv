@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001392,VNM,2018,consolidated,VNM_financial_statements_2018_consolidated,73,5,4,1,Số lượng bình quân gia quyền của cổ phiếu phổ thông cho năm kết thúc ngày 31 tháng 12,2018Số cổ phiếu | 2017Số cổ phiếu(Điều chỉnhhồi tố),2018Số cổ phiếu,(b) Số cổ phiếu phổ thông bình quân gia quyền,1.741.476.075,1741476075.0,1.0,1.0,1741476075.0,27.011991869918702

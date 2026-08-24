@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NVB,2015,0.0,NVB_financial_statements_2015_separate,10,8,2,-,III. Lưu chuyển tiền từ hoạt động tài chính,1000000.0,s1,15.143551
+NVB,2016,0.0,NVB_financial_statements_2016_separate,10,8,2,-,III. Lưu chuyển tiền từ hoạt động tài chính,1000000.0,s2,
+NVB,2019,1091339000000.0,NVB_financial_statements_2019_separate,10,8,2,1.091.339,III. Lưu chuyển tiền từ hoạt động tài chính,1000000.0,s3,
+NVB,2024,6552212000000.0,NVB_financial_statements_2024_separate,9,8,2,6.552.212,III. Lưu chuyển tiền từ hoạt động tài chính,1000000.0,s4,
+NVB,2025,7500000000000.0,NVB_financial_statements_2025_separate,13,8,2,7.500.000,III. Lưu chuyển tiền từ hoạt động tài chính,1000000.0,s5,

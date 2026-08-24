@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+7920537530999.0,MCH_financial_statements_2024_consolidated,9,19,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52) (mang sang trang sau),7.920.537.530.999,MCH,2024,npat,s1,0.6120147395643158
+9227283460294.0,MCH_financial_statements_2024_consolidated,11,20,2,Lưu chuyển tiền thuần từ hoạt động kinh doanh,9.227.283.460.294,MCH,2024,cfo,s2,
+2376694252532.0,QNS_financial_statements_2024_consolidated,10,18,4,Lợi nhuận sau thuế TNDN,2.376.694.252.532,QNS,2024,npat,s3,
+2032605724809.0,QNS_financial_statements_2024_consolidated,11,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,2.032.605.724.809,QNS,2024,cfo,s4,
+215147294010.0,OGC_financial_statements_2024_consolidated,7,19,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50-51-52),215.147.294.010,OGC,2024,npat,s5,
+253214642740.0,OGC_financial_statements_2024_consolidated,8,17,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,253.214.642.740,OGC,2024,cfo,s6,
+10393757226426.0,MCH_financial_statements_2024_consolidated,6,2,3,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),10.393.757.226.426,MCH,2024,current_assets,s7,
+2582184604799.0,MCH_financial_statements_2024_consolidated,6,14,3,Hàng tồn kho,2.582.184.604.799,MCH,2024,inventory,s8,
+14600189597321.0,MCH_financial_statements_2024_consolidated,8,3,3,Nợ ngắn hạn,14.600.189.597.321,MCH,2024,current_liabilities,s9,
+10010993374030.0,QNS_financial_statements_2024_consolidated,8,1,3,A. TÀI SẢN NGĂN HẠN,10.010.993.374.030,QNS,2024,current_assets,s10,
+1323444326308.0,QNS_financial_statements_2024_consolidated,8,13,3,IV. Hàng tồn kho,1.323.444.326.308,QNS,2024,inventory,s11,
+3626832974969.0,QNS_financial_statements_2024_consolidated,9,2,4,Nợ ngắn hạn,3.626.832.974.969,QNS,2024,current_liabilities,s12,
+676236857416.0,OGC_financial_statements_2024_consolidated,5,1,4,TÀI SẢN NGẮN HẠN(100=100+120+130+140+150),676.236.857.416,OGC,2024,current_assets,s13,
+233301649588.0,OGC_financial_statements_2024_consolidated,5,16,4,Hàng tồn kho,233.301.649.588,OGC,2024,inventory,s14,
+723732909020.0,OGC_financial_statements_2024_consolidated,6,2,4,Nợ ngắn hạn,723.732.909.020,OGC,2024,current_liabilities,s15,

@@ -1,0 +1,10 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+4272384000000.0,MSN_financial_statements_2024_consolidated,6,19,3,Lợi nhuận thuần sau thuế,4.272.384,MSN,2024,npat,s1,1.1769362189990205
+215147294010.0,OGC_financial_statements_2024_consolidated,7,19,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50-51-52),215.147.294.010,OGC,2024,npat,s2,
+9452892989948.0,VNM_financial_statements_2024_consolidated,9,19,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52) (mang sang trang sau),9.452.892.989.948,VNM,2024,npat,s3,
+83177720000000.0,MSN_financial_statements_2024_consolidated,6,3,3,Doanh thu thuần,83.177.720,MSN,2024,net_revenue,s4,
+1006899164283.0,OGC_financial_statements_2024_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01-02),1.006.899.164.283,OGC,2024,net_revenue,s5,
+61782609528445.0,VNM_financial_statements_2024_consolidated,9,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),61.782.609.528.445,VNM,2024,net_revenue,s6,
+9525462000000.0,MSN_financial_statements_2024_consolidated,8,19,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,9.525.462,MSN,2024,cfo,s7,
+253214642740.0,OGC_financial_statements_2024_consolidated,8,17,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,253.214.642.740,OGC,2024,cfo,s8,
+9685937539346.0,VNM_financial_statements_2024_consolidated,12,17,3,Lưu chuyển tiền thuần từ hoạt độngkinh doanh,9.685.937.539.346,VNM,2024,cfo,s9,

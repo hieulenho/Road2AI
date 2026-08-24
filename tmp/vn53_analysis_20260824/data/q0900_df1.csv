@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MSN,2016,768075674.0,MSN_financial_statements_2016_separate,22,3,1,768.075.674,Vốn cổ phần đã phát hànhCổ phiếu phổ thông,1.0,s1,2021.0
+MSN,2017,1157373974.0,MSN_financial_statements_2017_separate,26,3,1,1.157.373.974,Vốn cổ phần đã phát hànhCổ phiếu phổ thông,1.0,s2,
+MSN,2019,1168946447.0,MSN_financial_statements_2019_separate,26,3,1,1.168.946.447,Vốn cổ phần đã phát hànhCổ phiếu phổ thông,1.0,s3,
+MSN,2021,1180534692.0,MSN_financial_statements_2021_separate,30,3,1,1.180.534.692,Vốn cổ phần đã phát hànhCổ phiếu phổ thông,1.0,s4,

@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+POW,2022,319109165043.0,POW_financial_statements_2022_consolidated,51,2,1,319.109.165.043,Lãi tiền gửi,1.0,s1,61.43791817032499
+POW,2022,445221020562.0,POW_financial_statements_2022_consolidated,51,8,1,445.221.020.562,,1.0,s2,
+GAS,2022,1236723285029.0,GAS_financial_statements_2022_consolidated,51,1,1,1.236.723.285.029,Lãi tiền gửi,1.0,s3,
+GAS,2022,1568073330550.0,GAS_financial_statements_2022_consolidated,51,6,1,1.568.073.330.550,,1.0,s4,
+DTK,2022,5030193776.0,DTK_financial_statements_2022_consolidated,43,1,1,5.030.193.776,"Lãi tiền gửi, tiền cho vay",1.0,s5,
+DTK,2022,362991102761.0,DTK_financial_statements_2022_consolidated,43,6,1,362.991.102.761,Cộng,1.0,s6,
+GEG,2022,30505925784.0,GEG_financial_statements_2022_consolidated,63,2,1,30.505.925.784,Lãi tiền gửi và cho vay,1.0,s7,
+GEG,2022,213920427160.0,GEG_financial_statements_2022_consolidated,63,6,1,213.920.427.160,,1.0,s8,

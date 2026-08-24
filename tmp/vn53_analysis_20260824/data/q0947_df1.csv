@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+IJC,2016,1614902270238.0,IJC_financial_statements_2016_consolidated,8,4,4,1.614.902.270.238,Giá vốn hàng bán,1.0,s1,1045.55122516875
+IJC,2017,526610104869.0,IJC_financial_statements_2017_consolidated,8,4,4,526.610.104.869,Giá vốn hàng bán,1.0,s2,
+IJC,2020,1478799082559.0,IJC_financial_statements_2020_consolidated,8,4,4,1.478.799.082.559,Giá vốn hàng bán,1.0,s3,
+IJC,2024,561893443009.0,IJC_financial_statements_2024_consolidated,9,4,3,561.893.443.009,4. Giá vốn hàng bán,1.0,s4,

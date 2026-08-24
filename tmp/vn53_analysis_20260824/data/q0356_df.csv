@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000030,CTG,2019,parent,CTG_financial_statements_2019_separate,4,35,12,2,Dự phòng rủi ro cho vay khách hàng,,Ngày 31 tháng 12 năm 2019 triệu đồng | TÀI SẢN,===== PAGE 9 ===== Ngân hàng TMCP Công thương Việt Nam B02/TCTD BẢNG CÂN ĐỐI KẾ TOÁN RIÊNG tại ngày 31 tháng 12 năm 2019,(12.788.628),-12788628.0,1000000.0,1000000.0,-12788628.0,34.4472972972973

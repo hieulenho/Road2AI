@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000213,MBB,2022,parent,MBB_financial_statements_2022_separate_1,8,22,18,2,TỔNG LỢI NHUẬN TRƯỚC THUẾ,,Năm 2022 triệu đồng,===== PAGE 13 ===== Ngân hàng Thương mại Cổ phần Quân đội B03/TCTD BẢO CẢO KẾT QUẢ HOẠT ĐỘNG RIÊNG cho năm tái chính kết thúc ngày 31 tháng 12 năm 2022,20.318.374,20318374.0,1000000.0,1000000.0,20318374.0,33.31621621621622

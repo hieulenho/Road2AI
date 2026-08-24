@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000664,SJG,2020,consolidated,SJG_financial_statements_2020_consolidated,22,12,11,1,Cộng,,Số cuối năm,"Số đầu năm 2c. Đầu tư vào công ty liên doanh, liên kết",2.403.122.974.806,2403122974806.0,1.0,1000000000.0,2403.122974806,19.13371212121212

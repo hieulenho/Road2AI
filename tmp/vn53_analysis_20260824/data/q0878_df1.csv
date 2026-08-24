@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KBC,2015,20415184100.0,KBC_financial_statements_2015_consolidated,27,14,1,20.415.184.100,Số dư cuối năm,1.0,s1,2019.0
+KBC,2017,134884233798.0,KBC_financial_statements_2017_consolidated,21,12,1,134.884.233.798,Số cuối năm,1.0,s2,
+KBC,2019,432718621923.0,KBC_financial_statements_2019_consolidated,25,14,1,432.718.621.923,Số cuối năm,1.0,s3,

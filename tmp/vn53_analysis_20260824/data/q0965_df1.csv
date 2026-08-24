@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SSH,2022,29253314525.0,SSH_financial_statements_2022_separate,41,7,1,29.253.314.525,Cộng: Các khoản chi phí không được trừ,1.0,s1,1.0
+SSH,2022,38434986469.0,SSH_financial_statements_2022_separate,41,9,1,38.434.986.469,Cộng: Các khoản chi phí không được trừ,1.0,s2,
+DXS,2022,826702244.0,DXS_financial_statements_2022_separate,35,4,1,826.702.244,Chi phí không được trừ,1.0,s3,
+CEO,2022,2319425218.0,CEO_financial_statements_2022_separate,47,4,1,2.319.425.218,Chi phí không được trừ khi tính thuế thu nhập doanh nghiệp,1.0,s4,
+CEO,2022,5458655972.0,CEO_financial_statements_2022_separate,48,2,1,5.458.655.972,Chi phí không được trừ khi tính thuế thu nhập doanh nghiệp,1.0,s5,
+CEO,2022,277865333.0,CEO_financial_statements_2022_separate,48,10,1,277.865.333,Chi phí không được trừ khi tính thuế thu nhập doanh nghiệp,1.0,s6,

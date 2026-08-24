@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+QNS,2017,1690191227444.0,QNS_financial_statements_2017_separate,9,19,3,1.690.191.227.444,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s1,2023.0
+QNS,2019,1651722862838.0,QNS_financial_statements_2019_separate,5,19,3,1.651.722.862.838,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s2,
+QNS,2020,1223996483808.0,QNS_financial_statements_2020_separate,8,19,3,1.223.996.483.808,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s3,
+QNS,2021,1448611560410.0,QNS_financial_statements_2021_separate,9,18,2,1.448.611.560.410,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s4,
+QNS,2023,2435530925645.0,QNS_financial_statements_2023_separate,9,18,2,2.435.530.925.645,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.0,s5,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001536,GVR,2024,parent,GVR_financial_statements_2024_separate,64,10,2,1,Tổng lợi nhuận kế toán trước thuế TNDN,Năm 2024 | Năm 2023 > VND,Năm 2024 | VND,30 . CHI PHÍ THUẾ THU NHẬP DOANH NGHIỆP HIỆN HÀNH,2.353.531.650.555,2353531650555.0,1.0,1000000000000.0,2.353531650555,41.20816544566545

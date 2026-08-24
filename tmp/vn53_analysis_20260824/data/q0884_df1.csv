@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HND,2016,12393987700725.0,HND_financial_statements_2016,3,2,3,12.393.987.700.725,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s1,2016.0
+HND,2017,9968932894559.0,HND_financial_statements_2017,7,2,3,9.968.932.894.559,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s2,
+HND,2018,8077150487394.0,HND_financial_statements_2018,3,2,3,8.077.150.487.394,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s3,
+HND,2021,2475731954180.0,HND_financial_statements_2021,3,2,3,2.475.731.954.180,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s4,
+HND,2022,1903239627025.0,HND_financial_statements_2022,3,2,3,1.903.239.627.025,NỘ PHẢI TRẢ (300 = 310 + 330),1.0,s5,

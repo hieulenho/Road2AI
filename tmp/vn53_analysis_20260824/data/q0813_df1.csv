@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+ACV,2015,10870599111136.0,ACV_financial_statements_2015_separate,5,3,3,10.870.599.111.136,Doanh thu thuần bán hàng và cung cấp dịch vụ,1.0,s1,2023.0
+ACV,2017,13675231706162.0,ACV_financial_statements_2017_separate,7,4,4,13.675.231.706.162,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s2,
+ACV,2019,18332079929620.0,ACV_financial_statements_2019_separate,6,3,3,18.332.079.929.620,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s3,
+ACV,2023,20001342522819.0,ACV_financial_statements_2023_separate,8,3,3,20.001.342.522.819,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),1.0,s4,

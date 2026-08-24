@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HHV,2021,32355512700711.0,HHV_financial_statements_2021_consolidated,68,1,1,32.355.512.700.711,Tải sản bộ phận,1.0,s1,92.12883882306454
+HHV,2021,33963489243390.0,HHV_financial_statements_2021_consolidated,68,3,6,33.963.489.243.390,Tổng tài sản,1.0,s2,
+HHV,2022,33657835517377.0,HHV_financial_statements_2022_consolidated,77,1,1,33.657.835.517.377,Tài sản bộ phận,1.0,s3,
+HHV,2022,35653232484507.0,HHV_financial_statements_2022_consolidated,77,3,6,35.653.232.484.507,Tổng tài sản,1.0,s4,
+HHV,2024,35317671994443.0,HHV_financial_statements_2024_consolidated,82,1,1,35.317.671.994.443,Tài sản bộ phận Tài sản không phân bổ,1.0,s5,
+HHV,2024,38906360732239.0,HHV_financial_statements_2024_consolidated,82,3,6,38.906.360.732.239,Tổng tài sản,1.0,s6,
+HHV,2025,35890505367786.0,HHV_financial_statements_2025_consolidated,80,1,1,35.890.505.367.786,Tài sản bộ phận Tài sản không phân bổ,1.0,s7,
+HHV,2025,40752075682457.0,HHV_financial_statements_2025_consolidated,80,3,6,40.752.075.682.457,Tổng tài sản,1.0,s8,

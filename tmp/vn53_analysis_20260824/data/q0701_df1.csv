@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+IJC,2020,31609505169.0,IJC_financial_statements_2020_separate,8,9,3,31.609.505.169,8. Chi phí bán hàng,1.0,s1,1.6019257531463875
+IJC,2020,1973219114988.0,IJC_financial_statements_2020_separate,71,4,7,1.973.219.114.988,Tổng doanh thu thuần về bán hàng và cung cấp dịch vụ,1.0,s2,

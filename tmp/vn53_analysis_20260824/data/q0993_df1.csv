@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+GEE,2022,0.0,GEE_financial_statements_2022_separate,4,14,4,-,13.,1.0,s1,11.029042113367689
+GEE,2022,912546851205.0,GEE_financial_statements_2022_separate,4,13,4,912.546.851.205,12.,1.0,s2,
+VGC,2022,314011179543.0,VGC_financial_statements_2022_separate,10,16,4,314.011.179.543,15.,1.0,s3,
+VGC,2022,-2116228119.0,VGC_financial_statements_2022_separate,10,17,4,(2.116.228.119),16.,1.0,s4,
+VGC,2022,1709898127440.0,VGC_financial_statements_2022_separate,10,15,4,1.709.898.127.440,14.,1.0,s5,
+SJG,2022,201952237413.0,SJG_financial_statements_2022_separate,52,12,1,201.952.237.413,Tổng chi phí thuế thu nhập doanh nghiệp hiện hành,1.0,s6,
+SJG,2022,8056358883.0,SJG_financial_statements_2022_separate,53,3,1,8.056.358.883,- Tổng chi phí thuế thu nhập doanh nghiệp hoãn lại,1.0,s7,
+SJG,2022,1414526135994.0,SJG_financial_statements_2022_separate,52,1,1,1.414.526.135.994,Tổng lợi nhuận kế toán trước thuế,1.0,s8,

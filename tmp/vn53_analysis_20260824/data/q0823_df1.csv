@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HSG,2019,-14454085321.0,HSG_financial_statements_2019_consolidated,67,3,1,(14.454.085.321),"Số phân bổ vào quỹ khen thưởng, phúc lợi (*)",1.0,s1,1.0
+HSG,2021,-172540289351.0,HSG_financial_statements_2021_consolidated,66,3,1,(172.540.289.351),"Số phân bổ vào quỹ khen thưởng, phúc lợi (*)",1.0,s2,
+HSG,2024,-20585392335.0,HSG_financial_statements_2024_consolidated,41,3,1,(20.585.392.335),"Điều chỉnh giảm số trích quỹ khen thưởng, phúc lợi (VND) (*)",1.0,s3,
+HSG,2025,-29400751048.0,HSG_financial_statements_2025_consolidated,40,3,1,(29.400.751.048),"Điều chỉnh giảm số trích quỹ khen thưởng, phúc lợi (VND) (*)",1.0,s4,

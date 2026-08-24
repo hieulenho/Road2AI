@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HAG,2015,2313976917.0,HAG_financial_statements_2015_consolidated,88,16,2,2.313.976.917,Doanh thu từ khách hàng bên ngoài,1.0,s1,29.17492552409759
+HAG,2015,6252446533.0,HAG_financial_statements_2015_consolidated,88,16,6,6.252.446.533,Doanh thu từ khách hàng bên ngoài,1.0,s2,
+HAG,2016,2506968190.0,HAG_financial_statements_2016_consolidated,108,16,2,2.506.968.190,Doanh thu từ khách hàng bên ngoài,1.0,s3,
+HAG,2016,6439779268.0,HAG_financial_statements_2016_consolidated,108,16,6,6.439.779.268,Doanh thu từ khách hàng bên ngoài,1.0,s4,
+HAG,2017,1331396451.0,HAG_financial_statements_2017_consolidated,122,14,2,1.331.396.451,Doanh thu từ khách hàng bên ngoài,1.0,s5,
+HAG,2017,4841225074.0,HAG_financial_statements_2017_consolidated,122,14,6,4.841.225.074,Doanh thu từ khách hàng bên ngoài,1.0,s6,
+HAG,2022,677685411.0,HAG_financial_statements_2022_consolidated,110,13,2,677.685.411,Doanh thu từ khách hàng bên ngoài,1.0,s7,
+HAG,2022,5110781887.0,HAG_financial_statements_2022_consolidated,110,13,5,5.110.781.887,Doanh thu từ khách hàng bên ngoài,1.0,s8,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001282,BID,2016,consolidated,BID_financial_statements_2016_consolidated,71,14,2,1,Chứng chỉ tiền gửi,Số cuối năm | Số đầu năm > Triệu VND,Số cuối năm | Triệu VND,22. PHÁT HÀNH GIÁY TỔ CÓ GIÁ,47.141.004,47141004.0,1000000.0,1000000.0,47141004.0,37.5125

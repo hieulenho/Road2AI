@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VJC,2024,23858693067798.0,VJC_financial_statements_2024_separate,64,1,1,23.858.693.067.798,Chi phí nhiên liệu,1.0,s1,20.799329684971
+VJC,2021,3059363382827.0,VJC_financial_statements_2021_separate,56,1,1,3.059.363.382.827,Chi phí nhiên liệu,1.0,s2,

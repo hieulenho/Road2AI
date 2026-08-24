@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000083,MBB,2020,parent,MBB_financial_statements_2020_separate,5,36,35,2,TỔNG TẢI SẢN CÓ,,31/12/2020 triệu đồng | TÀI SẢN,===== PAGE 10 ===== Ngân hàng Thương mại Cổ phần Quân đội B02/TCTD BĂNG CĂN Đ ĐỐI KẾ TOĂN RIÊNG ngày 31 tháng 12 năm 2020,477.839.594,477839594.0,1000000.0,1000000.0,477839594.0,41.425555555555555

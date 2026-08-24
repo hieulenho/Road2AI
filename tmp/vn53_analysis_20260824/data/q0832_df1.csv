@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MCH,2017,677000209110.0,MCH_financial_statements_2017_separate,2,3,3,677.000.209.110,Tiền và các khoản tương đương tiền,1.0,s1,2025.0
+MCH,2018,822064867520.0,MCH_financial_statements_2018_separate,2,3,3,822.064.867.520,Tiền và các khoản tương đương tiền,1.0,s2,
+MCH,2019,1409367132962.0,MCH_financial_statements_2019_separate,2,3,3,1.409.367.132.962,Tiền và các khoản tương đương tiền,1.0,s3,
+MCH,2022,4200983420980.0,MCH_financial_statements_2022_separate,2,3,3,4.200.983.420.980,Tiền và các khoản tương đương tiền,1.0,s4,
+MCH,2025,6657178522986.0,MCH_financial_statements_2025_separate,2,3,3,6.657.178.522.986,Tiền và các khoản tương đương tiền,1.0,s5,

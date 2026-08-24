@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NLG,2020,6698604900.0,NLG_financial_statements_2020_consolidated,8,8,3,6.698.604.900,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s1,4.4118214512766665
+NLG,2020,757276989590.0,NLG_financial_statements_2020_consolidated,8,14,3,757.276.989.590,1. Doanh thu chưa thực hiện dài hạn,1.0,s2,
+NLG,2021,7186302603.0,NLG_financial_statements_2021_consolidated,8,8,3,7.186.302.603,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s3,
+NLG,2021,285093422869.0,NLG_financial_statements_2021_consolidated,8,14,3,285.093.422.869,1. Doanh thu chưa thực hiện dài hạn,1.0,s4,
+NLG,2023,7589982574.0,NLG_financial_statements_2023_consolidated,8,8,3,7.589.982.574,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s5,
+NLG,2023,259701132847.0,NLG_financial_statements_2023_consolidated,8,14,3,259.701.132.847,1. Doanh thu chưa thực hiện dài hạn,1.0,s6,

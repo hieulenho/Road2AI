@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SJG,2019,350.0,SJG_financial_statements_2019_consolidated,73,6,1,350,Lãi cơ bản trên cổ phiếu,1.0,s1,3375.0
+SJG,2021,804.0,SJG_financial_statements_2021_consolidated,57,4,1,804,Lãi cơ bản/suy giảm trên cổ phiếu,1.0,s2,
+SJG,2022,3375.0,SJG_financial_statements_2022_consolidated,49,5,1,3.375,Lãi cơ bản trên cổ phiếu (VND/CP),1.0,s3,
+SJG,2023,960.0,SJG_financial_statements_2023_consolidated,52,5,1,960,Lãi cơ bản trên cổ phiếu (VND/CP),1.0,s4,

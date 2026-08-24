@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MWG,2020,452605894.0,MWG_financial_statements_2020_consolidated,36,4,1,452.605.894,Cổ phiếu đang lưu hànhCổ phiếu phổ thông,1.0,s1,1.0
+HHS,2020,274744063.0,HHS_financial_statements_2020_consolidated,30,14,1,274.744.063,Số lượng cổ phiếu đang lưu hành,1.0,s2,
+PNJ,2020,227442803.0,PNJ_financial_statements_2020_consolidated,33,4,1,227.442.803,Số lượng cổ phiếu đang lưu hành,1.0,s3,
+HUT,2020,268631965.0,HUT_financial_statements_2020_consolidated,34,4,1,268.631.965,Số lượng cổ phiếu đang lưu hành,1.0,s4,

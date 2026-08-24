@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000033,MBB,2020,consolidated,MBB_financial_statements_2020_consolidated,5,40,14,2,Dự phòng rủi ro cho vay khách hàng,,31/12/2020 triệu đồng | TÀI SẢN,===== PAGE 10 ===== Ngân hàng Thương mại Cổ phần Quân đội B02/TCTD-HN BẢNG CẦN ĐỒI KẾ TOÁN HỢP NHẤT ngày 31 tháng 12 năm 2020,(4.354.219),-4354219.0,1000000.0,1000000.0,-4354219.0,34.29176734338024

@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HBC,2021,3721548024149.0,HBC_financial_statements_2021_separate,6,13,3,3.721.548.024.149,D. VỐN CHỦ SỞ HỮU,1.0,s1,118.848765917
+SAM,2021,3840396790066.0,SAM_financial_statements_2021_separate,5,15,3,3.840.396.790.066,D. VỐN CHỦ SỞ HỮU,1.0,s2,

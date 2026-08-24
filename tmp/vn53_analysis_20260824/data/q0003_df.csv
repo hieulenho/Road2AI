@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001562,STB,2020,consolidated,STB_financial_statements_2020_consolidated,92,27,23,1,Chi phí dự phòng,,Năm nayTriệu đồng,32. CHI PHÍ HOẠT ĐỘNG,1.422.948,1422948.0,1000000.0,1000000.0,1422948.0,39.92261235955056

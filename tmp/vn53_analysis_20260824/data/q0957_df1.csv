@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+EIB,2020,34215541000000.0,EIB_financial_statements_2020_consolidated,93,10,4,34.215.541,Tổng tài sản,1000000.0,s1,25.49991558294597
+EIB,2020,163129920000000.0,EIB_financial_statements_2020_consolidated,93,10,9,163.129.920,Tổng tài sản,1000000.0,s2,
+STB,2020,204251814000000.0,STB_financial_statements_2020_consolidated,107,13,4,204.251.814,Tổng tài sản,1000000.0,s3,
+STB,2020,505541942000000.0,STB_financial_statements_2020_consolidated,107,13,9,505.541.942,Tổng tài sản,1000000.0,s4,
+SSB,2020,27401037000000.0,SSB_financial_statements_2020_consolidated,92,14,4,27.401.037,,1000000.0,s5,
+SSB,2020,181190363000000.0,SSB_financial_statements_2020_consolidated,92,14,9,181.190.363,,1000000.0,s6,

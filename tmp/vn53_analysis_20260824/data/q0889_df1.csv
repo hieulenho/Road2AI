@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+FTS,2019,18974457727.0,FTS_financial_statements_2019,3,32,3,18.974.457.727,3. Tài sản cố định vô hình,1.0,s1,2024.0
+FTS,2020,19383703274.0,FTS_financial_statements_2020,10,31,3,19.383.703.274,3. Tài sản cố định vô hình,1.0,s2,
+FTS,2023,18335715313.0,FTS_financial_statements_2023,7,31,3,18.335.715.313,3. Tài sản cố định vô hình,1.0,s3,
+FTS,2024,20231334842.0,FTS_financial_statements_2024,4,31,3,20.231.334.842,3. Tài sản cố định vô hình,1.0,s4,

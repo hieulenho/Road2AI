@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001374,VIF,2023,consolidated,VIF_financial_statements_2023_consolidated,61,9,2,1,"Chi phí nguyên liệu, vật liệu",Đơn vị tính: VND > Năm nay | Năm trước,Đơn vị tính: VND | Năm nay,"31. CHI PHÍ SẢN XUẤT, KINH DOANH THEO YẾU TỐ",920.853.171.073,920853171073.0,1.0,100000000000.0,9.20853171073,42.23423913043479

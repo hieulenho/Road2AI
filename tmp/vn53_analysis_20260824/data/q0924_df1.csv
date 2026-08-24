@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DXG,2021,-1485726898.0,DXG_financial_statements_2021_separate,22,7,1,(1.485.726.898),Khấu hao trong năm,1.0,s1,9.02259803
+DXG,2022,-1406666210.0,DXG_financial_statements_2022_separate,23,7,1,(1.406.666.210),Khấu hao trong năm,1.0,s2,
+DXG,2023,-1361933052.0,DXG_financial_statements_2023_separate,20,7,1,(1.361.933.052),Khấu hao trong năm,1.0,s3,
+DXG,2024,-1368186692.0,DXG_financial_statements_2024_separate,21,7,1,(1.368.186.692),Khấu hao trong năm,1.0,s4,
+DXG,2025,-3400085178.0,DXG_financial_statements_2025_separate,22,8,1,(3.400.085.178),Khấu hao trong năm,1.0,s5,

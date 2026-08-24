@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VPI,2016,2542217408.0,VPI_financial_statements_2016_separate,5,5,3,2.542.217.408,3. Thuế và các khoản phải nộp Nhà nước,1.0,s1,37.2454051892
+DIG,2016,26323895303.0,DIG_financial_statements_2016_separate,7,5,3,26.323.895.303,Thuế và các khoản phải nộp Nhà nước,1.0,s2,
+VRE,2016,35068093552.0,VRE_financial_statements_2016_separate,6,5,3,35.068.093.552,3. Thuế và các khoản phải nộp Nhà nước,1.0,s3,
+DXG,2016,69976249971.0,DXG_financial_statements_2016_separate,8,5,3,69.976.249.971,3. Thuế và các khoản phải nộp Nhà nước,1.0,s4,
+PDR,2016,52316569712.0,PDR_financial_statements_2016_separate,6,5,3,52.316.569.712,3. Thuế và các khoản phải nộp Nhà nước,1.0,s5,

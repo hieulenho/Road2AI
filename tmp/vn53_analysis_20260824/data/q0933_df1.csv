@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VNM,2015,-6002261574354.0,VNM_financial_statements_2015_consolidated,9,6,3,(6.002.261.574.354),Tiền chi trả cổ tức,1.0,s1,2021.0
+VNM,2016,-7238478492000.0,VNM_financial_statements_2016_consolidated,12,20,3,(7.238.478.492.000),Tiền chi trả cổ tức,1.0,s2,
+VNM,2018,-7256172407500.0,VNM_financial_statements_2018_consolidated,12,17,3,(7.256.172.407.500),Tiền chi trả cổ tức,1.0,s3,
+VNM,2021,-7523560503000.0,VNM_financial_statements_2021_consolidated,10,17,3,(7.523.560.503.000),Tiền chi trả cổ tức,1.0,s4,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001267,FPT,2024,consolidated,FPT_financial_statements_2024_consolidated,61,5,2,1,Giá vốn của dịch vụ đã cung cấp,2024VND | 2023VND,2024VND,27 GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP,34.732.056.916.304,34732056916304.0,1.0,1000000000000.0,34.732056916304,43.54546703296703

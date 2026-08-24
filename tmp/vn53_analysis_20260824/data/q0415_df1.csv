@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+90118503426717.0,HPG_financial_statements_2020_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),90.118.503.426.717,HPG,2020,net_revenue,s1,1.2817279677185263
+149679789979345.0,HPG_financial_statements_2021_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),149.679.789.979.345,HPG,2021,net_revenue,s2,
+141409274460632.0,HPG_financial_statements_2022_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),141.409.274.460.632,HPG,2022,net_revenue,s3,
+118953027893654.0,HPG_financial_statements_2023_consolidated,5,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),118.953.027.893.654,HPG,2023,net_revenue,s4,
+138855112131387.0,HPG_financial_statements_2024_consolidated,7,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),138.855.112.131.387,HPG,2024,net_revenue,s5,
+56747258197010.0,HPG_financial_statements_2020_consolidated,2,2,3,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),56.747.258.197.010,HPG,2020,current_assets,s6,
+51975217447498.0,HPG_financial_statements_2020_consolidated,4,3,3,Nợ ngắn hạn,51.975.217.447.498,HPG,2020,current_liabilities,s7,
+94154859648304.0,HPG_financial_statements_2021_consolidated,2,2,3,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),94.154.859.648.304,HPG,2021,current_assets,s8,
+73459315876441.0,HPG_financial_statements_2021_consolidated,4,3,3,Nợ ngắn hạn,73.459.315.876.441,HPG,2021,current_liabilities,s9,
+80514710854456.0,HPG_financial_statements_2022_consolidated,2,2,3,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),80.514.710.854.456,HPG,2022,current_assets,s10,
+62385392809685.0,HPG_financial_statements_2022_consolidated,4,3,3,Nợ ngắn hạn,62.385.392.809.685,HPG,2022,current_liabilities,s11,
+82716439173043.0,HPG_financial_statements_2023_consolidated,1,2,3,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),82.716.439.173.043,HPG,2023,current_assets,s12,
+71513492904733.0,HPG_financial_statements_2023_consolidated,3,3,3,Nợ ngắn hạn,71.513.492.904.733,HPG,2023,current_liabilities,s13,
+86674276272995.0,HPG_financial_statements_2024_consolidated,3,2,3,Tài sản ngắn hạn\( (100 = 110 + 120 + 130 + 140 + 150) \),86.674.276.272.995,HPG,2024,current_assets,s14,
+75225243262689.0,HPG_financial_statements_2024_consolidated,5,3,3,Nợ ngắn hạn,75.225.243.262.689,HPG,2024,current_liabilities,s15,

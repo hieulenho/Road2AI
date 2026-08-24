@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BVH,2017,2286.0,BVH_financial_statements_2017_consolidated,83,4,1,2.286,Lãi cơ bản trên cổ phiếu,1.0,s1,2.843
+BVH,2019,1689.0,BVH_financial_statements_2019_consolidated,84,5,1,1.689,Lãi cơ bản trên cổ phiếu,1.0,s2,
+BVH,2022,2089.0,BVH_financial_statements_2022_consolidated,77,5,1,2.089,Lãi cơ bản trên cổ phiếu,1.0,s3,
+BVH,2024,2843.0,BVH_financial_statements_2024_consolidated,81,5,1,2.843,Lãi cơ bản trên cổ phiếu,1.0,s4,

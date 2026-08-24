@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KBC,2022,3951376578333.0,KBC_financial_statements_2022_consolidated,8,10,3,3.951.376.578.333,8. Vay ngắn hạn,1.0,s1,22.142121580543346
+KBC,2022,17845519292086.0,KBC_financial_statements_2022_consolidated,9,1,3,17.845.519.292.086,D. VỐN CHỦ SỞ HỮU,1.0,s2,

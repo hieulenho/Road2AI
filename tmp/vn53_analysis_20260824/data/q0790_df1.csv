@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VIB,2023,13400504000000.0,VIB_financial_statements_2023_separate,33,3,1,13.400.504,"Công nghiệp chế biến, chế tạo",1000000.0,s1,11.462937629600626
+VIB,2023,266345545000000.0,VIB_financial_statements_2023_separate,33,20,1,266.345.545,,1000000.0,s2,
+BID,2023,287063377000000.0,BID_financial_statements_2023_separate,30,3,1,287.063.377,"Công nghiệp chế biến, chế tạo",1000000.0,s3,
+BID,2023,1740391368000000.0,BID_financial_statements_2023_separate,30,10,1,1.740.391.368,,1000000.0,s4,

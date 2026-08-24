@@ -1,0 +1,7 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+1406490201935.0,ASM_financial_statements_2016_consolidated,11,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,1.406.490.201.935,ASM,2016,net_revenue,s1,1406.490201935
+173784735491.0,ASM_financial_statements_2016_consolidated,11,19,3,17. Lợi nhuận sau thuế thu nhập doanh nghiệp,173.784.735.491,ASM,2016,npat,s2,
+2100781280997.0,ASM_financial_statements_2017_consolidated,13,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,2.100.781.280.997,ASM,2017,net_revenue,s3,
+167736072436.0,ASM_financial_statements_2017_consolidated,13,19,3,17. Lợi nhuận sau thuế thu nhập doanh nghiệp,167.736.072.436,ASM,2017,npat,s4,
+8887128219281.0,ASM_financial_statements_2018_consolidated,9,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,8.887.128.219.281,ASM,2018,net_revenue,s5,
+1197875672560.0,ASM_financial_statements_2018_consolidated,9,19,3,17. Lợi nhuận sau thuế thu nhập doanh nghiệp,1.197.875.672.560,ASM,2018,npat,s6,

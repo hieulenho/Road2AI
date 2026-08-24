@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001136,HPX,2024,consolidated,HPX_financial_statements_2024_consolidated,43,5,4,1,Tổng,Năm 2024VND | Năm 2023VND,Năm 2024VND,6.2 Giá vốn hàng bán,1.097.119.148.438,1097119148438.0,1.0,1000000000.0,1097.119148438,23.625

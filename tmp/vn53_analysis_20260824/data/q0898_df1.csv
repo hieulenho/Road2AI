@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DIG,2024,213797839976.0,DIG_financial_statements_2024_separate,67,5,2,213.797.839.976,Phải trả ngắn hạn khác,1.0,s1,1775135.016586
+VRE,2024,24770000000.0,VRE_financial_statements_2024_separate,47,25,1,24.770,,1000000.0,s2,
+PDR,2024,1536567176610.0,PDR_financial_statements_2024_separate,73,19,2,1.536.567.176.610,,1.0,s3,

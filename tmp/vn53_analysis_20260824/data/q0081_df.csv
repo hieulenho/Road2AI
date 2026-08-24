@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000713,MBB,2023,consolidated,MBB_financial_statements_2023_consolidated,42,8,1,1,Chứng khoán nợ,31/12/2023triệu đồng | 31/12/2022triệu đồng,31/12/2023triệu đồng,13. CHỨNG KHOÁN ĐẦU TƯ 13.1 Chứng khoán đầu tư sẵn sàng để bán,143.010.711,143010711.0,1000000.0,1000000.0,143010711.0,23.784367007672635

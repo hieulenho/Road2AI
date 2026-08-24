@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KHG,2024,2271909427.0,KHG_financial_statements_2024_consolidated,50,19,2,2.271.909.427,Cộng,1.0,s1,5668.936028
+IJC,2024,7940845455.0,IJC_financial_statements_2024_consolidated,69,8,5,7.940.845.455,Cộng,1.0,s2,

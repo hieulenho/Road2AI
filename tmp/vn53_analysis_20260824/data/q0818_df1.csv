@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+FTS,2018,190150000.0,FTS_financial_statements_2018,22,2,7,190.150.000,Dự phòng nợ phải thu khác khó đòi,1.0,s1,145.134
+FTS,2020,78650000.0,FTS_financial_statements_2020,28,5,7,78.650.000,Dự phòng nợ phải thu khác khó đòi,1.0,s2,
+FTS,2021,125070000.0,FTS_financial_statements_2021,27,5,7,125.070.000,Dự phòng nợ phải thu khác khó đòi,1.0,s3,
+FTS,2023,158325000.0,FTS_financial_statements_2023,26,5,7,158.325.000,Dự phòng nợ phải thu khác khó đòi,1.0,s4,
+FTS,2024,173475000.0,FTS_financial_statements_2024,22,5,7,173.475.000,Dự phòng nợ phải thu khác khó đòi,1.0,s5,

@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VCB,2018,-2496594000000.0,VCB_financial_statements_2018_separate,84,5,3,(2.496.594),- Thuế TNDN của Ngân hàng,1000000.0,s1,5129398.2
+VCB,2020,-4588752000000.0,VCB_financial_statements_2020_separate,81,5,3,(4.588.752),- Thuế TNDN của Ngân hàng,1000000.0,s2,
+VCB,2021,-5707816000000.0,VCB_financial_statements_2021_separate,89,5,3,(5.707.816),- Thuế TNDN của Ngân hàng,1000000.0,s3,
+VCB,2022,-3820917000000.0,VCB_financial_statements_2022_separate,89,4,3,(3.820.917),Trong đó:- Thuế TNDN của Ngân hàng,1000000.0,s4,
+VCB,2025,-9032912000000.0,VCB_financial_statements_2025_separate,85,5,3,(9.032.912),- Thuế TNDN của Ngân hàng,1000000.0,s5,

@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+STB,2016,329187491000000.0,STB_financial_statements_2016_separate,5,39,2,329.187.491,TỔNG TÀI SẢN,1000000.0,s1,547.26316925
+STB,2017,364016293000000.0,STB_financial_statements_2017_separate,6,39,2,364.016.293,TỔNG TÀI SẢN,1000000.0,s2,
+STB,2022,587216341000000.0,STB_financial_statements_2022_separate,4,35,2,587.216.341,TỔNG TÀI SẢN,1000000.0,s3,
+STB,2025,908632552000000.0,STB_financial_statements_2025_separate,3,33,3,908.632.552,TỔNG TÀI SẢN,1000000.0,s4,

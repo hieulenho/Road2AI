@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+OGC,2017,893405000000.0,OGC_financial_statements_2017_consolidated,34,9,5,893.405.000.000,,1.0,s1,14.106015722205989
+OGC,2017,420354204745.0,OGC_financial_statements_2017_consolidated,34,17,5,420.354.204.745,Khoản đến hạn trả sau 12 tháng,1.0,s2,
+ASM,2017,716434488995.0,ASM_financial_statements_2017_consolidated,11,12,3,716.434.488.995,10. Vay và nợ thuê tài chính ngắn hạn,1.0,s3,
+ASM,2017,612814374587.0,ASM_financial_statements_2017_consolidated,11,25,3,612.814.374.587,8. Vay và nợ thuê tài chính dài hạn,1.0,s4,

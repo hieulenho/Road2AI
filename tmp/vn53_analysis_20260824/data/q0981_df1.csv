@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BSR,2017,5697895452596.0,BSR_financial_statements_2017_consolidated,34,5,1,5.697.895.452.596,Doanh thu LPG,1.0,s1,2022.0
+BSR,2019,5983079101866.0,BSR_financial_statements_2019_consolidated,37,6,1,5.983.079.101.866,Doanh thu LPG,1.0,s2,
+BSR,2021,7942513069668.0,BSR_financial_statements_2021_consolidated,37,5,1,7.942.513.069.668,Doanh thu LPG,1.0,s3,
+BSR,2022,9292539523199.0,BSR_financial_statements_2022_consolidated,41,6,1,9.292.539.523.199,Doanh thu LPG,1.0,s4,
+BSR,2025,7646974909812.0,BSR_financial_statements_2025_consolidated,37,7,1,7.646.974.909.812,Doanh thu LPG,1.0,s5,

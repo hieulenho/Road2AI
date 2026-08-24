@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000677,NVB,2024,consolidated,NVB_financial_statements_2024_consolidated,35,5,1,1,Các khoản phải trả nội bộ,31/12/2024 | 31/12/2023,31/12/2024,15. Các khoản nợ khác,307.293,307293.0,1000000.0,1000000.0,307293.0,34.157686335403724

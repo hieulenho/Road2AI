@@ -1,0 +1,10 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+260793426455.0,BSR_financial_statements_2024_consolidated,7,7,4,- Trong đó: Chi phí lãi vay,260.793.426.455,BSR,2024,interest_expense,s1,0.5558452780735023
+735998810618.0,BSR_financial_statements_2024_consolidated,7,14,4,Tổng lợi nhuận kế toán trước thuế (50=30+40),735.998.810.618,BSR,2024,pbt,s2,
+568190119356.0,PLX_financial_statements_2024_consolidated,8,8,3,Trong đó: Chi phí lãi vay,568.190.119.356,PLX,2024,interest_expense,s3,
+3972180279455.0,PLX_financial_statements_2024_consolidated,8,16,3,Lợi nhuận kế toán trước thuế (50 = 30 + 40),3.972.180.279.455,PLX,2024,pbt,s4,
+417711767303.0,PVT_financial_statements_2024_consolidated,8,7,4,- Trong đó: Chi phí lãi vay,417.711.767.303,PVT,2024,interest_expense,s5,
+1868391059627.0,PVT_financial_statements_2024_consolidated,8,15,4,Tổng lợi nhuận kế toán trước thuế (50=30+40),1.868.391.059.627,PVT,2024,pbt,s6,
+123027063879559.0,BSR_financial_statements_2024_consolidated,7,2,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01),123.027.063.879.559,BSR,2024,net_revenue,s7,
+284017424539160.0,PLX_financial_statements_2024_consolidated,8,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),284.017.424.539.160,PLX,2024,net_revenue,s8,
+11732148061983.0,PVT_financial_statements_2024_consolidated,8,2,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01),11.732.148.061.983,PVT,2024,net_revenue,s9,

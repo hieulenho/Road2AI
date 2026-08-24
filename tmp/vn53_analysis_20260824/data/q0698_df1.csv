@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+TTF,2020,95533369875.0,TTF_financial_statements_2020_consolidated,7,11,3,(95.533.369.875),10. Chi phí quản lý doanh nghiệp,1.0,s1,7.8724226440260825
+TTF,2020,1213519321749.0,TTF_financial_statements_2020_consolidated,7,3,3,1.213.519.321.749,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,1.0,s2,

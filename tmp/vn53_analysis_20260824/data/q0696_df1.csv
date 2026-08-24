@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HSG,2019,28034775118675.0,HSG_financial_statements_2019_consolidated,5,4,3,28.034.775.118.675,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),1.0,s1,5.279664948211131
+HSG,2019,2734140592825.0,HSG_financial_statements_2019_consolidated,4,17,3,5.468.281.185.650,Vốn chủ sở hữu,1.0,s2,
+HSG,2019,2575812859462.5,HSG_financial_statements_2019_consolidated,4,17,4,5.151.625.718.925,Vốn chủ sở hữu,1.0,s3,

@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BAB,2025,-1564458000000.0,BAB_financial_statements_2025_separate,4,12,3,(1.564.458),Dự phòng rủi ro cho vay khách hàng,1000000.0,s1,107.5416601936008
+BAB,2025,137377000000.0,BAB_financial_statements_2025_separate,24,3,1,137.377,Nợ dưới tiêu chuẩn,1000000.0,s2,
+BAB,2025,137466000000.0,BAB_financial_statements_2025_separate,24,4,1,137.466,Nợ nghi ngờ,1000000.0,s3,
+BAB,2025,1179903000000.0,BAB_financial_statements_2025_separate,24,5,1,1.179.903,Nợ có khả năng mất vốn,1000000.0,s4,

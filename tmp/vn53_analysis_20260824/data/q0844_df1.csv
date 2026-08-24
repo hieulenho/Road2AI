@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NLG,2015,2426494702355.0,NLG_financial_statements_2015_consolidated,8,15,3,2.426.494.702.355,D. VỐN CHỦ SỞ HỮU,1.0,s1,50.52158853016804
+NLG,2015,5022018174967.0,NLG_financial_statements_2015_consolidated,7,25,3,5.022.018.174.967,TỔNG CỘNG TÀI SẢN,1.0,s2,
+NLG,2018,5284504211423.0,NLG_financial_statements_2018_consolidated,7,19,3,5.284.504.211.423,D. VỐN CHỦ SỞ HỮU,1.0,s3,
+NLG,2018,9574399674864.0,NLG_financial_statements_2018_consolidated,6,24,3,9.574.399.674.864,TỔNG CỘNG TÀI SẢN,1.0,s4,
+NLG,2024,14568926285295.0,NLG_financial_statements_2024_consolidated,7,19,3,14.568.926.285.295,D. VỐN CHỦ SỞ HỮU,1.0,s5,
+NLG,2024,30318114011075.0,NLG_financial_statements_2024_consolidated,6,23,3,30.318.114.011.075,TỔNG CỘNG TÀI SẢN,1.0,s6,

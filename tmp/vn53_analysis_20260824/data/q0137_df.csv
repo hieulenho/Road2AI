@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000713,TTF,2023,parent,TTF_financial_statements_2023_separate,30,14,13,2,TỔNG CỔNG,,VND | Số đầu năm,17.2 Người mua trả tiền trước,1.352.726.821.642,1352726821642.0,1.0,1000000000.0,1352.726821642,23.042276422764225

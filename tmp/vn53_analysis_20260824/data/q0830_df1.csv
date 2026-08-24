@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+STB,2017,5906775000000.0,STB_financial_statements_2017_separate,100,1,1,5.906.775,Tiền mặt và vàng,1000000.0,s1,7067923.0
+STB,2021,7856774000000.0,STB_financial_statements_2021_separate,96,1,1,7.856.774,Tiền mặt và vàng,1000000.0,s2,
+STB,2022,7440220000000.0,STB_financial_statements_2022_separate,91,1,1,7.440.220,Tiền mặt và vàng,1000000.0,s3,

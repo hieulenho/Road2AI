@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VCB,2025,2504438000000.0,VCB_financial_statements_2025_separate,11,28,3,2.504.438,Tài sản cố định vô hình,1000000.0,s1,31.385622109258755
+VCB,2025,7979571000000.0,VCB_financial_statements_2025_separate,11,24,3,7.979.571,Tài sản cố định,1000000.0,s2,

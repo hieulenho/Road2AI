@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+PC1,2022,32479615863.0,PC1_financial_statements_2022_separate,23,1,1,32.479.615.863,Phải thu về cổ tức và lợi nhuận được chia,1.0,s1,166.562502443
+PC1,2023,102912151561.0,PC1_financial_statements_2023_separate,22,3,1,102.912.151.561,Phải thu về cổ tức và lợi nhuận được chia,1.0,s2,
+PC1,2024,152605436256.0,PC1_financial_statements_2024_separate,22,1,1,152.605.436.256,Phải thu về cổ tức và lợi nhuận được chia (*),1.0,s3,
+PC1,2025,166562502443.0,PC1_financial_statements_2025_separate,21,2,1,166.562.502.443,Phải thu về cổ tức và lợi nhuận được chia,1.0,s4,

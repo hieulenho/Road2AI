@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SSI,2020,208753551822.0,SSI_financial_statements_2020_consolidated,11,6,3,208.753.551.822,Cộng doanh thu hoạt động tài chính,1.0,s1,-40.933264107937774
+SSI,2023,123303909120.0,SSI_financial_statements_2023_consolidated,11,6,3,123.303.909.120,Cộng doanh thu hoạt động tài chính,1.0,s2,

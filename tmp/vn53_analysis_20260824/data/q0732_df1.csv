@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+FIT,2023,419991341072.0,FIT_financial_statements_2023_separate,34,1,1,419.991.341.072,Vay ngắn hạn ngân hàng (i),1.0,s1,902.4344411630631
+FIT,2023,15330585.0,FIT_financial_statements_2023_separate,17,1,1,15.330.585,Tiền mặt,1.0,s2,
+FIT,2023,450067589.0,FIT_financial_statements_2023_separate,17,2,1,450.067.589,Tiền gửi ngân hàng không kỳ hạn,1.0,s3,

@@ -1,0 +1,9 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+5349301099496.0,FPT_financial_statements_2021_consolidated,9,20,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52)Phân bổ cho:,5.349.301.099.496,FPT,2021,npat,s1,1.437511697769
+6491343454469.0,FPT_financial_statements_2022_consolidated,21,20,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52) Phân bổ cho:,6.491.343.454.469,FPT,2022,npat,s2,
+7788049739616.0,FPT_financial_statements_2023_consolidated,9,20,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),7.788.049.739.616,FPT,2023,npat,s3,
+9427422530444.0,FPT_financial_statements_2024_consolidated,9,20,3,Lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),9.427.422.530.444,FPT,2024,npat,s4,
+5839693554727.0,FPT_financial_statements_2021_consolidated,10,17,2,Lưu chuyển tiền thuần từ hoạt động kinh doanh,5.839.693.554.727,FPT,2021,cfo,s5,
+5053831756700.0,FPT_financial_statements_2022_consolidated,22,17,2,Lưu chuyển tiền thuần từ hoạt động kinh doanh,5.053.831.756.700,FPT,2022,cfo,s6,
+9517095698405.0,FPT_financial_statements_2023_consolidated,10,17,2,Lưu chuyển tiền thuần từ hoạt động kinh doanh,9.517.095.698.405,FPT,2023,cfo,s7,
+11703777188868.0,FPT_financial_statements_2024_consolidated,10,17,2,Lưu chuyển tiền thuần từ hoạt động kinh doanh,11.703.777.188.868,FPT,2024,cfo,s8,

@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KHG,2019,18711269101.0,KHG_financial_statements_2019_separate,20,2,1,18.711.269.101,Chi phí môi giới bắt động sản,1.0,s1,2022.0
+KHG,2020,71249969410.0,KHG_financial_statements_2020_separate,20,2,1,71.249.969.410,Chi phí môi giới bất động sản,1.0,s2,
+KHG,2021,227362215322.0,KHG_financial_statements_2021_separate,25,2,1,227.362.215.322,Chi phí môi giới bắt động sản,1.0,s3,
+KHG,2022,351761674853.0,KHG_financial_statements_2022_separate,25,2,1,351.761.674.853,Chi phí môi giới bắt động sản,1.0,s4,
+KHG,2023,26932187593.0,KHG_financial_statements_2023_separate,26,2,1,26.932.187.593,Chi phí môi giới bất động sản,1.0,s5,

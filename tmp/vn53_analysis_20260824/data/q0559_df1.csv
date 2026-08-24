@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+1370762859964.0,DCM_financial_statements_2019_consolidated,8,19,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.370.762.859.964,DCM,2019,cfo,s1,4.1889988418160184
+1780630001870.0,DCM_financial_statements_2020_consolidated,8,19,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.780.630.001.870,DCM,2020,cfo,s2,
+1759007340443.0,DPM_financial_statements_2019_consolidated,6,17,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.759.007.340.443,DPM,2019,cfo,s3,
+787273413997.0,DPM_financial_statements_2020_consolidated,8,17,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,787.273.413.997,DPM,2020,cfo,s4,
+-128195940927.0,PRT_financial_statements_2019_consolidated,7,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(128.195.940.927),PRT,2019,cfo,s5,
+1152796116490.0,PRT_financial_statements_2020_consolidated,8,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.152.796.116.490,PRT,2020,cfo,s6,
+6689328536776.0,DCM_financial_statements_2018_consolidated,5,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),6.689.328.536.776,DCM,2018,net_revenue,s7,
+7042966930117.0,DCM_financial_statements_2019_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.042.966.930.117,DCM,2019,net_revenue,s8,
+7561275100418.0,DCM_financial_statements_2020_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.561.275.100.418,DCM,2020,net_revenue,s9,
+9297111550409.0,DPM_financial_statements_2018_consolidated,6,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),9.297.111.550.409,DPM,2018,net_revenue,s10,
+7683541208058.0,DPM_financial_statements_2019_consolidated,5,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.683.541.208.058,DPM,2019,net_revenue,s11,
+7761818604563.0,DPM_financial_statements_2020_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.761.818.604.563,DPM,2020,net_revenue,s12,
+181027102563.0,PRT_financial_statements_2018_consolidated,6,3,3,Doanh thu thuần bán hàng và cung cấp dịch vụ,181.027.102.563,PRT,2018,net_revenue,s13,
+1674015385634.0,PRT_financial_statements_2019_consolidated,6,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,1.674.015.385.634,PRT,2019,net_revenue,s14,
+961523454420.0,PRT_financial_statements_2020_consolidated,7,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,961.523.454.420,PRT,2020,net_revenue,s15,

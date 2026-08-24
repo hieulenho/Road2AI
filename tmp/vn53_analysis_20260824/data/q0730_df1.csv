@@ -1,0 +1,2 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DTK,2017,1290950461998.0,DTK_financial_statements_2017_separate,45,10,4,1.290.950.461.998,Lợi nhuận gộp,1.0,s1,1.290950461998

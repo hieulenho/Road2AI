@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000666,VRE,2022,parent,VRE_financial_statements_2022_separate,33,10,1,1,Lãi vay phải trả,31/12/2022Triệu VND | 1/1/2022Triệu VND,31/12/2022Triệu VND,19. Chi phí phải trả - ngắn hạn,49.408,49408.0,1000000.0,1000000.0,49408.0,24.96100447116867

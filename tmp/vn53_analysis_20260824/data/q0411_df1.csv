@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+1615671932877.0,HPX_financial_statements_2024_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01-02),1.615.671.932.877,HPX,2024,net_revenue,s1,3.0
+1142739310537.0,HPX_financial_statements_2025_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01-02),1.142.739.310.537,HPX,2025,net_revenue,s2,
+2775773466955.0,KBC_financial_statements_2024_consolidated,5,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,2.775.773.466.955,KBC,2024,net_revenue,s3,
+6687125604053.0,KBC_financial_statements_2025_consolidated,8,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,6.687.125.604.053,KBC,2025,net_revenue,s4,
+9073375473961.0,NVL_financial_statements_2024_consolidated,12,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ(10 = 01 - 02),9.073.375.473.961,NVL,2024,net_revenue,s5,
+6965748286065.0,NVL_financial_statements_2025_consolidated,11,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ(10 = 01 - 02),6.965.748.286.065,NVL,2025,net_revenue,s6,
+821690538691.0,PDR_financial_statements_2025_consolidated,7,3,4,Doanh thu thuần bán hàng và cung cấp dịch vụ,821.690.538.691,PDR,2024,net_revenue,s7,
+1324974747132.0,PDR_financial_statements_2025_consolidated,7,3,3,Doanh thu thuần bán hàng và cung cấp dịch vụ,1.324.974.747.132,PDR,2025,net_revenue,s8,
+799116768725.0,SCR_financial_statements_2024_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,799.116.768.725,SCR,2024,net_revenue,s9,
+1227381771108.0,SCR_financial_statements_2025_consolidated,9,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,1.227.381.771.108,SCR,2025,net_revenue,s10,
+-454605830464.0,HPX_financial_statements_2025_consolidated,8,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(454.605.830.464),HPX,2025,cfo,s11,
+-17343896115028.0,KBC_financial_statements_2025_consolidated,11,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(17.343.896.115.028),KBC,2025,cfo,s12,
+-6145392029996.0,NVL_financial_statements_2025_consolidated,12,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(6.145.392.029.996),NVL,2025,cfo,s13,
+-2975418118104.0,PDR_financial_statements_2025_consolidated,8,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(2.975.418.118.104),PDR,2025,cfo,s14,
+-1074905152750.0,SCR_financial_statements_2025_consolidated,10,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(1.074.905.152.750),SCR,2025,cfo,s15,

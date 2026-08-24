@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001326,GAS,2016,consolidated,GAS_financial_statements_2016_consolidated,49,19,3,4,Tổng doanh thu thuần,VND > Doanh thu,Tổng cộng | VND | Doanh thu,Kết quả hoạt động kinh doanh hợp nhất cho năm tài chính kết thúc ngày 31 tháng 12 năm 2016,59.076.193.175.661,59076193175661.0,1.0,100000000000.0,590.76193175661,44.84166666666667

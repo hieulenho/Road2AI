@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+7561275100418.0,DCM_financial_statements_2020_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.561.275.100.418,DCM,2020,net_revenue,s1,0.8061317165144025
+662446334271.0,DCM_financial_statements_2020_consolidated,7,18,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52)Trong đó:,662.446.334.271,DCM,2020,npat,s2,
+9869762904637.0,DCM_financial_statements_2021_consolidated,4,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,9.869.762.904.637,DCM,2021,net_revenue,s3,
+1826124286936.0,DCM_financial_statements_2021_consolidated,4,19,3,Lợi nhuận sau thuế TNDN,1.826.124.286.936,DCM,2021,npat,s4,
+15924526874399.0,DCM_financial_statements_2022_consolidated,6,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),15.924.526.874.399,DCM,2022,net_revenue,s5,
+4321080734535.0,DCM_financial_statements_2022_consolidated,6,18,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52),4.321.080.734.535,DCM,2022,npat,s6,
+2050151784755.0,DCM_financial_statements_2020_consolidated,6,2,4,Nợ ngắn hạn,2.050.151.784.755,DCM,2020,current_liabilities,s7,
+1780630001870.0,DCM_financial_statements_2020_consolidated,8,19,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.780.630.001.870,DCM,2020,cfo,s8,
+3186610542693.0,DCM_financial_statements_2021_consolidated,3,3,3,Nợ ngắn hạn,3.186.610.542.693,DCM,2021,current_liabilities,s9,
+2568827826644.0,DCM_financial_statements_2021_consolidated,5,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,2.568.827.826.644,DCM,2021,cfo,s10,
+2874435985843.0,DCM_financial_statements_2022_consolidated,5,2,4,Nợ ngắn hạn,2.874.435.985.843,DCM,2022,current_liabilities,s11,
+5731609693298.0,DCM_financial_statements_2022_consolidated,7,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,5.731.609.693.298,DCM,2022,cfo,s12,

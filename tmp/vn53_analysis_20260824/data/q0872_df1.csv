@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+EVF,2021,50351000000.0,EVF_financial_statements_2021,5,21,3,50.351,Tài sản cố định vô hình,1000000.0,s1,90.067
+EVF,2022,51456000000.0,EVF_financial_statements_2022,5,20,2,51.456,Tài sản cố định vô hình,1000000.0,s2,
+EVF,2023,47394000000.0,EVF_financial_statements_2023,6,21,2,47.394,Tài sản cố định vô hình,1000000.0,s3,
+EVF,2025,211067000000.0,EVF_financial_statements_2025,5,25,3,211.067,Tài sản cố định vô hình,1000000.0,s4,

@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+2989878369540.0,BSR_financial_statements_2019_consolidated,5,11,4,Lợi nhuận thuần từ hoạt động kinh doanh (30=20+(21-22)-(25+26)),2.989.878.369.540,BSR,2019,operating_profit,s1,2.4664951502807497
+5511407200163.0,PLX_financial_statements_2019_consolidated,8,12,3,Lợi nhuận thuần từ hoạt động kinh doanh{30 = 20 + (21 - 22) + 24 - (25 + 26)},5.511.407.200.163,PLX,2019,operating_profit,s2,
+989988653563.0,PVT_financial_statements_2019_consolidated,7,12,4,Lợi nhuận thuần từ hoạt động kinh doanh (30=20+24+(21-22)-(25+26)),989.988.653.563,PVT,2019,operating_profit,s3,
+4937118588268.0,BSR_financial_statements_2019_consolidated,6,19,3,Lưu chuyển tiên thuần từ hoạt động kinh doanh,4.937.118.588.268,BSR,2019,cfo,s4,
+4180510986492.0,PLX_financial_statements_2019_consolidated,10,20,2,Lưu chuyển tiền thuần từhoạt động kinh doanh,4.180.510.986.492,PLX,2019,cfo,s5,
+1178512108355.0,PVT_financial_statements_2019_consolidated,8,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.178.512.108.355,PVT,2019,cfo,s6,
+102823752645297.0,BSR_financial_statements_2019_consolidated,5,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),102.823.752.645.297,BSR,2019,net_revenue,s7,
+2872997410347.0,BSR_financial_statements_2019_consolidated,5,18,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52)Trong đó:,2.872.997.410.347,BSR,2019,npat,s8,
+189603525406879.0,PLX_financial_statements_2019_consolidated,8,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),189.603.525.406.879,PLX,2019,net_revenue,s9,
+4676561758922.0,PLX_financial_statements_2019_consolidated,8,19,3,Lợi nhuận sau thuế TNDN(60 = 50 - 51 - 52)(chuyển sang trang sau),4.676.561.758.922,PLX,2019,npat,s10,
+7758369179957.0,PVT_financial_statements_2019_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.758.369.179.957,PVT,2019,net_revenue,s11,
+820683601126.0,PVT_financial_statements_2019_consolidated,7,20,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52),820.683.601.126,PVT,2019,npat,s12,

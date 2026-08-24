@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BID,2017,-11349782000000.0,BID_financial_statements_2017_consolidated,6,14,3,(11.349.782),2.,1000000.0,s1,40469060.0
+BID,2021,-29103718000000.0,BID_financial_statements_2021_consolidated,5,14,3,(29.103.718),2.,1000000.0,s2,
+BID,2023,-40469060000000.0,BID_financial_statements_2023_consolidated,5,14,3,(40.469.060),2.,1000000.0,s3,
+BID,2024,-38038771000000.0,BID_financial_statements_2024_consolidated,5,14,3,(38.038.771),2.,1000000.0,s4,
+BID,2025,-34945553000000.0,BID_financial_statements_2025_consolidated,4,14,3,(34.945.553),2.,1000000.0,s5,

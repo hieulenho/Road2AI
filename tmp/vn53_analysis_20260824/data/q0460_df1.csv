@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+3077744741352.0,DIG_financial_statements_2016_consolidated,5,1,3,NỘ PHẢI TRẢ,3.077.744.741.352,DIG,2016,liabilities,s1,0.6680875037792766
+2798060953720.0,DIG_financial_statements_2016_consolidated,5,31,3,VỐN CHỦ SỞ HỮU,2.798.060.953.720,DIG,2016,equity,s2,
+6036457811415.0,KBC_financial_statements_2016_consolidated,6,1,3,C. NỘ PHẢI TRẢ,6.036.457.811.415,KBC,2016,liabilities,s3,
+8621089984484.0,KBC_financial_statements_2016_consolidated,7,1,3,D. VỐN CHỦ SỞ HỮU,8.621.089.984.484,KBC,2016,equity,s4,
+26480185576926.0,NVL_financial_statements_2016_consolidated,4,2,3,NỘ PHẢI TRÀ,26.480.185.576.926,NVL,2016,liabilities,s5,
+10046890137071.0,NVL_financial_statements_2016_consolidated,4,19,3,VỐN CHỦ SỞ HỮU,10.046.890.137.071,NVL,2016,equity,s6,
+4236008315564.0,SCR_financial_statements_2016_consolidated,4,2,3,NỘ PHẢI TRẢ (300 = 310 + 330),4.236.008.315.564,SCR,2016,liabilities,s7,
+3262393800544.0,SCR_financial_statements_2016_consolidated,4,17,3,VỐN CHỦ SỞ HỮU (400 = 410),3.262.393.800.544,SCR,2016,equity,s8,
+9615764625070.0,VRE_financial_statements_2016_consolidated,6,1,3,C. NỘ PHẢI TRẢ,9.615.764.625.070,VRE,2016,liabilities,s9,
+24683385131878.0,VRE_financial_statements_2016_consolidated,6,19,3,D. VỐN CHỦ SỞ HỮU,24.683.385.131.878,VRE,2016,equity,s10,
+15687433198.0,DIG_financial_statements_2016_consolidated,7,8,3,Trong đó: Chi phí lãi vay,15.687.433.198,DIG,2016,interest_expense,s11,
+81656871847.0,KBC_financial_statements_2016_consolidated,8,8,3,Trong đó: Chi phí lãi vay,(81.656.871.847),KBC,2016,interest_expense,s12,
+863073263518.0,NVL_financial_statements_2016_consolidated,5,9,3,- Trong đó: Chi phí lãi vay,(863.073.263.518),NVL,2016,interest_expense,s13,
+38663508531.0,SCR_financial_statements_2016_consolidated,5,8,3,Trong đó: Chi phí lãi vay,38.663.508.531,SCR,2016,interest_expense,s14,
+1252384236423.0,VRE_financial_statements_2016_consolidated,7,8,3,Trong đó: Chi phí lãi vay,(1.252.384.236.423),VRE,2016,interest_expense,s15,

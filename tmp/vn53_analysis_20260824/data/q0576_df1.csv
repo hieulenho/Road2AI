@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+7042966930117.0,DCM_financial_statements_2019_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.042.966.930.117,DCM,2019,net_revenue,s1,3.9172954844846872
+7561275100418.0,DCM_financial_statements_2020_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.561.275.100.418,DCM,2020,net_revenue,s2,
+7683541208058.0,DPM_financial_statements_2019_consolidated,5,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.683.541.208.058,DPM,2019,net_revenue,s3,
+7761818604563.0,DPM_financial_statements_2020_consolidated,7,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.761.818.604.563,DPM,2020,net_revenue,s4,
+1674015385634.0,PRT_financial_statements_2019_consolidated,6,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,1.674.015.385.634,PRT,2019,net_revenue,s5,
+961523454420.0,PRT_financial_statements_2020_consolidated,7,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,961.523.454.420,PRT,2020,net_revenue,s6,
+959192196850.0,DCM_financial_statements_2019_consolidated,7,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),959.192.196.850,DCM,2019,gross_profit,s7,
+1316847799889.0,DCM_financial_statements_2020_consolidated,7,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),1.316.847.799.889,DCM,2020,gross_profit,s8,
+1402092953452.0,DPM_financial_statements_2019_consolidated,5,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),1.402.092.953.452,DPM,2019,gross_profit,s9,
+1729803613573.0,DPM_financial_statements_2020_consolidated,7,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),1.729.803.613.573,DPM,2020,gross_profit,s10,
+399384411874.0,PRT_financial_statements_2019_consolidated,6,6,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,399.384.411.874,PRT,2019,gross_profit,s11,
+97121554452.0,PRT_financial_statements_2020_consolidated,7,6,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,97.121.554.452,PRT,2020,gross_profit,s12,

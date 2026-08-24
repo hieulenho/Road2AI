@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SGB,2015,14968812000000.0,SGB_financial_statements_2015_separate,3,15,2,14.968.812,TỔNG NỘ PHẢI TRẢ,1000000.0,s1,81.53201278754366
+SGB,2015,18359429000000.0,SGB_financial_statements_2015_separate,2,21,2,18.359.429,TỔNG TÀI SẢN CÓ,1000000.0,s2,

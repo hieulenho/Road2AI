@@ -1,0 +1,9 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+2143769808850.0,AAA_financial_statements_2016_consolidated,4,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,2.143.769.808.850,AAA,2016,net_revenue,s1,28.379904075338
+142925017617.0,AAA_financial_statements_2016_consolidated,4,19,3,18. Lợi nhuận sau thuế thu nhập doanh nghiệp,142.925.017.617,AAA,2016,npat,s2,
+4910170683302.0,DCM_financial_statements_2016_consolidated,7,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),4.910.170.683.302,DCM,2016,net_revenue,s3,
+624339822048.0,DCM_financial_statements_2016_consolidated,7,17,3,16. Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51),624.339.822.048,DCM,2016,npat,s4,
+7924787123725.0,DPM_financial_statements_2016_consolidated,6,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),7.924.787.123.725,DPM,2016,net_revenue,s5,
+1164774744823.0,DPM_financial_statements_2016_consolidated,6,19,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52),1.164.774.744.823,DPM,2016,npat,s6,
+15544946268311.0,GVR_financial_statements_2016_consolidated,9,4,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,15.544.946.268.311,GVR,2016,net_revenue,s7,
+2796603372200.0,GVR_financial_statements_2016_consolidated,9,20,3,18. Tổng lợi nhuận sau thuế thu nhập doanh nghiệp,2.796.603.372.200,GVR,2016,npat,s8,

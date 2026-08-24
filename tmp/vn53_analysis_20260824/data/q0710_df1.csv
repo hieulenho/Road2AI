@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VNM,2022,13895815212897.0,VNM_financial_statements_2022_separate,8,3,3,13.895.815.212.897,Nợ ngắn hạn,1.0,s1,47.8936070867124
+VNM,2022,29013924943549.0,VNM_financial_statements_2022_separate,8,15,3,29.013.924.943.549,Vốn chủ sở hữu,1.0,s2,

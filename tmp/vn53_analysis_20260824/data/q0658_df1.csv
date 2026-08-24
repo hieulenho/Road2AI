@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+PLX,2024,528005384335.0,PLX_financial_statements_2024_consolidated,8,9,3,528.005.384.335,"Phần lãi trong các công ty liên doanh, liên kết",1.0,s1,18.271323545987165
+PLX,2024,2889803702540.0,PLX_financial_statements_2024_consolidated,62,2,1,2.889.803.702.540,Lợi nhuận thuần hợp nhất thuộc về các cổ đông phổ thông (VND),1.0,s2,

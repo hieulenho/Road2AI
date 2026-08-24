@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+POW,2017,13077812223.0,POW_financial_statements_2017_separate,28,4,1,13.077.812.223,Tập đoàn Điện lực Việt Nam,1.0,s1,79.072318889
+POW,2018,20520253105.0,POW_financial_statements_2018_separate,24,4,1,20.520.253.105,Tập đoàn Điện lực Việt Nam,1.0,s2,
+POW,2021,79072318889.0,POW_financial_statements_2021_separate,24,3,1,79.072.318.889,Tập đoàn Điện lực Việt Nam,1.0,s3,
+POW,2024,61539096219.0,POW_financial_statements_2024_separate,26,6,1,61.539.096.219,Tập đoàn Điện lực Việt Nam,1.0,s4,

@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000060,EIB,2024,parent,EIB_financial_statements_2024_separate,3,36,24,3,a | Nguyên giá,,Tại ngày | 31.12.2024 Triệu đồng,===== PAGE 9 ===== NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN XUẤT NHẬP KHẦU VIỆT NAM Mẫu B02/TCTD BÁO CÁO TÌNH HÌNH TÀI CHÍNH RIÊNG,2.569.380,2569380.0,1000000.0,1000000.0,2569380.0,22.36963147744424

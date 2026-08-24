@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SAM,2020,279200617865.0,SAM_financial_statements_2020_consolidated,6,17,3,279.200.617.865,2. Chỉ phí xây dựng cơ bản dở dang,1.0,s1,2021.0
+SAM,2021,676888943619.0,SAM_financial_statements_2021_consolidated,5,14,3,676.888.943.619,2. Chi phí xây dựng cơ bản dở dang,1.0,s2,
+SAM,2023,422108075599.0,SAM_financial_statements_2023_consolidated,6,14,3,422.108.075.599,2. Chi phí xây dựng cơ bản dở dang,1.0,s3,
+SAM,2024,324140630136.0,SAM_financial_statements_2024_consolidated,6,14,3,324.140.630.136,2. Chi phí xây dựng cơ bản dở dang,1.0,s4,

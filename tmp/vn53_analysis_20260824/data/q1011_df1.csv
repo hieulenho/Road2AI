@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SSB,2021,0.0,SSB_financial_statements_2021_separate,82,7,1,-,▪ Tiền vay tại Ngân hàng,1000000.0,s1,4300000.0
+SSB,2023,274352000000.0,SSB_financial_statements_2023_separate,89,7,1,274.352,Tiền vay tại Ngân hàng,1000000.0,s2,
+SSB,2023,0.0,SSB_financial_statements_2023_separate,89,20,1,-,Tiền vay tại Ngân hàng,1000000.0,s3,
+SSB,2024,0.0,SSB_financial_statements_2024_separate,85,7,1,-,Tiền vay tại Ngân hàng,1000000.0,s4,
+SSB,2024,4300000000000.0,SSB_financial_statements_2024_separate,85,26,1,4.300.000,Tiền vay tại Ngân hàng,1000000.0,s5,

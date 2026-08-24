@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000893,HT1,2017,parent,HT1_financial_statements_2017_separate,41,4,1,1,"Giá vốn của xi măng, clinker",Năm nay | VNDNăm trước,Năm nay,23. GIÁ VÓN HÀNG BÁN VÀ DỊCH VỤ CUNG CÁP,6.834.641.634.899,6834641634899.0,1.0,1000000000000.0,6.834641634899,33.9040504511895

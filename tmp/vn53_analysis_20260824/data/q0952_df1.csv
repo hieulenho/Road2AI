@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DTK,2022,60662738216.0,DTK_financial_statements_2022_separate,18,1,1,60.662.738.216,Ngắn hạn,1.0,s1,43.3481444
+DTK,2023,42773553679.0,DTK_financial_statements_2023_separate,21,1,1,42.773.553.679,Ngắn hạn,1.0,s2,
+DTK,2024,42069431300.0,DTK_financial_statements_2024_consolidated,21,1,1,42.069.431.300,Ngắn hạn,1.0,s3,
+DTK,2025,27886854405.0,DTK_financial_statements_2025_consolidated,21,2,1,27.886.854.405,Ngắn hạn,1.0,s4,

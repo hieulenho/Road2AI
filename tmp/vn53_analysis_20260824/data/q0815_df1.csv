@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+OCB,2017,46999721794.0,OCB_financial_statements_2017_consolidated,65,11,1,46.999.721.794,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,1.0,s1,145.113883664
+OCB,2020,94975111343.0,OCB_financial_statements_2020_consolidated,10,7,2,94.975.111.343,Lãi thuần từ hoạt động kinh doanh ngoại hối,1.0,s2,
+OCB,2021,99732528303.0,OCB_financial_statements_2021_consolidated,8,7,2,99.732.528.303,Lãi thuần từ hoạt động kinh doanh ngoại hối,1.0,s3,
+OCB,2022,145113883664.0,OCB_financial_statements_2022_consolidated_1,8,7,2,145.113.883.664,Lãi thuần từ hoạt động kinh doanh ngoại hối,1.0,s4,

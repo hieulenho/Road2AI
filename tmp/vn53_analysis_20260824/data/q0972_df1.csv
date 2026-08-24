@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DIG,2021,879010112441.0,DIG_financial_statements_2021_separate,6,12,3,879.010.112.441,11. Thu nhập khác,1.0,s1,879.010112441
+DIG,2023,71661951864.0,DIG_financial_statements_2023_separate,8,12,3,71.661.951.864,11. Thu nhập khác,1.0,s2,
+DIG,2025,29763848459.0,DIG_financial_statements_2025_separate,7,12,3,29.763.848.459,11. Thu nhập khác,1.0,s3,

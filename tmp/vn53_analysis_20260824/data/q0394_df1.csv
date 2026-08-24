@@ -1,0 +1,15 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+61465006731.0,HPX_financial_statements_2024_consolidated,7,19,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50-51-52),61.465.006.731,HPX,2024,npat,s1,20.846497
+423033429135.0,KBC_financial_statements_2024_consolidated,5,19,3,18. Lợi nhuận sau thuế TNDN,423.033.429.135,KBC,2024,npat,s2,
+-4394642203703.0,NVL_financial_statements_2024_consolidated,12,19,3,18. Lợi nhuận sau thuế thu nhập doanh nghiệp(60 = 50 - 51 -52),(4.394.642.203.703),NVL,2024,npat,s3,
+4247882268.0,SCR_financial_statements_2024_consolidated,8,19,3,18. Lợi nhuận sau thuế thu nhập doanh nghiệp(60 = 50 - 51 -52),4.247.882.268,SCR,2024,npat,s4,
+5276058000000.0,VIC_financial_statements_2024_consolidated,8,19,3,18. Lợi nhuận sau thuế TNDN,5.276.058,VIC,2024,npat,s5,
+303899468323.0,VPI_financial_statements_2024_consolidated,10,19,3,18. Lợi nhuận sau thuế TNDN,303.899.468.323,VPI,2024,npat,s6,
+4095780000000.0,VRE_financial_statements_2024_consolidated,6,17,4,Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52),4.095.780,VRE,2024,npat,s7,
+596433090233.0,HPX_financial_statements_2024_consolidated,8,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,596.433.090.233,HPX,2024,cfo,s8,
+1151833148407.0,KBC_financial_statements_2024_consolidated,6,14,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,1.151.833.148.407,KBC,2024,cfo,s9,
+-5971178115653.0,NVL_financial_statements_2024_consolidated,13,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(5.971.178.115.653),NVL,2024,cfo,s10,
+14824403804.0,SCR_financial_statements_2024_consolidated,9,17,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,14.824.403.804,SCR,2024,cfo,s11,
+20846497000000.0,VIC_financial_statements_2024_consolidated,10,16,3,Lưu chuyển tiền thuần tử/(sử dụng vào) hoạt động kinh doanh,20.846.497,VIC,2024,cfo,s12,
+138366384108.0,VPI_financial_statements_2024_consolidated,11,15,3,Lưu chuyển tiền thuần từ/(sử dụng) vào hoạt động kinh doanh,138.366.384.108,VPI,2024,cfo,s13,
+758109000000.0,VRE_financial_statements_2024_consolidated,7,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,758.109,VRE,2024,cfo,s14,

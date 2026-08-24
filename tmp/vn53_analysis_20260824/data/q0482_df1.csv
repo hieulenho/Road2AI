@@ -1,0 +1,17 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+9869762904637.0,DCM_financial_statements_2021_consolidated,4,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,9.869.762.904.637,DCM,2021,net_revenue,s1,5.224530332938886
+15924526874399.0,DCM_financial_statements_2022_consolidated,6,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),15.924.526.874.399,DCM,2022,net_revenue,s2,
+12786141193352.0,DPM_financial_statements_2021_consolidated,8,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),12.786.141.193.352,DPM,2021,net_revenue,s3,
+18627179544265.0,DPM_financial_statements_2022_consolidated,9,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),18.627.179.544.265,DPM,2022,net_revenue,s4,
+26189593001148.0,GVR_financial_statements_2021_consolidated,9,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (01 - 02),26.189.593.001.148,GVR,2021,net_revenue,s5,
+25425943612070.0,GVR_financial_statements_2022_consolidated,10,4,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (01 - 02),25.425.943.612.070,GVR,2022,net_revenue,s6,
+1488242477604.0,PRT_financial_statements_2021_consolidated,7,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,1.488.242.477.604,PRT,2021,net_revenue,s7,
+1605378863246.0,PRT_financial_statements_2022_consolidated,6,4,3,3. Doanh thu thuần bán hàng và cung cấp dịch vụ,1.605.378.863.246,PRT,2022,net_revenue,s8,
+2780936924312.0,DCM_financial_statements_2021_consolidated,4,6,3,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,2.780.936.924.312,DCM,2021,gross_profit,s9,
+5703429442168.0,DCM_financial_statements_2022_consolidated,6,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),5.703.429.442.168,DCM,2022,gross_profit,s10,
+4785538755035.0,DPM_financial_statements_2021_consolidated,8,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),4.785.538.755.035,DPM,2021,gross_profit,s11,
+7838219881452.0,DPM_financial_statements_2022_consolidated,9,5,4,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20=10-11),7.838.219.881.452,DPM,2022,gross_profit,s12,
+7575288103430.0,GVR_financial_statements_2021_consolidated,9,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (10 - 11),7.575.288.103.430,GVR,2021,gross_profit,s13,
+6342113055858.0,GVR_financial_statements_2022_consolidated,10,6,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (10 - 11),6.342.113.055.858,GVR,2022,gross_profit,s14,
+360067002905.0,PRT_financial_statements_2021_consolidated,7,6,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,360.067.002.905,PRT,2021,gross_profit,s15,
+442710815769.0,PRT_financial_statements_2022_consolidated,6,6,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,442.710.815.769,PRT,2022,gross_profit,s16,

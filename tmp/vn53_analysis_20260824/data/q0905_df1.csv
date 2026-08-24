@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VIC,2020,31068411000000.0,VIC_financial_statements_2020_consolidated,7,6,3,31.068.411,6. Doanh thu hoạt động tài chính,1000000.0,s1,118.080049
+VIC,2021,16045903000000.0,VIC_financial_statements_2021_consolidated,8,6,3,16.045.903,6. Doanh thu hoạt động tài chính,1000000.0,s2,
+VIC,2023,20502485000000.0,VIC_financial_statements_2023_consolidated,10,6,3,20.502.485,6. Doanh thu hoạt động tài chính,1000000.0,s3,
+VIC,2025,50463250000000.0,VIC_financial_statements_2025_consolidated,9,6,3,50.463.250,6. Doanh thu hoạt động tài chính,1000000.0,s4,

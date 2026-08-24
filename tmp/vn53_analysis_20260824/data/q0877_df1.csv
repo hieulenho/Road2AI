@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HDB,2023,23657737000000.0,HDB_financial_statements_2023_consolidated_2,68,1,1,23.657.737,Chi phí lãi tiền gửi,1000000.0,s1,2025.0
+HDB,2023,30456603000000.0,HDB_financial_statements_2023_consolidated_2,5,3,3,(30.456.603),Chi phí lãi và các chi phí tương tự,1000000.0,s2,
+HDB,2024,20578179000000.0,HDB_financial_statements_2024_consolidated,71,1,1,20.578.179,Chi phí lãi tiền gửi,1000000.0,s3,
+HDB,2024,27138452000000.0,HDB_financial_statements_2024_consolidated,5,3,3,(27.138.452),Chi phí lãi và các chi phí tương tự,1000000.0,s4,
+HDB,2025,26150925000000.0,HDB_financial_statements_2025_consolidated,70,2,1,26.150.925,Chi phí lãi tiền gửi,1000000.0,s5,
+HDB,2025,33246226000000.0,HDB_financial_statements_2025_consolidated,9,2,3,(33.246.226),Chi phí lãi và các chi phí tương tự,1000000.0,s6,

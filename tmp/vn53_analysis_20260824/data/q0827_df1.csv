@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SNZ,2019,15344409381.0,SNZ_financial_statements_2019_separate,9,5,3,15.344.409.381,3. Thuế và các khoản phải nộp Nhà nước,1.0,s1,602.37564375975
+VIC,2019,2050099000000.0,VIC_financial_statements_2019_separate,8,5,3,2.050.099,3. Thuế và các khoản phải nộp Nhà nước,1000000.0,s2,
+DXS,2019,185442713325.0,DXS_financial_statements_2019_separate,4,5,3,185.442.713.325,3. Thuế và các khoản phải nộp Nhà nước,1.0,s3,
+HPX,2019,158616452333.0,HPX_financial_statements_2019_separate,4,5,3,158.616.452.333,3. Thuế và các khoản phải nộp Nhà nước,1.0,s4,

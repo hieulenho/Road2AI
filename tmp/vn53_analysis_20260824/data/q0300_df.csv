@@ -1,0 +1,2 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,section,source_scale,requested_scale,source_id,computed_answer
+SSI,2023,4231123470000.0,SSI_financial_statements_2023_consolidated,65,1,1,4.231.123.470.000,Tài sản tài chính giao dịch tự do chuyển nhượng,30.2. Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán (VSD) của CTCK,1.0,1000000000000.0,s1,4.23112347

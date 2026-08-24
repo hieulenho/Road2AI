@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VIB,2015,752476000000.0,VIB_financial_statements_2015_consolidated,24,1,1,752.476,Dự phòng rủi ro cho vay khách hàng,1000000.0,s1,4270530.0
+VIB,2022,3064773000000.0,VIB_financial_statements_2022_consolidated,7,10,2,(3.064.773),Dự phòng rủi ro cho vay khách hàng,1000000.0,s2,
+VIB,2023,4270530000000.0,VIB_financial_statements_2023_consolidated,4,10,2,(4.270.530),Dự phòng rủi ro cho vay khách hàng,1000000.0,s3,

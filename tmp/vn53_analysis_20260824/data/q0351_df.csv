@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001063,SHB,2016,parent,SHB_financial_statements_2016_separate,61,16,8,1,Chi phí chờ phân bổ,Tài sản Có khác,31/12/2016Triệu VND,(iii) Tài sân Có khác,182.979,182979.0,1000000.0,1000000.0,182979.0,20.817045454545458

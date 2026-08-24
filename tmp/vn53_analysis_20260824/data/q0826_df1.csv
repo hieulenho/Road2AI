@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+KBC,2016,790694785484.0,KBC_financial_statements_2016_consolidated,46,2,1,790.694.785.484,Giá vốn đất và cơ sở hạ tầng cho thuê,1.0,s1,2016.0
+KBC,2016,865066256541.0,KBC_financial_statements_2016_consolidated,8,4,3,(865.066.256.541),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s2,
+KBC,2019,1074791528600.0,KBC_financial_statements_2019_consolidated,48,1,1,1.074.791.528.600,Giá vốn cho thuê đất và cơ sở hạ tầng cho thuê,1.0,s3,
+KBC,2019,1363156822246.0,KBC_financial_statements_2019_consolidated,8,4,3,(1.363.156.822.246),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s4,
+KBC,2020,1145609640866.0,KBC_financial_statements_2020_consolidated,50,2,1,1.145.609.640.866,Giá vốn cho thuê dài hạn đất và cơ sở hạ tầng,1.0,s5,
+KBC,2020,1461933537631.0,KBC_financial_statements_2020_consolidated,9,4,3,(1.461.933.537.631),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s6,
+KBC,2022,344538062465.0,KBC_financial_statements_2022_consolidated,55,2,1,344.538.062.465,Giá vốn cho thuê dài hạn đất và cơ sở hạ tầng,1.0,s7,
+KBC,2022,684515319313.0,KBC_financial_statements_2022_consolidated,10,4,3,(684.515.319.313),4. Giá vốn hàng bán và dịch vụ cung cấp,1.0,s8,

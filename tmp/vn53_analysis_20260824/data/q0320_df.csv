@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000959,SCR,2023,parent,SCR_financial_statements_2023_separate,47,9,1,1,Giá vốn dịch vụ bất động sản,Năm nay | VNDNăm trước,Năm nay,26. GIÁ VÓN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP,75.102.963.651,75102963651.0,1.0,1.0,75102963651.0,42.7485248447205

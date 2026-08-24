@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SHB,2016,3538006000000.0,SHB_financial_statements_2016_consolidated,2,26,3,3.538.006,Tài sản cố định vô hình,1000000.0,s1,4442784.0
+SHB,2018,4306760000000.0,SHB_financial_statements_2018_consolidated,2,25,3,4.306.760,Tài sản cố định vô hình,1000000.0,s2,
+SHB,2020,4333077000000.0,SHB_financial_statements_2020_consolidated,2,25,3,4.333.077,Tài sản cố định vô hình,1000000.0,s3,
+SHB,2021,4442784000000.0,SHB_financial_statements_2021_consolidated,2,26,3,4.442.784,Tài sản cố định vô hình,1000000.0,s4,

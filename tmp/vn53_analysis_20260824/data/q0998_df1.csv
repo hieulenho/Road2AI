@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HHS,2016,509293273804.0,HHS_financial_statements_2016_separate,35,2,1,509.293.273.804,Tiền và các khoản tương đương tiền,1.0,s1,509.293273804
+HHS,2017,44439370604.0,HHS_financial_statements_2017_separate,32,2,1,44.439.370.604,Tiền và các khoản tương đương tiền,1.0,s2,
+HHS,2018,13676118684.0,HHS_financial_statements_2018_separate,34,2,1,13.676.118.684,Tiền và các khoản tương đương tiền,1.0,s3,
+HHS,2019,16483670555.0,HHS_financial_statements_2019_separate,33,2,1,16.483.670.555,Tiền và các khoản tương đương tiền,1.0,s4,
+HHS,2021,36133852205.0,HHS_financial_statements_2021_separate,39,3,1,36.133.852.205,Tiền và các khoản tương đương tiền,1.0,s5,

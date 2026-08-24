@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+GEX,2015,33722050001.0,GEX_financial_statements_2015_separate,25,4,3,33.722.050.001,Thuế Thu nhập doanh nghiệp,1.0,s1,312.539124607
+GEX,2018,27251729705.0,GEX_financial_statements_2018_separate,34,2,2,27.251.729.705,Thuế thu nhập doanh nghiệp,1.0,s2,
+GEX,2022,7365517897.0,GEX_financial_statements_2022_separate,43,3,3,7.365.517.897,Thuế thu nhập doanh nghiệp,1.0,s3,
+GEX,2025,244199827004.0,GEX_financial_statements_2025_separate,40,4,3,244.199.827.004,Thuế thu nhập doanh nghiệp,1.0,s4,

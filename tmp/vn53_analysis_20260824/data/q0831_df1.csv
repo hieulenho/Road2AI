@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DLG,2015,104493457068.0,DLG_financial_statements_2015_consolidated,8,6,3,104.493.457.068,6. Doanh thu hoạt động tài chính,1.0,s1,308.0892125485
+VJC,2015,153676796667.0,VJC_financial_statements_2015_consolidated,5,4,3,153.676.796.667,Doanh thu hoạt động tài chính,1.0,s2,
+ACV,2015,959726497099.0,ACV_financial_statements_2015_consolidated,5,6,3,959.726.497.099,Doanh thu hoạt động tài chính,1.0,s3,
+VSC,2015,14460099360.0,VSC_financial_statements_2015_consolidated,5,4,3,14.460.099.360,Doanh thu hoạt động tài chính,1.0,s4,

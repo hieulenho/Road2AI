@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DXG,2017,274878315250.0,DXG_financial_statements_2017_consolidated,8,17,3,(274.878.315.250),16. Chi phí thuế TNDN hiện hành,1.0,s1,920.96301298
+DXG,2017,-24978471969.0,DXG_financial_statements_2017_consolidated,8,18,3,24.978.471.969,17. Thu nhập (chi phí) thuế TNDN hoãn lại,1.0,s2,
+DXG,2018,381773261869.0,DXG_financial_statements_2018_consolidated,7,17,3,(381.773.261.869),16. Chi phí thuế TNDN hiện hành,1.0,s3,
+DXG,2018,-2783512358.0,DXG_financial_statements_2018_consolidated,7,18,3,2.783.512.358,17. Thu nhập thuế TNDN hoãn lại,1.0,s4,
+DXG,2021,849225776906.0,DXG_financial_statements_2021_consolidated,7,17,3,(849.225.776.906),16. Chi phí thuế TNDN hiện hành,1.0,s5,
+DXG,2021,71737236074.0,DXG_financial_statements_2021_consolidated,7,18,3,(71.737.236.074),17. (Chi phí) thu nhập thuế TNDN hoãn lại,1.0,s6,
+DXG,2023,171914882384.0,DXG_financial_statements_2023_consolidated,8,17,3,(171.914.882.384),16. Chi phí thuế TNDN hiện hành,1.0,s7,
+DXG,2023,130998156825.0,DXG_financial_statements_2023_consolidated,8,18,3,(130.998.156.825),17. (Chi phí) thu nhập thuế TNDN hoãn lại,1.0,s8,
+DXG,2025,227618738009.0,DXG_financial_statements_2025_consolidated,5,17,3,(227.618.738.009),16. Chi phí thuế TNDN hiện hành,1.0,s9,
+DXG,2025,-98033264950.0,DXG_financial_statements_2025_consolidated,5,18,3,98.033.264.950,17. Thu nhập (chi phí) thuế TNDN hoãn lại,1.0,s10,

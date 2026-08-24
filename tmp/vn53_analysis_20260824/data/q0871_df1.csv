@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MPC,2019,-1477919227.0,MPC_financial_statements_2019_consolidated,72,2,1,(1.477.919.227),Phân bổ vào quỹ khen thưởng phúc lợi,1.0,s1,41.12984201
+MPC,2022,-41129842010.0,MPC_financial_statements_2022_consolidated,77,2,1,(41.129.842.010),Phân bổ vào quỹ khen`thường phúc lợi,1.0,s2,
+MPC,2023,-25688629546.0,MPC_financial_statements_2023_consolidated,75,2,1,(25.688.629.546),"Phân bổ vào quỹ khen thưởng, phúc lợi",1.0,s3,
+MPC,2024,-38776065470.0,MPC_financial_statements_2024_consolidated,70,2,1,(38.776.065.470),"Phân bổ vào quỹ khen thưởng, phúc lợi",1.0,s4,

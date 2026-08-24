@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001391,VGC,2025,consolidated,VGC_financial_statements_2025_consolidated,57,16,4,1,Tài sản thuế thu nhập hoãn lại,VND > a. Tài sản thuế thu nhập hoãn lại,Số cuối năm | VND | a. Tài sản thuế thu nhập hoãn lại,27. THUẾ THU NHẬP HOÃN LẠI,11.330.193.248,11330193248.0,1.0,1000000.0,11330.193248,35.17411616161617

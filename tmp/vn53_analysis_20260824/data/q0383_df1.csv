@@ -1,0 +1,15 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+108546019665412.0,MWG_financial_statements_2020_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,108.546.019.665.412,MWG,2020,net_revenue,s1,2.0
+23954497272463.0,MWG_financial_statements_2020_consolidated,8,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,23.954.497.272.463,MWG,2020,gross_profit,s2,
+122958106103174.0,MWG_financial_statements_2021_consolidated,7,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,122.958.106.103.174,MWG,2021,net_revenue,s3,
+27632131995534.0,MWG_financial_statements_2021_consolidated,7,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,27.632.131.995.534,MWG,2021,gross_profit,s4,
+133404777590524.0,MWG_financial_statements_2022_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,133.404.777.590.524,MWG,2022,net_revenue,s5,
+30862042496181.0,MWG_financial_statements_2022_consolidated,8,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,30.862.042.496.181,MWG,2022,gross_profit,s6,
+118279788455442.0,MWG_financial_statements_2023_consolidated,7,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,118.279.788.455.442,MWG,2023,net_revenue,s7,
+22520613163730.0,MWG_financial_statements_2023_consolidated,7,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,22.520.613.163.730,MWG,2023,gross_profit,s8,
+134341152848802.0,MWG_financial_statements_2024_consolidated,7,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,134.341.152.848.802,MWG,2024,net_revenue,s9,
+27499210077021.0,MWG_financial_statements_2024_consolidated,7,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,27.499.210.077.021,MWG,2024,gross_profit,s10,
+171390435922.0,MWG_financial_statements_2021_consolidated,8,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,171.390.435.922,MWG,2021,cfo,s11,
+7976298801645.0,MWG_financial_statements_2022_consolidated,9,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,7.976.298.801.645,MWG,2022,cfo,s12,
+3435827176070.0,MWG_financial_statements_2023_consolidated,8,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,3.435.827.176.070,MWG,2023,cfo,s13,
+8517332706742.0,MWG_financial_statements_2024_consolidated,8,15,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,8.517.332.706.742,MWG,2024,cfo,s14,

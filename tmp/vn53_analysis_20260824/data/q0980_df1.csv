@@ -1,0 +1,9 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HDB,2018,644742000000.0,HDB_financial_statements_2018_consolidated,111,15,5,644.742,Trạng thái tiền tệ nội bằng,1000000.0,s1,10.058546982787037
+HDB,2018,22034332000000.0,HDB_financial_statements_2018_consolidated,111,7,5,22.034.332,Tổng tài sản,1000000.0,s2,
+HDB,2021,-563981000000.0,HDB_financial_statements_2021_consolidated,106,17,5,(563.981),Trạng thái tiền tệ nội bằng,1000000.0,s3,
+HDB,2021,35609486000000.0,HDB_financial_statements_2021_consolidated,106,8,5,35.609.486,Tổng tài sản,1000000.0,s4,
+HDB,2022,42192668000000.0,HDB_financial_statements_2022_consolidated,102,22,6,42.192.668,Trạng thái tiền tệ nội bảng,1000000.0,s5,
+HDB,2022,419470805000000.0,HDB_financial_statements_2022_consolidated,102,12,6,419.470.805,Tổng tài sản,1000000.0,s6,
+HDB,2024,62694143000000.0,HDB_financial_statements_2024_consolidated,103,22,6,62.694.143,Trạng thái tiền tệ nội bảng,1000000.0,s7,
+HDB,2024,703403340000000.0,HDB_financial_statements_2024_consolidated,103,12,6,703.403.340,Tổng tài sản,1000000.0,s8,

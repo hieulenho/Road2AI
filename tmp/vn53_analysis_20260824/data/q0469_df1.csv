@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+2142716548893.0,AAA_financial_statements_2017_consolidated,5,1,3,A. TÀI SẢN NGĂN HẠN,2.142.716.548.893,AAA,2017,current_assets,s1,0.25150459572595124
+1990803708402.0,AAA_financial_statements_2017_consolidated,6,2,3,I. Nợ ngắn hạn,1.990.803.708.402,AAA,2017,current_liabilities,s2,
+4838709104648.0,DCM_financial_statements_2017_consolidated,4,1,3,A. TÀI SẢN NGĂN HẠN,4.838.709.104.648,DCM,2017,current_assets,s3,
+2525325658242.0,DCM_financial_statements_2017_consolidated,5,2,3,I. Nợ ngắn hạn,2.525.325.658.242,DCM,2017,current_liabilities,s4,
+17191117760724.0,GVR_financial_statements_2017_consolidated,5,1,3,A. TÀI SẢN NGẮN HẠN,17.191.117.760.724,GVR,2017,current_assets,s5,
+10474301799936.0,GVR_financial_statements_2017_consolidated,7,2,3,I. Nợ ngắn hạn,10.474.301.799.936,GVR,2017,current_liabilities,s6,
+2373925961709.0,PRT_financial_statements_2017_consolidated,3,2,3,A. TÀI SẢN NGĂN HẠN,2.373.925.961.709,PRT,2017,current_assets,s7,
+3053888039462.0,PRT_financial_statements_2017_consolidated,4,3,3,I. Nợ ngắn hạn,3.053.888.039.462,PRT,2017,current_liabilities,s8,
+536681725193.0,AAA_financial_statements_2017_consolidated,5,13,3,IV. Hàng tồn kho,536.681.725.193,AAA,2017,inventory,s9,
+370662712495.0,DCM_financial_statements_2017_consolidated,4,12,3,IV. Hàng tồn kho,370.662.712.495,DCM,2017,inventory,s10,
+3541939317234.0,GVR_financial_statements_2017_consolidated,5,18,3,IV. Hàng tồn kho,3.541.939.317.234,GVR,2017,inventory,s11,
+1144900874743.0,PRT_financial_statements_2017_consolidated,3,14,3,IV. Hàng tồn kho,1.144.900.874.743,PRT,2017,inventory,s12,

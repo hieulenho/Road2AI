@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MPC,2017,3368196325.0,MPC_financial_statements_2017_consolidated,5,14,3,3.368.196.325,Chi phí khác,1.0,s1,0.10660207796
+MPC,2018,3522995083.0,MPC_financial_statements_2018_consolidated,5,14,3,3.522.995.083,Chi phí khác,1.0,s2,
+MPC,2020,10660207796.0,MPC_financial_statements_2020_consolidated,8,14,3,10.660.207.796,Chi phí khác,1.0,s3,
+MPC,2021,3408419827.0,MPC_financial_statements_2021_consolidated,10,14,3,3.408.419.827,Chi phí khác,1.0,s4,
+MPC,2022,5802039785.0,MPC_financial_statements_2022_consolidated,10,14,3,5.802.039.785,Chi phí khác,1.0,s5,

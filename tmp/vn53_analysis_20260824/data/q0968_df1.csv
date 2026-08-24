@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+POW,2017,12950216434336.0,POW_financial_statements_2017_separate,35,2,1,12.950.216.434.336,Vay bằng USD,1.0,s1,82.6867139287576
+POW,2017,15661786300389.0,POW_financial_statements_2017_separate,35,4,1,15.661.786.300.389,,1.0,s2,
+POW,2019,5707365539513.0,POW_financial_statements_2019_separate,31,2,1,5.707.365.539.513,Vay bằng USD,1.0,s3,
+POW,2019,7921256591629.0,POW_financial_statements_2019_separate,31,4,1,7.921.256.591.629,,1.0,s4,
+POW,2022,516770814702.0,POW_financial_statements_2022_separate,31,2,1,516.770.814.702,Vay bằng USD,1.0,s5,
+POW,2022,1984143645915.0,POW_financial_statements_2022_separate,31,4,1,1.984.143.645.915,,1.0,s6,
+POW,2023,2543730418101.0,POW_financial_statements_2023_separate,31,2,1,2.543.730.418.101,Vay bằng USD,1.0,s7,
+POW,2023,5987879090875.0,POW_financial_statements_2023_separate,31,4,1,5.987.879.090.875,,1.0,s8,
+POW,2024,4928718355610.0,POW_financial_statements_2024_separate,35,2,1,4.928.718.355.610,Vay bằng USD,1.0,s9,
+POW,2024,8356636117641.0,POW_financial_statements_2024_separate,35,4,1,8.356.636.117.641,,1.0,s10,

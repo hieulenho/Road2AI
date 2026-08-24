@@ -1,0 +1,2 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+NLG,2019,570913002904.0,NLG_financial_statements_2019_separate,7,5,3,570.913.002.904,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,1.0,s1,570.913002904

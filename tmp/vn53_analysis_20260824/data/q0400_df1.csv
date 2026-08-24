@@ -1,0 +1,12 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+63658192673791.0,HPG_financial_statements_2019_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),63.658.192.673.791,HPG,2019,net_revenue,s1,17.85205157409383
+90118503426717.0,HPG_financial_statements_2020_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),90.118.503.426.717,HPG,2020,net_revenue,s2,
+149679789979345.0,HPG_financial_statements_2021_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),149.679.789.979.345,HPG,2021,net_revenue,s3,
+141409274460632.0,HPG_financial_statements_2022_consolidated,6,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),141.409.274.460.632,HPG,2022,net_revenue,s4,
+118953027893654.0,HPG_financial_statements_2023_consolidated,5,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),118.953.027.893.654,HPG,2023,net_revenue,s5,
+138855112131387.0,HPG_financial_statements_2024_consolidated,7,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),138.855.112.131.387,HPG,2024,net_revenue,s6,
+11587249912974.0,HPG_financial_statements_2020_consolidated,8,20,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,11.587.249.912.974,HPG,2020,cfo,s7,
+26720913303108.0,HPG_financial_statements_2021_consolidated,8,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,26.720.913.303.108,HPG,2021,cfo,s8,
+12277636676507.0,HPG_financial_statements_2022_consolidated,8,20,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,12.277.636.676.507,HPG,2022,cfo,s9,
+8643030777026.0,HPG_financial_statements_2023_consolidated,7,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,8.643.030.777.026,HPG,2023,cfo,s10,
+6608320655215.0,HPG_financial_statements_2024_consolidated,9,21,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,6.608.320.655.215,HPG,2024,cfo,s11,

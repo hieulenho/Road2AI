@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VNM,2019,2025224469158.0,VNM_financial_statements_2019_separate,10,17,3,(2.025.224.469.158),Thuế thu nhập doanh nghiệp đã nộp,1.0,s1,2019.0
+VNM,2022,1903065886321.0,VNM_financial_statements_2022_separate,10,18,3,(1.903.065.886.321),Thuế thu nhập doanh nghiệp đã nộp,1.0,s2,
+VNM,2023,1441600595087.0,VNM_financial_statements_2023_separate,9,15,3,(1.441.600.595.087),Thuế thu nhập doanh nghiệp đã nộp,1.0,s3,
+VNM,2024,1997458922345.0,VNM_financial_statements_2024_separate,11,13,3,(1.997.458.922.345),Thuế thu nhập doanh nghiệp đã nộp,1.0,s4,
+VNM,2025,1353040369936.0,VNM_financial_statements_2025_separate,11,12,3,(1.353.040.369.936),Thuế thu nhập doanh nghiệp đã nộp,1.0,s5,

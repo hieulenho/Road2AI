@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SCR,2016,40408678718.0,SCR_financial_statements_2016_consolidated,5,7,3,40.408.678.718,Chi phí tài chính,1.0,s1,340.168281916
+DIG,2016,51666905016.0,DIG_financial_statements_2016_consolidated,7,7,3,51.666.905.016,Chi phí tài chính,1.0,s2,
+DXG,2016,32702590722.0,DXG_financial_statements_2016_consolidated,9,7,3,(32.702.590.722),7. Chi phí tài chính,1.0,s3,
+KBC,2016,99196167198.0,KBC_financial_statements_2016_consolidated,8,7,3,(99.196.167.198),7. Chi phí tài chính,1.0,s4,
+IJC,2016,116193940262.0,IJC_financial_statements_2016_consolidated,8,7,4,116.193.940.262,Chi phí tài chính,1.0,s5,

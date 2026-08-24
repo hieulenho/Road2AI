@@ -35,6 +35,7 @@ def main() -> int:
         help="Only print these submission IDs after fetching the participant list.",
     )
     parser.add_argument("--download-prediction", type=int, metavar="SUBMISSION_ID")
+    parser.add_argument("--download-scoring", type=int, metavar="SUBMISSION_ID")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
@@ -51,20 +52,22 @@ def main() -> int:
     )
     session.headers.update({"Authorization": f"Token {token_response.json()['token']}"})
 
-    if args.download_prediction is not None:
+    download_id = args.download_prediction or args.download_scoring
+    if download_id is not None:
         if args.output is None:
-            parser.error("--output is required with --download-prediction")
+            parser.error("--output is required with a download option")
         details = checked(
             session.get(
-                f"{base}/api/submissions/{args.download_prediction}/get_details/",
+                f"{base}/api/submissions/{download_id}/get_details/",
                 timeout=30,
             ),
             "submission details",
         ).json()
-        prediction_url = details.get("prediction_result")
-        if not prediction_url:
-            raise RuntimeError("submission has no downloadable prediction_result")
-        content = checked(session.get(prediction_url, timeout=180), "prediction download").content
+        result_key = "prediction_result" if args.download_prediction is not None else "scoring_result"
+        result_url = details.get(result_key)
+        if not result_url:
+            raise RuntimeError(f"submission has no downloadable {result_key}")
+        content = checked(session.get(result_url, timeout=180), f"{result_key} download").content
         output = args.output.resolve()
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_bytes(content)

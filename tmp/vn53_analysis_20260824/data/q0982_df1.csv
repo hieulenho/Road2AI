@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+PVT,2018,3651292326370.0,PVT_financial_statements_2018_separate,33,2,1,3.651.292.326.370,Tài sản bộ phận,1.0,s1,2025.0
+PVT,2018,4035964396077.0,PVT_financial_statements_2018_separate,33,2,4,4.035.964.396.077,Tài sản bộ phận,1.0,s2,
+PVT,2019,3858725645070.0,PVT_financial_statements_2019_separate,35,3,1,3.858.725.645.070,Tài sản bộ phận,1.0,s3,
+PVT,2019,4230956906954.0,PVT_financial_statements_2019_separate,35,3,4,4.230.956.906.954,Tài sản bộ phận,1.0,s4,
+PVT,2022,4414779454115.0,PVT_financial_statements_2022_separate,35,4,1,4.414.779.454.115,Tài sản bộ phận,1.0,s5,
+PVT,2022,4857334937302.0,PVT_financial_statements_2022_separate,35,4,5,4.857.334.937.302,Tài sản bộ phận,1.0,s6,
+PVT,2023,5876946513287.0,PVT_financial_statements_2023_separate,36,2,1,5.876.946.513.287,Tài sản bộ phận,1.0,s7,
+PVT,2023,6209559687197.0,PVT_financial_statements_2023_separate,36,2,5,6.209.559.687.197,Tài sản bộ phận,1.0,s8,
+PVT,2025,8124300980449.0,PVT_financial_statements_2025_separate,38,2,1,8.124.300.980.449,Tài sản bộ phận,1.0,s9,
+PVT,2025,8255495919685.0,PVT_financial_statements_2025_separate,38,2,5,8.255.495.919.685,Tài sản bộ phận,1.0,s10,

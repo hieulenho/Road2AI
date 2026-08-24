@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000353,EIB,2020,consolidated,EIB_financial_statements_2020_consolidated,29,16,2,1,Cho vay các tổ chức kinh tế,Ngày 31 tháng 12năm 2020 | Ngày 31 tháng 12năm 2019 > Triệu đồng | %,Ngày 31 tháng 12năm 2020 | Triệu đồng,9.3 Phân tích dư nợ cho vay theo đối tượng khách hàng và theo loại hình doanh nghiệp,50.555.028,50555028.0,1000000.0,1000000.0,50555028.0,33.00975274725275

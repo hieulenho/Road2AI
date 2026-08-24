@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000012,VRE,2020,parent,VRE_financial_statements_2020_separate,1,4,3,2,Lợi nhuận sau thuế TNDN,Mã số | Chỉ tiêu | Năm nay | Năm trước | Chênh lệch | %,Năm nay,===== PAGE 2 ===== PHỤ LỤC 1- GIẢI TRÌNH BIẾN ĐỘNG KẾT QUẢ KINH DOANH RIÊNG SO VỚI NĂM TRƯỚC Đơn vị tính: Triệu VND,1.005.105,1005105.0,1000000.0,1000000.0,1005105.0,40.19310344827586

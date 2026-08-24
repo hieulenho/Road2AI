@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+6280148452585.0,HPX_financial_statements_2024_consolidated,5,2,3,A - (100=110+120+130+140+150),6.280.148.452.585,HPX,2024,current_assets,s1,1.0
+3820593269928.0,HPX_financial_statements_2024_consolidated,6,2,4,Nợ ngắn hạn,3.820.593.269.928,HPX,2024,current_liabilities,s2,
+207831078798684.0,NVL_financial_statements_2024_consolidated,8,1,3,A. TÀI SẢN NGẮN HẠN(100 = 110 + 120 + 130 + 140 + 150),207.831.078.798.684,NVL,2024,current_assets,s3,
+107222351548398.0,NVL_financial_statements_2024_consolidated,10,2,3,I. Nợ ngắn hạn,107.222.351.548.398,NVL,2024,current_liabilities,s4,
+6970315188477.0,SCR_financial_statements_2024_consolidated,4,1,3,A. TÀI SẢN NGĂN HẠN,6.970.315.188.477,SCR,2024,current_assets,s5,
+3801079069785.0,SCR_financial_statements_2024_consolidated,6,2,3,I. Nợ ngắn hạn,3.801.079.069.785,SCR,2024,current_liabilities,s6,
+396479911000000.0,VIC_financial_statements_2024_consolidated,4,1,3,A. TÀI SẢN NGÁN HẠN,396.479.911,VIC,2024,current_assets,s7,
+505292040000000.0,VIC_financial_statements_2024_consolidated,6,2,3,I. Nợ ngắn hạn,505.292.040,VIC,2024,current_liabilities,s8,
+12312424000000.0,VRE_financial_statements_2024_consolidated,2,1,4,TÀI SẢN NGẮN HẠN,12.312.424,VRE,2024,current_assets,s9,
+5920740000000.0,VRE_financial_statements_2024_consolidated,4,2,4,Nợ ngắn hạn,5.920.740,VRE,2024,current_liabilities,s10,
+596433090233.0,HPX_financial_statements_2024_consolidated,8,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,596.433.090.233,HPX,2024,cfo,s11,
+-5971178115653.0,NVL_financial_statements_2024_consolidated,13,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(5.971.178.115.653),NVL,2024,cfo,s12,
+14824403804.0,SCR_financial_statements_2024_consolidated,9,17,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,14.824.403.804,SCR,2024,cfo,s13,
+20846497000000.0,VIC_financial_statements_2024_consolidated,10,16,3,Lưu chuyển tiền thuần tử/(sử dụng vào) hoạt động kinh doanh,20.846.497,VIC,2024,cfo,s14,
+758109000000.0,VRE_financial_statements_2024_consolidated,7,16,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,758.109,VRE,2024,cfo,s15,

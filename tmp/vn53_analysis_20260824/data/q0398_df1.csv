@@ -1,0 +1,16 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+36586849600056.0,ACV_financial_statements_2024_consolidated,4,18,3,TÀI SẢN DÀI HẠN,36.586.849.600.056,ACV,2024,long_term_assets,s1,0.08741984139443595
+77281952865563.0,ACV_financial_statements_2024_consolidated,4,39,3,TỔNG TÀI SẢN,77.281.952.865.563,ACV,2024,total_assets,s2,
+37623411236338.0,HHV_financial_statements_2024_consolidated,9,2,3,TÀI SẢN DÀI HẠN,37.623.411.236.338,HHV,2024,long_term_assets,s3,
+38906360732239.0,HHV_financial_statements_2024_consolidated,9,26,3,TỔNG TÀI SẢN,38.906.360.732.239,HHV,2024,total_assets,s4,
+5983572285936.0,VSC_financial_statements_2024_consolidated,3,21,3,TÀI SẢN DÀI HẠN,5.983.572.285.936,VSC,2024,long_term_assets,s5,
+7795129594538.0,VSC_financial_statements_2024_consolidated,3,45,3,TỔNG TÀI SẢN,7.795.129.594.538,VSC,2024,total_assets,s6,
+19998142418629.0,ACV_financial_statements_2023_consolidated,8,3,4,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10=01-02),19.998.142.418.629,ACV,2023,net_revenue,s7,
+67347604356638.0,ACV_financial_statements_2023_consolidated,5,23,4,TỔNG CỘNG TÀI SẢN (270=100+200),67.347.604.356.638,ACV,2023,total_assets,s8,
+22596600942144.0,ACV_financial_statements_2024_consolidated,6,3,3,Doanh thu thuần bán hàng và cung cấp dịch vụ,22.596.600.942.144,ACV,2024,net_revenue,s9,
+2685542239251.0,HHV_financial_statements_2023_consolidated,13,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,2.685.542.239.251,HHV,2023,net_revenue,s10,
+36780154788883.0,HHV_financial_statements_2023_consolidated,10,26,3,TỔNG TÀI SẢN,36.780.154.788.883,HHV,2023,total_assets,s11,
+3308251591277.0,HHV_financial_statements_2024_consolidated,12,4,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ,3.308.251.591.277,HHV,2024,net_revenue,s12,
+2180945411694.0,VSC_financial_statements_2023_consolidated,5,4,3,Doanh thu thuần về cung cấp dịch vụ,2.180.945.411.694,VSC,2023,net_revenue,s13,
+5190925854088.0,VSC_financial_statements_2023_consolidated,3,42,3,TỔNG TÀI SẢN,5.190.925.854.088,VSC,2023,total_assets,s14,
+2787912700840.0,VSC_financial_statements_2024_consolidated,5,4,3,Doanh thu thuần về cung cấp dịch vụ,2.787.912.700.840,VSC,2024,net_revenue,s15,

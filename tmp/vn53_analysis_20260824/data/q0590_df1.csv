@@ -1,0 +1,11 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HHV,2025,200000000000.0,HHV_financial_statements_2025_consolidated,49,1,2,200.000.000.000,Ngân hàng TMCP Công thương Việt Nam - CN Đà Nẵng,1.0,s1,1015.4
+HHV,2025,100000000000.0,HHV_financial_statements_2025_consolidated,49,2,2,100.000.000.000,Ngân hàng TMCP Công thương Việt Nam - CN Đà Nẵng,1.0,s2,
+HHV,2025,800000000000.0,HHV_financial_statements_2025_consolidated,49,3,2,800.000.000.000,Ngân hàng TMCP Tiên Phong - CN Thắng Long Hà Nội,1.0,s3,
+HHV,2025,1000000000000.0,HHV_financial_statements_2025_consolidated,49,4,2,1.000.000.000.000,Ngân hàng TMCP Việt Nam Thịnh Vượng,1.0,s4,
+HHV,2021,100000000000.0,HHV_financial_statements_2021_consolidated,38,1,2,100.000.000.000,- Ngân hàng TM Cổ phần Công Thương VN - CN Đà Nẵng,1.0,s5,
+HHV,2021,80000000000.0,HHV_financial_statements_2021_consolidated,38,2,2,80.000.000.000,- Ngân hàng TM Cổ phần Công Thương VN - CN Đà Nẵng,1.0,s6,
+HHV,2021,300000000000.0,HHV_financial_statements_2021_consolidated,38,3,2,300.000.000.000,"- Ngân hàng TP Bank - CN Thăng Long, Hà Nội",1.0,s7,
+HHV,2021,2600000000.0,HHV_financial_statements_2021_consolidated,38,4,2,2.600.000.000,- Công ty Cổ phần BOT Hưng Phát,1.0,s8,
+HHV,2021,400000000000.0,HHV_financial_statements_2021_consolidated,38,5,2,400.000.000.000,- Công ty Cổ phần Tập đoàn Đẻo cả,1.0,s9,
+HHV,2021,202000000000.0,HHV_financial_statements_2021_consolidated,38,6,2,202.000.000.000,- Công ty Cổ phần Đầu tư Hải Thạch B.O.T,1.0,s10,

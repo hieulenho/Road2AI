@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+PC1,2015,9179.0,PC1_financial_statements_2015_consolidated,46,5,1,9.179,Lãi cơ bản trên cổ phiếu,1.0,s1,2992.4
+PC1,2020,2682.0,PC1_financial_statements_2020_consolidated,60,5,1,2.682,Lãi cơ bản trên cổ phiếu,1.0,s2,
+PC1,2022,1519.0,PC1_financial_statements_2022_consolidated,70,6,1,1.519,Lãi cơ bản trên cổ phiếu (VND/cổ phiếu),1.0,s3,
+PC1,2023,405.0,PC1_financial_statements_2023_consolidated,73,6,1,405,Lãi cơ bản trên cổ phiếu (VND/cổ phiếu),1.0,s4,
+PC1,2024,1177.0,PC1_financial_statements_2024_consolidated,77,6,1,1.177,Lãi cơ bản trên cổ phiếu (VND/cổ phiếu),1.0,s5,

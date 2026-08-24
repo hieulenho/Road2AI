@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VGT,2015,424308792043.0,VGT_financial_statements_2015_separate,6,6,3,424.308.792.043,Tài sản cố định hữu hình,1.0,s1,2017.0
+VGT,2017,1189563447563.0,VGT_financial_statements_2017_separate,6,6,3,1.189.563.447.563,Tài sản cố định hữu hình,1.0,s2,
+VGT,2018,1125874312586.0,VGT_financial_statements_2018_separate,4,6,3,1.125.874.312.586,Tài sản cố định hữu hình,1.0,s3,
+VGT,2020,1039404891409.0,VGT_financial_statements_2020_separate,3,6,3,1.039.404.891.409,Tài sản cố định hữu hình,1.0,s4,
+VGT,2022,797363441490.0,VGT_financial_statements_2022_separate,2,7,3,797.363.441.490,Tài sản cố định hữu hình,1.0,s5,

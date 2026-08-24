@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+BID,2020,6220746000000.0,BID_financial_statements_2020_consolidated,52,3,1,6.220.746,Các khoản phải thu bên ngoài,1000000.0,s1,2025.0
+BID,2022,19761045000000.0,BID_financial_statements_2022_consolidated,52,3,1,19.761.045,Các khoản phải thu bên ngoài,1000000.0,s2,
+BID,2024,24149063000000.0,BID_financial_statements_2024_consolidated,64,2,1,24.149.063,Các khoản phải thu bên ngoài,1000000.0,s3,
+BID,2025,31151488000000.0,BID_financial_statements_2025_consolidated,52,3,1,31.151.488,Các khoản phải thu bên ngoài,1000000.0,s4,

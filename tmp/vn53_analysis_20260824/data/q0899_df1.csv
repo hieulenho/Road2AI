@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MPC,2018,1680383084683.0,MPC_financial_statements_2018_separate,8,14,3,1.680.383.084.683,Đầu tư vào công ty con,1.0,s1,5.311626449501
+MPC,2020,3738260328062.0,MPC_financial_statements_2020_separate,5,14,3,3.738.260.328.062,Đầu tư vào công ty con,1.0,s2,
+MPC,2022,5113672015620.0,MPC_financial_statements_2022_separate,5,14,3,5.113.672.015.620,Đầu tư vào công ty con,1.0,s3,
+MPC,2023,5311626449501.0,MPC_financial_statements_2023_separate,5,12,3,5.311.626.449.501,Đầu tư vào các công ty con,1.0,s4,

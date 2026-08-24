@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MBB,2020,31007000000.0,MBB_financial_statements_2020_separate,82,2,1,31.007,- đến hạn trong 1 năm,1000000.0,s1,2.0
+HDB,2020,17186000000.0,HDB_financial_statements_2020_separate,104,3,1,17.186,- Đến hạn trong 1 năm,1000000.0,s2,
+KLB,2020,49649000000.0,KLB_financial_statements_2020_separate,70,1,1,49.649,Trong vòng 1 năm,1000000.0,s3,
+NAB,2020,79657000000.0,NAB_financial_statements_2020_separate,112,1,1,79.657,Đến một năm,1000000.0,s4,

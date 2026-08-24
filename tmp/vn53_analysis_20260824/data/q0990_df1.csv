@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VPI,2021,219999780.0,VPI_financial_statements_2021_separate,36,3,1,219.999.780,Cổ phiếu đang lưu hành,1.0,s1,3.0
+NLG,2021,382940013.0,NLG_financial_statements_2021_separate,40,5,1,382.940.013,Cổ phiếu đang lưu hànhCổ phiếu phổ thông,1.0,s2,
+DXG,2021,596025562.0,DXG_financial_statements_2021_separate,40,5,1,596.025.562,Cổ phiếu đang lưu hànhCổ phiếu phổ thông,1.0,s3,
+SNZ,2021,376491800.0,SNZ_financial_statements_2021_separate,35,4,1,376.491.800,Số lượng cổ phiếu phổ thông đang lưu hành,1.0,s4,

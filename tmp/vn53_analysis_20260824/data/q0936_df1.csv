@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+CRE,2020,8391508988.0,CRE_financial_statements_2020_consolidated,5,9,3,8.391.508.988,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s1,2025.0
+CRE,2021,14738671468.0,CRE_financial_statements_2021_consolidated,5,9,3,14.738.671.468,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s2,
+CRE,2022,11862148197.0,CRE_financial_statements_2022_consolidated,4,9,3,11.862.148.197,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s3,
+CRE,2025,15375056210.0,CRE_financial_statements_2025_consolidated,3,9,3,15.375.056.210,6. Doanh thu chưa thực hiện ngắn hạn,1.0,s4,

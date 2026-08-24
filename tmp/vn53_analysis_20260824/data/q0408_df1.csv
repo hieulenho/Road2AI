@@ -1,0 +1,10 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+60368915511505.0,VNM_financial_statements_2023_consolidated,9,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),60.368.915.511.505,VNM,2023,net_revenue,s1,13.471323064879389
+61782609528445.0,VNM_financial_statements_2024_consolidated,9,3,3,Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02),61.782.609.528.445,VNM,2024,net_revenue,s2,
+11110000756812.0,DBC_financial_statements_2023_consolidated,5,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,11.110.000.756.812,DBC,2023,net_revenue,s3,
+13573523231898.0,DBC_financial_statements_2024_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,13.573.523.231.898,DBC,2024,net_revenue,s4,
+5198785295390.0,BAF_financial_statements_2023_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,5.198.785.295.390,BAF,2023,net_revenue,s5,
+5640685734268.0,BAF_financial_statements_2024_consolidated,8,3,3,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,5.640.685.734.268,BAF,2024,net_revenue,s6,
+25590176323124.0,VNM_financial_statements_2024_consolidated,9,5,3,Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20 = 10 - 11),25.590.176.323.124,VNM,2024,gross_profit,s7,
+1933445224235.0,DBC_financial_statements_2024_consolidated,8,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,1.933.445.224.235,DBC,2024,gross_profit,s8,
+716277183611.0,BAF_financial_statements_2024_consolidated,8,5,3,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,716.277.183.611,BAF,2024,gross_profit,s9,

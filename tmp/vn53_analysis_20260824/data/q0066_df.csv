@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000231,NKG,2021,consolidated,NKG_financial_statements_2021_consolidated,6,24,9,3,- Trong đó: Chi phí lãi vay,,Năm tài chính kết thúc ngày 31 tháng 12 năm | 2021 VND,===== PAGE 11 ===== CÔNG TY CỔ PHẦN THÉP NAM KIM Mẫu số B 02 – DN/HN BÁO CÁO KẾT QUÀ HOẠT ĐỘNG KINH DOANH HỢP NHẤT,(243.685.237.356),-243685237356.0,1.0,1000000000.0,-243.685237356,46.75603146853147

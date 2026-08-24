@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SHB,2016,125790000000.0,SHB_financial_statements_2016_consolidated,47,4,1,125.790,,1000000.0,s1,988816.0
+VIB,2016,138113000000.0,VIB_financial_statements_2016_consolidated,36,4,3,138.113,Số dự tại ngày 31 tháng 12 năm 2016,1000000.0,s2,
+BID,2016,-252792000000.0,BID_financial_statements_2016_consolidated,49,9,1,(252.792),Dự phòng rủi ro chứng khoán sẵn sàng để bán,1000000.0,s3,
+CTG,2016,-472121000000.0,CTG_financial_statements_2016_consolidated,30,9,1,(472.121),Dự phòng giảm giá chứng khoán đầu tư sẵn sàng để bán,1000000.0,s4,

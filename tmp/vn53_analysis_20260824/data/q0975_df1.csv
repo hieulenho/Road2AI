@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MCH,2024,1127794091580.0,MCH_financial_statements_2024_consolidated,9,17,3,1.127.794.091.580,Chi phí thuế TNDN hiện hành,1.0,s1,1235.96115574425
+MSN,2024,1510936000000.0,MSN_financial_statements_2024_consolidated,75,4,1,1.510.936,,1000000.0,s2,
+VNM,2024,2240859169951.0,VNM_financial_statements_2024_consolidated,9,17,3,2.240.859.169.951,Chi phí thuế TNDN hiện hành,1.0,s3,
+ASM,2024,64255361446.0,ASM_financial_statements_2024_consolidated,85,3,1,64.255.361.446,Tổng chi phí thuế thu nhập doanh nghiệp hiện hành,1.0,s4,

@@ -1,0 +1,4 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DXG,2016,1818216889701.0,DXG_financial_statements_2016_consolidated,6,2,3,1.818.216.889.701,I. Tiền và các khoản tương đương tiền,1.0,s1,2016.0
+DXG,2018,1158571308567.0,DXG_financial_statements_2018_consolidated,5,2,3,1.158.571.308.567,I. Tiền và các khoản tương đương tiền,1.0,s2,
+DXG,2020,1779630924503.0,DXG_financial_statements_2020_consolidated,6,2,3,1.779.630.924.503,I. Tiền và các khoản tương đương tiền,1.0,s3,

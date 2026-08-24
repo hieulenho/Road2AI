@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000642,HND,2025,unknown,HND_financial_statements_2025,29,5,4,1,,Số cuối nămVND | Số đầu nămVND,Số cuối nămVND,Cổ phiếu phổ thông có mệnh giá 10.000 VND/cổ phiếu 22. CÁC KHOÀN MỤC NGOÀI BẢNG CÂN ĐỐI KẾ TOÁN Tài sản thuê ngoài,387.656.354.540,387656354540.0,1.0,1000000000.0,387.65635454,17.44107142857143

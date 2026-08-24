@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+HPG,2015,13765062289.0,HPG_financial_statements_2015_separate,18,8,1,13.765.062.289,Khấu hao trong năm,1.0,s1,18.246612135
+HPG,2019,2486045976.0,HPG_financial_statements_2019_separate,11,9,1,2.486.045.976,Khấu hao trong năm,1.0,s2,
+HPG,2022,688445976.0,HPG_financial_statements_2022_separate,16,8,1,688.445.976,Khẩu hao trong năm,1.0,s3,
+HPG,2023,688445976.0,HPG_financial_statements_2023_separate,15,8,1,688.445.976,Khấu hao trong năm,1.0,s4,
+HPG,2024,618611918.0,HPG_financial_statements_2024_separate,15,8,1,618.611.918,Khấu hao trong năm,1.0,s5,

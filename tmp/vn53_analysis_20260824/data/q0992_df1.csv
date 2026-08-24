@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VPB,2022,1514429000000.0,VPB_financial_statements_2022_consolidated,59,12,6,1.514.429,Số dư cuối năm,1000000.0,s1,55.90294420102745
+VPB,2022,2733537000000.0,VPB_financial_statements_2022_consolidated,59,6,6,2.733.537,Số dư cuối năm,1000000.0,s2,
+SHB,2022,784295000000.0,SHB_financial_statements_2022_consolidated,51,16,6,784.295,Số dư cuối năm,1000000.0,s3,
+SHB,2022,1287149000000.0,SHB_financial_statements_2022_consolidated,51,8,6,1.287.149,Số dư cuối năm,1000000.0,s4,
+MBB,2022,3653001000000.0,MBB_financial_statements_2022_consolidated,49,16,5,3.653.001,Số dư cuối năm,1000000.0,s5,
+MBB,2022,7110562000000.0,MBB_financial_statements_2022_consolidated,49,8,5,7.110.562,Số dư cuối năm,1000000.0,s6,

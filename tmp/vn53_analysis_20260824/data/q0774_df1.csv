@@ -1,0 +1,3 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VIB,2022,1617912000000.0,VIB_financial_statements_2022_separate,7,2,2,1.617.912,Tiền mặt và vàng,1000000.0,s1,204503.0
+SHB,2022,1822415000000.0,SHB_financial_statements_2022_separate,6,2,3,1.822.415,Tiền mặt và vàng,1000000.0,s2,

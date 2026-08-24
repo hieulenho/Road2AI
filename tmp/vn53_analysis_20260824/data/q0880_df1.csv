@@ -1,0 +1,7 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+MBB,2022,44620225000000.0,MBB_financial_statements_2022_separate_1,38,2,1,44.620.225,Trải phiếu Chính phủ,1000000.0,s1,54.08171716684874
+MBB,2022,152053008000000.0,MBB_financial_statements_2022_separate_1,38,1,1,152.053.008,Chứng khoán nợ,1000000.0,s2,
+MSB,2022,16577065000000.0,MSB_financial_statements_2022_separate,40,2,1,16.577.065,Chứng khoán Chính phủ,1000000.0,s3,
+MSB,2022,31554087000000.0,MSB_financial_statements_2022_separate,40,1,1,31.554.087,Chứng khoán nợ,1000000.0,s4,
+STB,2022,22309012000000.0,STB_financial_statements_2022_separate,43,2,1,22.309.012,Trái phiếu Chính phủ (a),1000000.0,s5,
+STB,2022,27759758000000.0,STB_financial_statements_2022_separate,43,1,1,27.759.758,Chứng khoán nợ,1000000.0,s6,

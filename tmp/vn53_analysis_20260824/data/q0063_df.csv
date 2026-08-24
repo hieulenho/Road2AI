@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e001458,ASM,2025,parent,ASM_financial_statements_2025_separate,64,6,1,1,"Lãi tiền gửi, tiền cho vay",Năm nay | Năm trước,Năm nay,(*) Số liệu cùng kỳ năm trước được phân loại lại cho phù hợp với số liệu năm nay. 04. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,26.562.557.408,26562557408.0,1.0,1000000.0,26562.557408,41.784239130434784

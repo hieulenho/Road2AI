@@ -1,0 +1,17 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+3594024059539.0,DCM_financial_statements_2021_consolidated,3,2,3,NỘ PHẢI TRÀ,3.594.024.059.539,DCM,2021,liabilities,s1,24.942106960461928
+7478097275386.0,DCM_financial_statements_2021_consolidated,3,15,3,VỐN CHỦ SỞ HỮU,7.478.097.275.386,DCM,2021,equity,s2,
+3204770523758.0,DPM_financial_statements_2021_consolidated,6,1,4,NỘ PHẢI TRẢ,3.204.770.523.758,DPM,2021,liabilities,s3,
+10713159720643.0,DPM_financial_statements_2021_consolidated,7,1,4,VỐN CHỦ SỞ HỮU,10.713.159.720.643,DPM,2021,equity,s4,
+27074158287185.0,GVR_financial_statements_2021_consolidated,7,1,3,C. NỘ PHẢI TRẢ,27.074.158.287.185,GVR,2021,liabilities,s5,
+51940039448199.0,GVR_financial_statements_2021_consolidated,8,2,3,D. VỐN CHỦ SỞ HỮU,51.940.039.448.199,GVR,2021,equity,s6,
+1915947870487.0,PRT_financial_statements_2021_consolidated,6,2,3,C. NỘ PHẢI TRẢ,1.915.947.870.487,PRT,2021,liabilities,s7,
+4029359965749.0,PRT_financial_statements_2021_consolidated,6,19,3,D. VỐN CHỦ SỞ HỮU,4.029.359.965.749,PRT,2021,equity,s8,
+18580201013.0,DCM_financial_statements_2021_consolidated,4,9,3,- Trong đó: Chi phí lãi vay,(18.580.201.013),DCM,2021,interest_expense,s9,
+1956269988841.0,DCM_financial_statements_2021_consolidated,4,16,3,Tổng lợi nhuận kế toán trước thuế,1.956.269.988.841,DCM,2021,pbt,s10,
+69266472919.0,DPM_financial_statements_2021_consolidated,8,8,4,- Trong đó: Chi phí lãi vay,69.266.472.919,DPM,2021,interest_expense,s11,
+3799471222620.0,DPM_financial_statements_2021_consolidated,8,16,4,Tổng lợi nhuận kế toán trước thuế (50=30+40),3.799.471.222.620,DPM,2021,pbt,s12,
+607999588765.0,GVR_financial_statements_2021_consolidated,9,8,3,Trong đó: Chi phí lãi vay,607.999.588.765,GVR,2021,interest_expense,s13,
+6212769218890.0,GVR_financial_statements_2021_consolidated,9,16,3,15. Tổng lợi nhuận kế toán trước thuế (30+40),6.212.769.218.890,GVR,2021,pbt,s14,
+29983317576.0,PRT_financial_statements_2021_consolidated,7,9,3,Trong đó: Chi phí lãi vay,29.983.317.576,PRT,2021,interest_expense,s15,
+322892804231.0,PRT_financial_statements_2021_consolidated,7,17,3,15. Tổng lợi nhuận kế toán trước thuế,322.892.804.231,PRT,2021,pbt,s16,

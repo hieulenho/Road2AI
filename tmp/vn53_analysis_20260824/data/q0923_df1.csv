@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+OGC,2016,239080080571.0,OGC_financial_statements_2016_consolidated,58,3,1,239.080.080.571,Chi phí nhân công,1.0,s1,1102.672392327
+OGC,2017,261585083957.0,OGC_financial_statements_2017_consolidated,61,3,1,261.585.083.957,Chi phí nhân công,1.0,s2,
+OGC,2018,287946510328.0,OGC_financial_statements_2018_consolidated,61,3,1,287.946.510.328,Chi phí nhân công,1.0,s3,
+OGC,2019,314060717471.0,OGC_financial_statements_2019_consolidated,63,3,1,314.060.717.471,Chi phí nhân công,1.0,s4,

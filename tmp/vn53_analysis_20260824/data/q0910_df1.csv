@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+DBC,2015,13552932078.0,DBC_financial_statements_2015_separate,20,10,1,13.552.932.078,Hàng hóa,1.0,s1,2022.0
+DBC,2016,37599315595.0,DBC_financial_statements_2016_separate,20,11,1,37.599.315.595,Hàng hóa,1.0,s2,
+DBC,2019,10343284355.0,DBC_financial_statements_2019_separate,17,11,1,10.343.284.355,Hàng hóa,1.0,s3,
+DBC,2022,62380590090.0,DBC_financial_statements_2022_separate,18,9,1,62.380.590.090,Hàng hóa,1.0,s4,
+DBC,2025,0.0,DBC_financial_statements_2025_separate,23,9,1,-,Hàng hóa,1.0,s5,

@@ -1,0 +1,6 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+VNM,2015,7795345501520.0,VNM_financial_statements_2015_consolidated,3,6,3,7.795.345.501.520,Tài sản cố định hữu hình,1.0,s1,2023.0
+VNM,2016,7916322992944.0,VNM_financial_statements_2016_consolidated,7,6,3,7.916.322.992.944,Tài sản cố định hữu hình,1.0,s2,
+VNM,2021,11620094589519.0,VNM_financial_statements_2021_consolidated,5,5,3,11.620.094.589.519,Tài sản cố định hữu hình,1.0,s3,
+VNM,2023,11688520305045.0,VNM_financial_statements_2023_consolidated,7,5,3,11.688.520.305.045,Tài sản cố định hữu hình,1.0,s4,
+VNM,2025,11618118961976.0,VNM_financial_statements_2025_consolidated,7,6,3,11.618.118.961.976,Tài sản cố định hữu hình,1.0,s5,

@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+ACV,2017,96165565685.0,ACV_financial_statements_2017_consolidated,7,8,3,96.165.565.685,- Trong đó: Chi phí lãi vay,1.0,s1,2019.0
+ACV,2019,96418310786.0,ACV_financial_statements_2019_consolidated,7,8,3,96.418.310.786,- Trong đó: Chi phí lãi vay,1.0,s2,
+ACV,2021,88792729468.0,ACV_financial_statements_2021_consolidated,50,1,1,88.792.729.468,Chi phí lãi vay,1.0,s3,
+ACV,2022,73083857692.0,ACV_financial_statements_2022_consolidated,44,1,1,73.083.857.692,Chi phí lãi vay,1.0,s4,

@@ -1,0 +1,5 @@
+ticker,year,value,doc_id,table_id,row_idx,col_idx,raw_value,label,source_scale,source_id,computed_answer
+SSH,2020,11863882275.0,SSH_financial_statements_2020_separate,49,2,1,11.863.882.275,Doanh thu cung cấp dịch vụ,1.0,s1,2023.0
+SSH,2021,61614783673.0,SSH_financial_statements_2021_separate,49,2,2,61.614.783.673,Doanh thu cung cấp dịch vụ (Thuyết minh số 26),1.0,s2,
+SSH,2022,62744631137.0,SSH_financial_statements_2022_separate,43,2,2,62.744.631.137,Doanh thu cung cấp dịch vụ (Thuyết minh số 25),1.0,s3,
+SSH,2023,88961131800.0,SSH_financial_statements_2023_separate,41,2,2,88.961.131.800,Doanh thu cung cấp dịch vụ (Thuyết minh số 23),1.0,s4,

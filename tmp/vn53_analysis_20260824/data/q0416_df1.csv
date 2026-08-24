@@ -1,0 +1,13 @@
+value,doc_id,table_id,row_idx,col_idx,label,raw,ticker,year,raw_column,source_id,computed_answer
+31984096504586.0,BSR_financial_statements_2024_consolidated,6,2,4,Nợ ngắn hạn,31.984.096.504.586,BSR,2024,current_liabilities,s1,1.7391325698148246
+-80470180397.0,BSR_financial_statements_2024_consolidated,8,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,(80.470.180.397),BSR,2024,cfo,s2,
+51179621629763.0,PLX_financial_statements_2024_consolidated,6,3,3,Nợ ngắn hạn,51.179.621.629.763,PLX,2024,current_liabilities,s3,
+2372990773154.0,PLX_financial_statements_2024_consolidated,10,20,2,Lưu chuyển tiền thuần từ hoạt động kinh doanh,2.372.990.773.154,PLX,2024,cfo,s4,
+3714296573614.0,PVT_financial_statements_2024_consolidated,7,2,4,Nợ ngắn hạn,3.714.296.573.614,PVT,2024,current_liabilities,s5,
+2567966837828.0,PVT_financial_statements_2024_consolidated,9,18,3,Lưu chuyển tiền thuần từ hoạt động kinh doanh,2.567.966.837.828,PVT,2024,cfo,s6,
+71515534342682.0,BSR_financial_statements_2024_consolidated,5,1,4,TÀI SẢN NGẮN HẠN,71.515.534.342.682,BSR,2024,current_assets,s7,
+15890950395456.0,BSR_financial_statements_2024_consolidated,5,13,4,Hàng tồn kho,15.890.950.395.456,BSR,2024,inventory,s8,
+59543529720085.0,PLX_financial_statements_2024_consolidated,4,2,3,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),59.543.529.720.085,PLX,2024,current_assets,s9,
+15673039677316.0,PLX_financial_statements_2024_consolidated,4,16,3,Hàng tồn kho,15.673.039.677.316,PLX,2024,inventory,s10,
+6648001421674.0,PVT_financial_statements_2024_consolidated,5,1,4,TÀI SẢN NGẮN HẠN,6.648.001.421.674,PVT,2024,current_assets,s11,
+331073290370.0,PVT_financial_statements_2024_consolidated,5,13,4,Hàng tồn kho,331.073.290.370,PVT,2024,inventory,s12,

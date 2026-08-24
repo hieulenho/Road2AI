@@ -1,0 +1,2 @@
+candidate_id,ticker,report_year,scope,doc_id,table_id,table_rows,row_idx,col_idx,row_label,section,column_header,table_context,raw_value,raw_number,source_scale,requested_scale,answer_value,retrieval_score
+e000270,ACB,2024,parent,ACB_financial_statements_2024_separate,5,22,21,3,XIII | Lợi nhuận sau thuế,,Năm 2024 Triệu VND,===== PAGE 10 ===== NGÂN HÀNG THƯƠNG MẠI CÓ PHẦN Á CHẦU Mẫu B03/TCTD BÁO CÁO KẾT QUẢ HOẠT ĐỘNG RIÊNG,16.085.199,16085199.0,1000000.0,1000000.0,16085199.0,46.0669593006171
