@@ -8,9 +8,12 @@ import json
 import math
 import re
 import shutil
+import sqlite3
 import tempfile
 import zipfile
+from contextlib import closing
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path, PurePosixPath
 
 import numpy as np
@@ -58,19 +61,50 @@ def _dedupe(values: tuple[str, ...]) -> list[str]:
     return list(dict.fromkeys(value for value in values if value))
 
 
-def canonical_table_ref(value: str) -> str:
-    """Return the scorer's canonical ``document|table_N`` identifier.
+@lru_cache(maxsize=2048)
+def _physical_table_lines(source_path: str, modified_ns: int, size: int) -> tuple[int, ...]:
+    """One-based physical source lines, never expanded-row or ordinal indices."""
+    del modified_ns, size  # These arguments invalidate cached source revisions.
+    raw = Path(source_path).read_bytes()
+    return tuple(
+        raw.count(b"\n", 0, match.start()) + 1
+        for match in re.finditer(br"<table\b[^>]*>.*?</table>", raw, re.I | re.S)
+    )
 
-    Early local runs used ``document|N`` because that is how the competition
-    page abbreviated the field.  The official ViFinQA schemas and evaluator
-    use the filename-shaped ``table_N`` token.  Accepting the legacy spelling
-    here lets preserved checkpoints be released safely without recomputation.
+
+def canonical_table_ref(value: str, *, index_path: Path | None = None) -> str:
+    """Resolve internal ``document|table_N`` to ``document|source_line``.
+
+    Internal table IDs are one-based ordinals. Released IDs are one-based
+    physical line positions in the organizer's TXT file, as used by the
+    release audit. Bare numeric IDs are already release IDs and are preserved;
+    their meaning must not be guessed or converted a second time.
     """
 
     match = _TABLE_REF.fullmatch(value)
     if not match:
         raise ValueError(f"invalid table reference: {value!r}")
-    return f"{match.group(1)}|table_{int(match.group(2))}"
+    doc_id, position = match.group(1), int(match.group(2))
+    if not value.rsplit("|", 1)[1].startswith("table_"):
+        return f"{doc_id}|{position}"
+    if index_path is None:
+        from .paths import INDEX_PATH
+        index_path = INDEX_PATH
+    with closing(sqlite3.connect(f"file:{index_path.resolve().as_posix()}?mode=ro", uri=True)) as connection:
+        document = connection.execute(
+            "SELECT source_path, table_count FROM documents WHERE doc_id=?", (doc_id,)
+        ).fetchone()
+    if document is None:
+        raise ValueError(f"unknown source document: {doc_id}")
+    source = Path(document[0])
+    if not source.is_absolute():
+        from .paths import PROJECT_ROOT
+        source = PROJECT_ROOT / source
+    stat = source.stat()
+    lines = _physical_table_lines(str(source.resolve()), stat.st_mtime_ns, stat.st_size)
+    if len(lines) != int(document[1]) or not 1 <= position <= len(lines):
+        raise ValueError(f"source/index table mismatch: {value}")
+    return f"{doc_id}|{lines[position - 1]}"
 
 
 def _finite_scalar(value: object) -> float | int:

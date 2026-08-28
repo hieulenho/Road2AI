@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import sys
 import zipfile
 from collections import defaultdict
@@ -9,7 +10,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HISTORY = ROOT / "runs/live_search/remote_history_20260824.json"
+HISTORY = ROOT / os.environ.get(
+    "PUBLIC_HISTORY",
+    "runs/live_search/remote_history_20260824.json",
+)
 BASE_ZIP = ROOT / "submission_vn53.zip"
 # The public phase scores 506 hidden-public rows (half of the 1,012 test
 # questions).  This is directly identifiable from the 0.0020 score movement

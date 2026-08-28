@@ -145,11 +145,16 @@ def enrich_panel(frame: pd.DataFrame) -> pd.DataFrame:
     df["cfo_to_operating_profit"] = _safe_div(df.cfo, df.operating_profit)
 
     grouped = df.groupby("ticker", sort=False)
-    prior_assets = grouped.total_assets.shift(1)
-    prior_equity = grouped.equity.shift(1)
-    prior_inventory = grouped.inventory.shift(1)
-    prior_revenue = grouped.net_revenue.shift(1)
-    prior_operating_profit = grouped.operating_profit.shift(1)
+    # The previous row is not necessarily the previous financial year. A
+    # missing 2023 report must never turn a 2024 YoY calculation into 2021→2024.
+    # Explicit comparative cells can fill such gaps before enrichment; absent
+    # those cells, leave the rolling metric unknown rather than invent a year.
+    consecutive = df.year.sub(grouped.year.shift(1)).eq(1)
+    prior_assets = grouped.total_assets.shift(1).where(consecutive)
+    prior_equity = grouped.equity.shift(1).where(consecutive)
+    prior_inventory = grouped.inventory.shift(1).where(consecutive)
+    prior_revenue = grouped.net_revenue.shift(1).where(consecutive)
+    prior_operating_profit = grouped.operating_profit.shift(1).where(consecutive)
     avg_assets = (prior_assets + df.total_assets) / 2
     avg_equity = (prior_equity + df.equity) / 2
     avg_inventory = (prior_inventory + df.inventory) / 2
@@ -161,7 +166,7 @@ def enrich_panel(frame: pd.DataFrame) -> pd.DataFrame:
     df["net_working_capital"] = df.current_assets - df.current_liabilities
     df["operating_accruals_ratio"] = _safe_div(df.npat - df.cfo, avg_assets) * 100
     df["revenue_growth"] = _safe_div(df.net_revenue - prior_revenue, prior_revenue) * 100
-    df["gross_margin_change"] = grouped.gross_margin.diff()
+    df["gross_margin_change"] = grouped.gross_margin.diff().where(consecutive)
     op_growth = _safe_div(df.operating_profit - prior_operating_profit, prior_operating_profit)
     rev_growth = _safe_div(df.net_revenue - prior_revenue, prior_revenue)
     df["dol"] = _safe_div(op_growth, rev_growth)

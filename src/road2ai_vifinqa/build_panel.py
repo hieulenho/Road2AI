@@ -172,16 +172,34 @@ def _label(row: list[str], code_idx: int) -> str:
     return row_label(row, code_idx=code_idx)
 
 
-def _numeric_values(row: list[str], code_idx: int) -> list[tuple[int, float, str]]:
+def _numeric_values(
+    row: list[str], code_idx: int, *, analyzer: TableAnalyzer | None = None,
+    row_idx: int | None = None,
+) -> list[tuple[int, float, str]]:
     values: list[tuple[int, float, str]] = []
     for idx in range(code_idx + 1, len(row)):
         raw = row[idx].strip()
+        # A small number under an explicit reporting-period heading is an
+        # amount, not a note number. An explicit dash in the same column is
+        # a reported nil amount; an empty OCR cell remains unknown.
+        period_column = False
+        scaled_amount_column = False
+        if analyzer is not None and row_idx is not None:
+            semantics = analyzer.cell(row_idx, idx, code_idx=code_idx)
+            period = semantics.period
+            period_column = bool(semantics.row_label) and period.explicit and period.role != PeriodRole.UNKNOWN
+            # OCR occasionally shifts a note reference into an amount column.
+            # Only relax the old small-number guard when a scaled currency
+            # unit is explicit; base-VND one-digit values remain ambiguous.
+            scaled_amount_column = period_column and semantics.unit_scale > 1
         value = parse_vn_number(raw)
+        if value is None and raw in {"-", "–", "—"} and period_column:
+            value = 0.0
         if value is None:
             continue
         compact = raw.replace(".", "").replace(",", "").replace(" ", "")
         unsigned = compact.strip("+-()")
-        if unsigned.isdigit() and (len(unsigned) <= 3 or 1900 <= int(unsigned) <= 2100):
+        if not scaled_amount_column and unsigned.isdigit() and (len(unsigned) <= 3 or 1900 <= int(unsigned) <= 2100):
             continue
         values.append((idx, value, raw))
     return values
@@ -316,7 +334,7 @@ def build_panel(
                 code = _normalise_code(code, kind)
                 if code not in KNOWN_CODES[kind]:
                     continue
-                values = _numeric_values(row, code_idx)
+                values = _numeric_values(row, code_idx, analyzer=analyzer, row_idx=row_idx)
                 if not values:
                     continue
                 evaluated: list[tuple[float, int, float, str, CellSemantics]] = []

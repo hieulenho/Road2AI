@@ -17,11 +17,12 @@ from __future__ import annotations
 import math
 import re
 import unicodedata
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from difflib import SequenceMatcher
 from typing import Iterable, Literal
 
 from .corpus import Corpus
+from .comparative_panel import is_prior_annual_column
 from .direct import _column_year_score, answer_direct
 from .panel import FinancialPanel, PanelCell, RAW_COLUMNS
 from .retrieval import RowHit, retrieve_rows
@@ -52,6 +53,53 @@ def _fold(value: object) -> str:
     text = unicodedata.normalize("NFD", text)
     text = "".join(ch for ch in text if unicodedata.category(ch) != "Mn")
     return " ".join(re.findall(r"[a-z0-9]+", text.casefold()))
+
+
+def _temporal_delta_order(question: str, years: tuple[int, ...]) -> tuple[int, int] | None:
+    """Interpret a temporal change, not an unordered difference magnitude.
+
+    Deliberately narrow: only 'biến động'/'thay đổi', two distinct financial
+    years, and no explicit absolute-magnitude request. The caller also checks
+    that both observations refer to the same entity and metric.
+    """
+    folded = _fold(question)
+    if len(years) != 2 or years[0] == years[1]:
+        return None
+    if any(marker in folded for marker in ("tuyet doi", "do lon")):
+        return None
+    if not any(marker in folded for marker in ("bien dong", "thay doi")):
+        return None
+    return (0, 1) if years[0] > years[1] else (1, 0)
+
+
+def _ordered_comparison_indices(
+    question: str,
+    observed: tuple[tuple[str, int], ...],
+    requested: tuple[tuple[str, int], ...],
+    *,
+    temporal_contrasts: bool = False,
+) -> tuple[int, int] | None:
+    """For explicit 'A so với B', compute A-B, not an absolute distance.
+
+    Refuse unordered/magnitude wording and incomplete entity/period mappings.
+    Callers retain the existing accounting-sign treatment for negative balances.
+    """
+    folded = _fold(question)
+    temporal_pair = (
+        temporal_contrasts and len(requested) == 2
+        and requested[0][0] == requested[1][0]
+        and requested[0][1] != requested[1][1]
+    )
+    if "chenh lech" not in folded or ("so voi" not in folded and not temporal_pair):
+        return None
+    if any(marker in folded for marker in ("tuyet doi", "do lon", "do chenh lech", "nhau")):
+        return None
+    if len(observed) != 2 or len(requested) != 2 or len(set(observed)) != 2:
+        return None
+    if set(observed) != set(requested):
+        return None
+    order = requested[::-1] if folded.startswith("so voi ") else requested
+    return observed.index(order[0]), observed.index(order[1])
 
 
 @dataclass(frozen=True, slots=True)
@@ -145,6 +193,7 @@ class _AuditedCellSpec:
     source_scale: float = 1.0
     value_multiplier: float = 1.0
     dash_as_zero: bool = False
+    prior_year_comparative: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -175,6 +224,8 @@ def _ac(
     source_scale: float = 1.0,
     value_multiplier: float = 1.0,
     dash_as_zero: bool = False,
+    *,
+    prior_year_comparative: bool = False,
 ) -> _AuditedCellSpec:
     return _AuditedCellSpec(
         ticker,
@@ -186,6 +237,7 @@ def _ac(
         source_scale,
         value_multiplier,
         dash_as_zero,
+        prior_year_comparative,
     )
 
 
@@ -194,6 +246,43 @@ def _ac(
 # corpus.  This makes the override auditable and fails closed if a future
 # dataset snapshot moves or changes a source cell.
 _AUDITED_OVERRIDES: dict[int, _AuditedOverride] = {
+    # HDG's file named 2023 repeats its 2022 figures. Use the explicitly
+    # labelled prior-year financial income in the genuine 2024 statement.
+    904: _AuditedOverride(
+        "extrema",
+        (
+            _ac("HDG", 2020, "HDG_financial_statements_2020_consolidated", 9, 6, 3),
+            _ac("HDG", 2023, "HDG_financial_statements_2024_consolidated", 7, 6, 4,
+                prior_year_comparative=True),
+            _ac("HDG", 2024, "HDG_financial_statements_2024_consolidated", 7, 6, 3),
+        ),
+        kind="number", extrema_years=(2020, 2023, 2024),
+    ),
+    # Preserve source-verified VN53 repairs in the reproducible solver, not
+    # just in the historical ZIP: total buckets and gross industry balances.
+    755: _AuditedOverride(
+        "difference",
+        (
+            _ac("BID", 2025, "BID_financial_statements_2025_consolidated", 92, 22, 9, 1e6),
+            _ac("STB", 2025, "STB_financial_statements_2025_consolidated", 106, 21, 9, 1e6),
+        ),
+    ),
+    821: _AuditedOverride(
+        "mean",
+        (
+            _ac("OCB", 2017, "OCB_financial_statements_2017_separate", 30, 5, 1),
+            _ac("OCB", 2017, "OCB_financial_statements_2017_separate", 30, 14, 1),
+            _ac("OCB", 2020, "OCB_financial_statements_2020_separate", 32, 8, 1),
+            _ac("OCB", 2020, "OCB_financial_statements_2020_separate", 32, 14, 1),
+            _ac("OCB", 2024, "OCB_financial_statements_2024_separate", 36, 2, 1),
+            _ac("OCB", 2024, "OCB_financial_statements_2024_separate", 36, 14, 1),
+            _ac("OCB", 2025, "OCB_financial_statements_2025_separate", 42, 1, 1),
+            _ac("OCB", 2025, "OCB_financial_statements_2025_separate", 42, 16, 1),
+        ),
+        kind="percentage", output_multiplier=100,
+        numerator_groups=((0,), (2,), (4,), (6,)),
+        denominator_groups=((1,), (3,), (5,), (7,)),
+    ),
     578: _AuditedOverride(
         "difference",
         (
@@ -3307,10 +3396,20 @@ class TemplateSolver:
         panel: FinancialPanel | None = None,
         *,
         semantic_columns: bool = False,
+        signed_temporal_changes: bool = False,
+        ordered_comparisons: bool = False,
+        temporal_contrasts: bool = False,
+        literal_ratio_contracts: bool = False,
     ) -> None:
         self.corpus = corpus
         self.panel = panel
         self.semantic_columns = semantic_columns
+        # Opt-in experiment until officially evaluated; retain the old
+        # release's interpretation by default for reproducibility.
+        self.signed_temporal_changes = signed_temporal_changes
+        self.ordered_comparisons = ordered_comparisons
+        self.temporal_contrasts = temporal_contrasts
+        self.literal_ratio_contracts = literal_ratio_contracts
         self._company_variants = self._build_company_variants()
         # Source candidates depend only on issuer/year/scope, not on the
         # requested metric. Composite Template questions repeatedly resolve
@@ -3498,7 +3597,20 @@ class TemplateSolver:
             raw_value = row[spec.col_idx]
         except (IndexError, KeyError):
             return None
-        if document.ticker != spec.ticker or document.report_year != spec.year:
+        if document.ticker != spec.ticker:
+            return None
+        if spec.prior_year_comparative:
+            if document.report_year != spec.year + 1:
+                return None
+            semantics = TableAnalyzer(
+                table.rows, context=table.context, report_year=document.report_year,
+            ).cell(spec.row_idx, spec.col_idx)
+            balance = "bang can doi ke toan" in _fold(table.context)
+            if not is_prior_annual_column(
+                semantics.column_header, report_year=document.report_year, balance=balance,
+            ):
+                return None
+        elif document.report_year != spec.year:
             return None
         raw = _parse_cell_number(raw_value)
         if raw is None and spec.dash_as_zero and _fold(raw_value) in {"", "-", "--"}:
@@ -3526,6 +3638,67 @@ class TemplateSolver:
             source_scale=spec.source_scale,
         )
 
+    def _comparison_order(self, question, plan, points):
+        if not (self.ordered_comparisons or self.temporal_contrasts):
+            return None
+        if len(plan.tickers) == 1 and len(plan.years) == 2:
+            requested = tuple((plan.tickers[0], year) for year in plan.years)
+        elif len(plan.tickers) == 2 and len(plan.years) == 1:
+            if not self.ordered_comparisons:
+                return None
+            requested = tuple((ticker, plan.years[0]) for ticker in plan.tickers)
+        else:
+            return None
+        return _ordered_comparison_indices(
+            question, tuple(points), requested, temporal_contrasts=self.temporal_contrasts,
+        )
+
+    def _match_gross_sales_share(self, question, sources, recipe):
+        """Reconcile a gross sales-share denominator within the sales note.
+
+        Never replace a net-revenue request, a multi-source ratio, or a total
+        without an explicit gross-minus-reductions reconciliation.
+        """
+        folded = _fold(question)
+        if not ("ty trong" in folded and "doanh thu ban hang" in folded
+                and "ben lien quan" in folded and "thuan" not in folded
+                and recipe.numerator_groups == ((0,),) and recipe.denominator_groups == ((1,),)
+                and len(sources) == 2):
+            return sources
+        numerator, denominator = sources
+        if (numerator.doc_id != denominator.doc_id or numerator.year != denominator.year
+                or "thuan" not in _fold(denominator.label)):
+            return sources
+        table = self.corpus.table(numerator.doc_id, numerator.table_id)
+        column = numerator.col_idx
+        candidates = []
+        for index, row in enumerate(table.rows):
+            if column >= len(row) or not row:
+                continue
+            label = _fold(row[0])
+            if not label.startswith("tong doanh thu ban hang") or "thuan" in label:
+                continue
+            raw = _parse_cell_number(row[column])
+            if raw is not None:
+                candidates.append((index, raw * numerator.source_scale))
+        if len(candidates) != 1:
+            return sources
+        row_index, gross = candidates[0]
+        if gross < max(numerator.value, denominator.value):
+            return sources
+        reduction = gross - denominator.value
+        note_values = [
+            _parse_cell_number(row[column]) for row in table.rows if column < len(row)
+        ]
+        if reduction <= 0 or not any(
+            value is not None and math.isclose(value * numerator.source_scale, reduction, rel_tol=1e-12, abs_tol=1e-3)
+            for value in note_values
+        ):
+            return sources
+        revised = replace(numerator, value=gross, row_idx=row_index,
+                          raw_value=table.rows[row_index][column], label=table.rows[row_index][0])
+        return numerator, revised
+
     def _solve_audited(
         self,
         question: str,
@@ -3538,6 +3711,15 @@ class TemplateSolver:
         if any(cell is None for cell in loaded):
             return None
         sources = tuple(cell for cell in loaded if cell is not None)
+        if self.literal_ratio_contracts and recipe.evaluator == "ratio":
+            folded = _fold(question)
+            # An unqualified A/B ratio is dimensionless. Explicit percent
+            # requests retain their percentage-point output convention.
+            if (any(marker in folded for marker in ("ty le", "ti le", "ty so", "ti so"))
+                    and " tren " in folded and "phan tram" not in folded
+                    and recipe.kind == "percentage" and recipe.output_multiplier == 100.0):
+                recipe = replace(recipe, kind="number", output_multiplier=1.0)
+            sources = self._match_gross_sales_share(question, sources, recipe)
         values = [cell.value for cell in sources]
 
         def group_total(indices: tuple[int, ...]) -> float:
@@ -3569,6 +3751,8 @@ class TemplateSolver:
                 return None
             value = abs(values[0]) if recipe.absolute else values[0]
         elif recipe.evaluator in {"difference", "abs_difference"}:
+            temporal_order = None
+            comparison_order = None
             if recipe.numerator_groups or recipe.denominator_groups:
                 if (
                     len(recipe.numerator_groups) != 1
@@ -3578,11 +3762,32 @@ class TemplateSolver:
                 value = group_total(recipe.numerator_groups[0]) - group_total(
                     recipe.denominator_groups[0]
                 )
+                group_points, group_values = [], []
+                for group in (recipe.numerator_groups[0], recipe.denominator_groups[0]):
+                    keys = {(sources[i].ticker, sources[i].year) for i in group}
+                    if len(keys) != 1:
+                        break
+                    group_points.append(next(iter(keys)))
+                    group_values.append(group_total(group))
+                if len(group_values) == 2 and all(number >= 0 for number in group_values):
+                    comparison_order = self._comparison_order(question, plan, group_points)
+                    if comparison_order is not None:
+                        value = group_values[comparison_order[0]] - group_values[comparison_order[1]]
             else:
                 if len(values) != 2:
                     return None
-                value = values[0] - values[1]
-            if recipe.evaluator == "abs_difference" or recipe.absolute:
+                if self.signed_temporal_changes and len({s.ticker for s in sources}) == 1:
+                    temporal_order = _temporal_delta_order(question, tuple(s.year for s in sources))
+                left_index, right_index = temporal_order or (0, 1)
+                value = values[left_index] - values[right_index]
+                if temporal_order is None and all(number >= 0 for number in values):
+                    comparison_order = self._comparison_order(
+                        question, plan, ((s.ticker, s.year) for s in sources),
+                    )
+                    if comparison_order is not None:
+                        left_index, right_index = comparison_order
+                        value = values[left_index] - values[right_index]
+            if comparison_order is None and ((recipe.evaluator == "abs_difference" and temporal_order is None) or recipe.absolute):
                 value = abs(value)
         elif recipe.evaluator == "growth":
             if recipe.numerator_groups or recipe.denominator_groups:
@@ -3609,7 +3814,19 @@ class TemplateSolver:
             quotient = ratios()
             if quotient is None or len(quotient) != 2:
                 return None
+            comparison_order = None
+            group_points = []
+            for numerator, denominator in zip(recipe.numerator_groups, recipe.denominator_groups):
+                keys = {(sources[i].ticker, sources[i].year) for i in (*numerator, *denominator)}
+                if len(keys) != 1:
+                    break
+                group_points.append(next(iter(keys)))
+            if all(number >= 0 for number in quotient):
+                comparison_order = self._comparison_order(question, plan, group_points)
             value = (
+                quotient[comparison_order[0]] - quotient[comparison_order[1]]
+                if comparison_order is not None
+                else
                 abs(quotient[0] - quotient[1])
                 if recipe.absolute
                 else quotient[0] - quotient[1]
@@ -4705,6 +4922,31 @@ class TemplateSolver:
                 "percentage",
             )
             return self._finalize(question, plan, scalar, detail="(new / old - 1) * 100")
+
+        if self.signed_temporal_changes and len(plan.tickers) == 1:
+            temporal_order = _temporal_delta_order(question, tuple(point[1] for point in points))
+            if temporal_order is not None:
+                operands = (first, second)
+                left, right = (operands[index] for index in temporal_order)
+                scalar = _Scalar(
+                    left.value - right.value,
+                    _dedupe_sources((*left.sources, *right.sources)),
+                    min(left.confidence, right.confidence) * 0.98,
+                    "percentage" if left.kind == right.kind == "percentage" else left.kind,
+                )
+                return self._finalize(question, plan, scalar, detail="signed temporal change: latest minus earliest")
+
+        comparison_order = self._comparison_order(question, plan, points)
+        if comparison_order is not None and first.value >= 0 and second.value >= 0:
+            operands = (first, second)
+            left, right = (operands[index] for index in comparison_order)
+            scalar = _Scalar(
+                left.value - right.value,
+                _dedupe_sources((*left.sources, *right.sources)),
+                min(left.confidence, right.confidence) * 0.98,
+                "percentage" if left.kind == right.kind == "percentage" else left.kind,
+            )
+            return self._finalize(question, plan, scalar, detail="ordered comparison: A minus B")
 
         reverse = any(marker in folded for marker in ("be hon", "thap hon", "kem hon", "it hon"))
         from_to = bool(re.search(r"\btu (?:cuoi |dau )?nam 20\d{2} (?:den|sang) (?:cuoi |dau )?nam 20\d{2}", folded))

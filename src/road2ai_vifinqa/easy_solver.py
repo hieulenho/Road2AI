@@ -37,7 +37,8 @@ from .easy_reranker import EASY_RERANKER_NAME, score_easy_candidates
 from .paths import ARTIFACT_ROOT
 from .retrieval import RowHit, STOPWORDS, metric_phrase, retrieve_rows
 from .submission import evaluate_expression
-from .text import fold_text, parse_vn_number, requested_scale, source_scale
+from .source_units import continuation_scale
+from .text import english_vnd_scale, fold_text, parse_vn_number, requested_scale, source_scale
 
 
 Operation = Literal["value", "sum", "difference", "abs_difference"]
@@ -1060,6 +1061,7 @@ def build_easy_candidates(corpus: Corpus, question: str) -> list[EasyCandidate]:
     document_by_id: dict[str, DocumentRef] = {document.doc_id: document for document in documents}
     rows = corpus.rows_for_documents(documents)
     tables: dict[tuple[str, int], TableAsset] = {}
+    inherited_scales: dict[tuple[str, int], float | None] = {}
     pending: list[dict[str, Any]] = []
     for row in rows:
         key = (row.doc_id, row.table_id)
@@ -1067,11 +1069,14 @@ def build_easy_candidates(corpus: Corpus, question: str) -> list[EasyCandidate]:
         if table is None:
             table = corpus.table(*key)
             tables[key] = table
+            inherited_scales[key] = continuation_scale(corpus, table)
         document = document_by_id[row.doc_id]
         hit = RowHit(0.0, row, table, document)
         label = _row_label(row)
         section = _section_text(table, row.row_idx)
         scale = _source_scale_for_hit(hit)
+        if inherited_scales.get(key) is not None:
+            scale = float(inherited_scales[key])
         unit_evidence = fold_text(
             f"{table.context} "
             + " ".join(" ".join(str(cell) for cell in values) for values in table.rows[:4])
@@ -1093,7 +1098,7 @@ def build_easy_candidates(corpus: Corpus, question: str) -> list[EasyCandidate]:
             header = _column_header(table, row.row_idx, col_idx)
             cell_scale = scale
             cell_unit_evidence = fold_text(f"{label} {header}")
-            if any(
+            if english_vnd_scale(cell_unit_evidence) is not None or any(
                 unit in cell_unit_evidence
                 for unit in (
                     "trieu dong",

@@ -275,7 +275,7 @@ def period_info(header: str, *, report_year: int | None = None) -> PeriodInfo:
     years = [int(value) for value in YEAR_RE.findall(folded)]
     year = years[-1] if years else None
     explicit = bool(years)
-    opening_date = bool(re.search(r"\b01 01(?: 20\d{2})?\b", folded))
+    opening_date = bool(re.search(r"\b0?1 0?1(?: 20\d{2})?\b", folded))
     closing_date = bool(re.search(r"\b31 12(?: 20\d{2})?\b", folded))
     if opening_date or any(marker in folded for marker in ("so dau", "dau ky", "dau nam")):
         role = PeriodRole.OPENING
@@ -302,7 +302,7 @@ def _explicit_unit_scale(text: str) -> float | None:
     has_base_marker = any(marker in folded for marker in ("don vi vnd", "don vi dong")) or (
         "vnd" in folded.split()
     )
-    if has_base_marker and not any(
+    if has_base_marker and source_scale(folded) == 1.0 and not any(
         marker in folded
         for marker in ("trieu", "nghin", "ngan", "tram ty", "nghin ty")
     ):

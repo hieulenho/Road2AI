@@ -27,6 +27,7 @@ from pathlib import Path
 from typing import Any
 
 from .corpus import Corpus
+from .comparative_panel import is_prior_annual_column
 from .direct import _column_year_score, _source_scale_for_hit
 from .local_llm import chat, extract_json
 from .panel import FinancialPanel, RAW_COLUMNS
@@ -692,11 +693,14 @@ def _deterministic_solution(
     spec: NoteSpec,
     *,
     log_path: Path | None,
+    panel: FinancialPanel | None = None,
 ) -> NoteSolution:
     """Replay audited recipes which the compiler smoke test got wrong."""
 
     started = time.time()
     sources: tuple[Any, ...]
+    if 429 <= question_id <= 439 and panel is None:
+        panel = FinancialPanel()
     if question_id == 427:
         doc = "FPT_financial_statements_2016_consolidated"
         liabilities = _candidate_at(corpus, candidate_id="c0001", doc_id=doc, table_id=54,
@@ -756,7 +760,6 @@ def _deterministic_solution(
                 counter += 1
                 fixed[ticker, year] = candidate
                 all_sources.append(candidate)
-        panel = FinancialPanel()
         revenue: dict[str, float] = {}
         for ticker in tickers:
             cell = panel.cell(ticker, 2024, "net_revenue")
@@ -778,7 +781,6 @@ def _deterministic_solution(
         note = f"Median fixed-asset turnover={median!r}; below-median winner by average net fixed assets={winner}."
 
     elif question_id == 430:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & panel.frame.year.isin((2023, 2024))]
         revenue = data.pivot(index="ticker", columns="year", values="net_revenue")
@@ -799,7 +801,6 @@ def _deterministic_solution(
         note = f"Revenue and operating margin both decline for {keep}; KBC has the largest SG&A-intensity increase."
 
     elif question_id == 431:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & panel.frame.year.isin((2023, 2024))]
         gross = data.pivot(index="ticker", columns="year", values="gross_margin")
@@ -816,7 +817,6 @@ def _deterministic_solution(
         note = f"Gross-margin-decline filter keeps {keep}; {winner} has the largest asset-turnover increase."
 
     elif question_id == 432:
-        panel = FinancialPanel()
         tickers = spec.tickers
         fixed: dict[tuple[str, int], NumericCandidate] = {}
         all_sources = []
@@ -847,7 +847,6 @@ def _deterministic_solution(
         note = f"Median fixed-asset turnover={median!r}; maximum required revenue increase is {winner}."
 
     elif question_id == 433:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & (panel.frame.year == 2023)].copy()
         median = float(data.liabilities_to_assets.median())
@@ -878,7 +877,6 @@ def _deterministic_solution(
         note = f"Above-median leverage group={list(high.ticker)}; negative stressed net assets={negative}."
 
     elif question_id == 434:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & (panel.frame.year == 2023)]
         eligible = data[data.interest_coverage > 2.0]
@@ -889,7 +887,6 @@ def _deterministic_solution(
         note = f"{winner.ticker} has the smallest interest-coverage cushion above 2.0."
 
     elif question_id == 435:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & (panel.frame.year == 2023)].copy()
         scenario = (data.pbt + data.interest_expense - 0.10 * data.gross_profit) / data.interest_expense
@@ -901,7 +898,6 @@ def _deterministic_solution(
         note = f"Scenario interest coverage below 1.5 for {list(data.loc[scenario < 1.5, 'ticker'])}."
 
     elif question_id == 436:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[
             panel.frame.ticker.isin(tickers) & (panel.frame.year == 2023)
@@ -919,7 +915,6 @@ def _deterministic_solution(
         note = f"Maximum price increase needed while preserving operating margin is {data.loc[winner_index, 'ticker']}."
 
     elif question_id == 437:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & (panel.frame.year == 2024)].copy()
         median = float(data.liabilities_to_assets.median())
@@ -933,7 +928,6 @@ def _deterministic_solution(
         note = f"Below-median profitable contributors={list(low.ticker)}; denominator is all profitable companies."
 
     elif question_id == 438:
-        panel = FinancialPanel()
         tickers = spec.tickers
         data = panel.frame[panel.frame.ticker.isin(tickers) & panel.frame.year.isin((2023, 2024))]
         npat = data.pivot(index="ticker", columns="year", values="npat")
@@ -953,7 +947,6 @@ def _deterministic_solution(
         note = f"Two-year positive-profit and CFO/NPAT>1 filter keeps {keep}."
 
     elif question_id == 439:
-        panel = FinancialPanel()
         data = panel.frame[(panel.frame.ticker == "HPG") & panel.frame.year.between(2018, 2024)]
         below = data[data.gross_margin < data.gross_margin.median()]
         winner = below.sort_values("cfo_margin", ascending=False, kind="stable").iloc[0]
@@ -967,7 +960,10 @@ def _deterministic_solution(
 
     elif question_id == 495:
         selector_locations = {
-            2018: (32, 7), 2020: (28, 10), 2021: (25, 15), 2022: (29, 12),
+            # 2021 table 25 is ALL other short-term receivables, not the
+            # related-party subset requested by the selector. The latter is
+            # explicitly disclosed on the next page, table 26 (total row 10).
+            2018: (32, 7), 2020: (28, 10), 2021: (26, 10), 2022: (29, 12),
         }
         lease_locations = {
             2018: (67, 4), 2020: (58, 4), 2021: (56, 4), 2022: (60, 4),
@@ -977,6 +973,9 @@ def _deterministic_solution(
         for index, year in enumerate(selector_locations, 1):
             doc = f"VGT_financial_statements_{year}_consolidated"
             table_id, row_idx = selector_locations[year]
+            table = corpus.table(doc, table_id)
+            if "phai thu ngan han khac tu cac ben lien quan" not in fold_text(table.context):
+                raise ValueError(f"VGT {year}: selector is not explicitly the related-party subset")
             selected.append(_candidate_at(
                 corpus, candidate_id=f"c{index:04d}", doc_id=doc, table_id=table_id,
                 row_idx=row_idx, col_idx=1,
@@ -1161,7 +1160,9 @@ def _deterministic_solution(
         ]
         maximum = max(source.vnd_value for source in selected)
         tied_years = {source.report_year for source in selected if source.vnd_value == maximum}
-        overdue_locations = {2020: (20, 10), 2021: (20, 6), 2023: (21, 10)}
+        # Table 20 in 2021 is the impairment allowance, not gross overdue
+        # principal. The gross-principal total is table 21, column "Giá gốc".
+        overdue_locations = {2020: (20, 10), 2021: (21, 10), 2023: (21, 10)}
         overdue = [
             _candidate_at(
                 corpus, candidate_id=f"c{index + 4:04d}",
@@ -1175,13 +1176,18 @@ def _deterministic_solution(
                      key=lambda source: source.vnd_value)
         answer = int(winner.report_year)
         sources = tuple((*selected, *overdue))
-        query = repr(answer)
+        investment = "df.loc[df.retrieval_phrase=='Thanh Phat investment original cost selector']"
+        tied = f"{investment}.loc[{investment}.vnd_value=={investment}.vnd_value.max(),'report_year']"
+        query = (
+            "int(df.loc[(df.retrieval_phrase=='gross overdue receivables total tie-break') & "
+            f"df.report_year.isin({tied})].set_index('report_year').vnd_value.idxmax())"
+        )
         note = f"Maximum investment ties in {sorted(tied_years)}; overdue-receivables tie-break selects {answer}."
 
     elif question_id == 502:
         selector_locations = {
             2015: (33, 8), 2016: (32, 7), 2018: (34, 7),
-            2019: (36, 7), 2020: (35, 8), 2021: (39, 8),
+            2019: (36, 7), 2020: (35, 8), 2021: (11, 3),
         }
         selected = [
             _candidate_at(
@@ -1201,7 +1207,11 @@ def _deterministic_solution(
             raise ValueError(f"Unexpected price-stabilisation-fund winner: {winner_year}")
         answer = accrued_interest.vnd_value / 1e9
         sources = tuple((*selected, accrued_interest))
-        query = repr(float(answer))
+        query = (
+            "float(df.loc[(df.retrieval_phrase=='ending accrued interest') & "
+            "(df.report_year==df.loc[df.retrieval_phrase=='price-stabilisation-fund bank balance selector']"
+            ".set_index('report_year').vnd_value.idxmax()),'vnd_value'].iloc[0])/1e9"
+        )
         note = "Maximum price-stabilisation-fund bank balance occurs in 2020."
 
     elif question_id == 503:
@@ -1297,8 +1307,8 @@ def _deterministic_solution(
         tickers = spec.tickers
         selected = [
             _statement_code_candidate(
-                corpus, ticker, 2024, "220", f"c{index:04d}",
-                "ending net carrying value of fixed assets selector",
+                corpus, ticker, 2024, "221", f"c{index:04d}",
+                "ending net carrying value of tangible fixed assets selector",
             )
             for index, ticker in enumerate(tickers, 1)
         ]
@@ -1311,8 +1321,12 @@ def _deterministic_solution(
             raise ValueError(f"Unexpected fixed-assets winner: {winner}")
         answer = revenue.vnd_value / 1e12
         sources = tuple((*selected, revenue))
-        query = repr(float(answer))
-        note = "NVL has the largest 2024 ending net carrying value of fixed assets; target is net revenue."
+        query = (
+            "float(df.loc[(df.retrieval_phrase=='net revenue code 10') & "
+            "(df.ticker==df.loc[df.retrieval_phrase=='ending net carrying value of tangible fixed assets selector']"
+            ".set_index('ticker').vnd_value.idxmax()),'vnd_value'].iloc[0])/1e12"
+        )
+        note = "NVL has the largest 2024 ending net carrying value of tangible fixed assets (code 221); target is net revenue."
 
     elif question_id == 507:
         selector_locations = (
@@ -1737,30 +1751,42 @@ def _deterministic_solution(
         note = "MCH has the largest 2022 ending carrying amount of short-term borrowings."
 
     elif question_id == 521:
-        selector_locations = {
-            2021: (5, 2, 3), 2023: (5, 2, 3), 2025: (4, 2, 3),
-        }
+        # The supplied HDG file named 2023 repeats the 2022 statements.
+        # The annual opening balance in the genuine 2024 statement is the
+        # 2023 closing balance. Keep its source document year distinct from
+        # the financial period; never relabel a 2024 document as 2023.
+        selector_locations = (
+            (2021, 2021, 5, 2, 3), (2023, 2024, 3, 2, 4), (2025, 2025, 4, 2, 3),
+        )
         selected = [
             _candidate_at(
                 corpus, candidate_id=f"c{index:04d}",
-                doc_id=f"HDG_financial_statements_{year}_consolidated",
+                doc_id=f"HDG_financial_statements_{report_year}_consolidated",
                 table_id=table_id, row_idx=row_idx, col_idx=col_idx,
                 retrieval_phrase="ending cash and cash equivalents selector",
             )
-            for index, (year, (table_id, row_idx, col_idx))
-            in enumerate(selector_locations.items(), 1)
+            for index, (period_year, report_year, table_id, row_idx, col_idx)
+            in enumerate(selector_locations, 1)
         ]
-        winner_year = max(selected, key=lambda source: source.vnd_value).report_year
+        if not is_prior_annual_column(selected[1].column_header, report_year=2024, balance=True):
+            raise ValueError("HDG 2023 donor must explicitly be the annual opening/prior balance")
+        period_by_id = {source.candidate_id: location[0] for location, source in zip(selector_locations, selected)}
+        winner_year = period_by_id[max(selected, key=lambda source: source.vnd_value).candidate_id]
         interest = _candidate_at(
-            corpus, candidate_id="c0004", doc_id="HDG_financial_statements_2023_consolidated",
-            table_id=49, row_idx=2, col_idx=1, retrieval_phrase="interest expense",
+            corpus, candidate_id="c0004", doc_id="HDG_financial_statements_2025_consolidated",
+            table_id=51, row_idx=2, col_idx=1, retrieval_phrase="interest expense",
         )
-        if winner_year != 2023:
+        if winner_year != 2025:
             raise ValueError(f"Unexpected HDG ending-cash winner: {winner_year}")
         answer = interest.vnd_value / 1e9
         sources = tuple((*selected, interest))
-        query = repr(float(answer))
-        note = "Maximum ending cash and cash equivalents occurs in report year 2023."
+        query = (
+            "float(df.loc[(df.retrieval_phrase=='interest expense') & "
+            "(df.report_year==df.loc[df.retrieval_phrase=='ending cash and cash equivalents selector']"
+            f".assign(period_year=df.candidate_id.map({period_by_id!r}))"
+            ".set_index('period_year').vnd_value.idxmax()),'vnd_value'].iloc[0])/1e9"
+        )
+        note = "Maximum ending cash occurs in financial year 2025; 2023 uses the explicit opening balance of the genuine 2024 statement."
 
     elif question_id == 522:
         selector_locations = {
@@ -1877,7 +1903,7 @@ def _deterministic_solution(
 
     elif question_id == 526:
         selector_locations = {
-            2023: (45, 3, 2), 2024: (51, 3, 1), 2025: (51, 3, 1),
+            2023: (45, 3, 1), 2024: (51, 3, 1), 2025: (51, 3, 1),
         }
         selected = [
             _candidate_at(
@@ -1898,7 +1924,11 @@ def _deterministic_solution(
             raise ValueError(f"Unexpected MWG EPS winner: {winner_year}")
         answer = abs(other_expense.vnd_value) / 1e9
         sources = tuple((*selected, other_expense))
-        query = repr(float(answer))
+        query = (
+            "abs(float(df.loc[(df.retrieval_phrase=='other expenses') & "
+            "(df.report_year==df.loc[df.retrieval_phrase=='basic and diluted EPS selector']"
+            ".set_index('report_year').raw_number.idxmax()),'vnd_value'].iloc[0]))/1e9"
+        )
         note = "Maximum basic and diluted EPS occurs in 2025; expense is returned as a positive amount."
 
     elif question_id == 527:
@@ -2375,9 +2405,11 @@ def _solve_scenario_panel(
     *,
     max_attempts: int,
     log_path: Path | None,
+    panel: FinancialPanel | None = None,
 ) -> NoteSolution:
     started = time.time()
-    panel = FinancialPanel()
+    if panel is None:
+        panel = FinancialPanel()
     solution = solve_panel_question(
         _augmented_question(question, spec),
         panel,
@@ -2416,6 +2448,7 @@ def solve_note(
     *,
     max_attempts: int = 3,
     log_path: Path | None = None,
+    panel: FinancialPanel | None = None,
 ) -> NoteSolution:
     """Solve one curated public hard question from grounded inputs.
 
@@ -2433,6 +2466,7 @@ def solve_note(
             corpus,
             spec,
             log_path=log_path,
+            panel=panel,
         )
     if spec.engine == "panel":
         return _solve_scenario_panel(
@@ -2440,6 +2474,7 @@ def solve_note(
             spec,
             max_attempts=max_attempts,
             log_path=log_path,
+            panel=panel,
         )
     return _solve_note_cells(
         question,

@@ -86,7 +86,7 @@ def _source_scale_for_hit(hit: RowHit) -> float:
     header_text = " ".join(" ".join(row) for row in rows[: min(5, len(rows))])
     scale = source_scale(f"{hit.table.context} {header_text}")
     folded_header = fold_text(header_text)
-    if "vnd" in folded_header and not any(
+    if "vnd" in folded_header and source_scale(header_text) == 1.0 and not any(
         unit in folded_header for unit in ("trieu vnd", "nghin vnd", "ngan vnd", "ty vnd")
     ):
         return 1.0

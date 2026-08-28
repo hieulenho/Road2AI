@@ -27,6 +27,8 @@ class RegressionRegistryTest(unittest.TestCase):
                 641,
                 676,
                 701,
+                755,
+                821,
                 827,
                 888,
                 923,

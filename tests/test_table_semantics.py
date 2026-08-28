@@ -64,6 +64,11 @@ class TableSemanticsTest(unittest.TestCase):
         self.assertEqual(info.year, 2024)
         self.assertEqual(info.role, PeriodRole.OPENING)
 
+    def test_unpadded_opening_dates_are_recognized(self) -> None:
+        for header in ("1/1/2024 VND", "01/1/2024", "1/01/2024"):
+            with self.subTest(header=header):
+                self.assertEqual(period_info(header, report_year=2024).role, PeriodRole.OPENING)
+
 
 if __name__ == "__main__":
     unittest.main()

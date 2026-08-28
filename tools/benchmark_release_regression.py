@@ -18,12 +18,14 @@ if str(SRC_ROOT) not in sys.path:
 
 from road2ai_vifinqa.corpus import Corpus, load_questions  # noqa: E402
 from road2ai_vifinqa.hard_solver import solve_hard  # noqa: E402
+from road2ai_vifinqa.hard_note_solver import solve_note  # noqa: E402
 from road2ai_vifinqa.panel import FinancialPanel  # noqa: E402
 from road2ai_vifinqa.template_solver import TemplateSolver  # noqa: E402
 
 
 HARD_IDS = frozenset((*range(362, 427), *range(440, 495), *range(539, 578)))
 TEMPLATE_IDS = frozenset(range(578, 1013))
+NOTE_IDS = frozenset((*range(427, 440), *range(495, 539)))
 
 
 def _reference_answers(path: Path) -> dict[int, float]:
@@ -46,10 +48,15 @@ def benchmark(
     *,
     qid_min: int | None = None,
     qid_max: int | None = None,
+    include_notes: bool = False,
+    signed_temporal_changes: bool = False,
+    ordered_comparisons: bool = False,
+    temporal_contrasts: bool = False,
+    literal_ratio_contracts: bool = False,
 ) -> dict[str, object]:
     reference = _reference_answers(reference_zip)
     questions = {int(row["id"]): str(row["question"]) for row in load_questions()}
-    selected = sorted((HARD_IDS | TEMPLATE_IDS) & reference.keys())
+    selected = sorted((HARD_IDS | TEMPLATE_IDS | (NOTE_IDS if include_notes else frozenset())) & reference.keys())
     if qid_min is not None:
         selected = [qid for qid in selected if qid >= qid_min]
     if qid_max is not None:
@@ -59,12 +66,17 @@ def benchmark(
     started = time.perf_counter()
     with Corpus(index_path) as corpus:
         panel = FinancialPanel(panel_path)
-        template = TemplateSolver(corpus, panel)
+        template = TemplateSolver(corpus, panel, signed_temporal_changes=signed_temporal_changes,
+                                  ordered_comparisons=ordered_comparisons,
+                                  temporal_contrasts=temporal_contrasts,
+                                  literal_ratio_contracts=literal_ratio_contracts)
         for position, qid in enumerate(selected, 1):
             try:
                 solution = (
                     solve_hard(questions[qid], qid, panel)
                     if qid in HARD_IDS
+                    else solve_note(questions[qid], qid, corpus, panel=panel)
+                    if qid in NOTE_IDS
                     else template.solve(questions[qid], question_id=qid)
                 )
                 if solution is None:
@@ -91,6 +103,10 @@ def benchmark(
         "reference_zip": str(reference_zip.resolve()),
         "index": str(index_path.resolve()),
         "panel": str(panel_path.resolve()),
+        "signed_temporal_changes": signed_temporal_changes,
+        "ordered_comparisons": ordered_comparisons,
+        "temporal_contrasts": temporal_contrasts,
+        "literal_ratio_contracts": literal_ratio_contracts,
         "questions": len(selected),
         "elapsed_seconds": round(elapsed, 3),
         "questions_per_second": round(len(selected) / elapsed, 3) if elapsed else None,
@@ -107,6 +123,11 @@ def main() -> None:
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--qid-min", type=int)
     parser.add_argument("--qid-max", type=int)
+    parser.add_argument("--include-notes", action="store_true", help="Also replay the 57 deterministic note/scenario recipes")
+    parser.add_argument("--signed-temporal-changes", action="store_true")
+    parser.add_argument("--ordered-comparisons", action="store_true")
+    parser.add_argument("--temporal-contrasts", action="store_true")
+    parser.add_argument("--literal-ratio-contracts", action="store_true")
     args = parser.parse_args()
     result = benchmark(
         args.reference,
@@ -114,6 +135,11 @@ def main() -> None:
         args.panel,
         qid_min=args.qid_min,
         qid_max=args.qid_max,
+        include_notes=args.include_notes,
+        signed_temporal_changes=args.signed_temporal_changes,
+        ordered_comparisons=args.ordered_comparisons,
+        temporal_contrasts=args.temporal_contrasts,
+        literal_ratio_contracts=args.literal_ratio_contracts,
     )
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

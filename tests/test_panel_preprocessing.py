@@ -40,6 +40,26 @@ class PanelPreprocessingTest(unittest.TestCase):
         semantics = TableAnalyzer(rows, report_year=2024).cell(1, 2)
         self.assertFalse(_is_current_period_source(semantics, 2024))
 
+    def test_small_amounts_are_not_note_numbers_in_period_columns(self) -> None:
+        rows = [["Chỉ tiêu", "Mã", "Thuyết minh", "31/12/2024", "1/1/2024"],
+                ["Tài sản khác", "150", "5", "125", "2024"]]
+        analyzer = TableAnalyzer(rows, context="Đơn vị tính: triệu VND", report_year=2024)
+        self.assertEqual(_numeric_values(rows[1], 1, analyzer=analyzer, row_idx=1),
+                         [(3, 125.0, "125"), (4, 2024.0, "2024")])
+
+    def test_reported_nil_is_zero_but_blank_cell_is_unknown(self) -> None:
+        rows = [["Chỉ tiêu", "Mã", "Thuyết minh", "31/12/2024", "1/1/2024"],
+                ["Tài sản khác", "150", "-", "—", ""]]
+        analyzer = TableAnalyzer(rows, report_year=2024)
+        self.assertEqual(_numeric_values(rows[1], 1, analyzer=analyzer, row_idx=1),
+                         [(3, 0.0, "—")])
+
+    def test_numeric_column_ordinals_are_not_statement_amounts(self) -> None:
+        rows = [["Chỉ tiêu", "Mã", "Thuyết minh", "Năm 2024", "Năm 2023"],
+                ["1", "2", "3", "4", "5"]]
+        analyzer = TableAnalyzer(rows, context="Đơn vị tính: triệu VND", report_year=2024)
+        self.assertEqual(_numeric_values(rows[1], 1, analyzer=analyzer, row_idx=1), [])
+
 
 if __name__ == "__main__":
     unittest.main()

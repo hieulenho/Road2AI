@@ -166,6 +166,7 @@ def _solve_one(
             question_id,
             question,
             resources.corpus,
+            panel=resources.panel,
             max_attempts=max_attempts,
             log_path=run_dir / "llm" / f"q{question_id:04d}.json",
         )

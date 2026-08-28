@@ -96,13 +96,34 @@ def parse_vn_number(value: object) -> float | None:
     return number
 
 
+def english_vnd_scale(text: object) -> float | None:
+    """Recognise explicit English VND unit labels in either word order.
+
+    Currency and multiplier must be adjacent (possibly in parentheses), so a
+    narrative mention of millions of shares cannot scale a VND column.
+    """
+    folded = fold_text(text)
+    multiplier = r"(thousands?|millions?|billions?|trillions?)"
+    separator = r"[\s()\[\]:]*"
+    match = re.search(r"(?<![a-z])vnd" + separator + multiplier + r"\b", folded)
+    if match is None:
+        match = re.search(r"\b" + multiplier + separator + r"vnd\b", folded)
+    if match is None:
+        return None
+    return {"thousand": 1e3, "million": 1e6, "billion": 1e9,
+            "trillion": 1e12}[match.group(1).rstrip("s")]
+
+
 def source_scale(text: object) -> float:
     folded = fold_text(text)
+    english_scale = english_vnd_scale(folded)
+    if english_scale is not None:
+        return english_scale
     if "nghin ty" in folded:
         return 1_000_000_000_000.0
     if "tram ty" in folded:
         return 100_000_000_000.0
-    if "ty dong" in folded or folded.endswith(" ty"):
+    if "ty dong" in folded or "ty vnd" in folded or folded.endswith(" ty"):
         return 1_000_000_000.0
     if "trieu dong" in folded or "trieu vnd" in folded:
         return 1_000_000.0
