@@ -14,6 +14,16 @@ dependencies = [
   "pandas>=2.2",
 ]
 
+[project.optional-dependencies]
+model-download = ["requests>=2.32"]
+analysis = ["scipy>=1.14"]
+codabench = ["selenium>=4.30"]
+dev = ["requests>=2.32", "scipy>=1.14", "selenium>=4.30"]
+
+[project.urls]
+Repository = "https://github.com/hieulenho/Road2AI"
+Documentation = "https://github.com/hieulenho/Road2AI/tree/main/docs"
+
 [project.scripts]
 vifinqa-build-index = "road2ai_vifinqa.build_index:main"
 vifinqa-build-panel = "road2ai_vifinqa.build_panel:main"

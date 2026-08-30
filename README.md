@@ -1,5 +1,28 @@
 # Road2AI ViFinQA
 
+Hệ thống end-to-end cho bài toán **Vietnamese Financial Question Answering** trên
+1.973 báo cáo tài chính OCR. Repository kết hợp truy hồi bảng, phân tích ngữ
+nghĩa tài chính, mô hình ngôn ngữ cục bộ và bộ giải công thức deterministic để
+tạo đủ bốn thành phần mà evaluator yêu cầu: đáp án số, tài liệu nguồn, bảng
+nguồn và biểu thức Pandas có thể chạy lại.
+
+> Trạng thái: pipeline nghiên cứu/thi đấu có checkpoint và release gate. Kết quả
+> official tốt nhất được lưu trong lịch sử dự án là **0,7016 Execution Accuracy
+> và 0,7016 Answer Accuracy (VN70)**. Đây là kết quả aggregate trên hệ thống chấm,
+> không phải cam kết cho một lần chạy mới.
+
+## Bắt đầu đọc từ đâu?
+
+| Nhu cầu | Tài liệu |
+|---|---|
+| Hiểu toàn bộ hệ thống để làm slide/báo cáo | [Kiến trúc và pipeline](docs/architecture.md) |
+| Clone và chạy từ đầu | [Hướng dẫn tái lập](docs/reproduction.md) |
+| Hiểu model, prompting và vai trò của LLM | [Model và cơ chế suy luận](docs/models.md) |
+| Xem số liệu benchmark/leaderboard | [Kết quả thực nghiệm](docs/experiments.md) |
+| Đọc từng module Python | [README của package](src/road2ai_vifinqa/README.md) |
+| Dùng công cụ audit/benchmark/release | [README của tools](tools/README.md) |
+| Hiểu test và release gate | [README của tests](tests/README.md) |
+
 Pipeline có thể tái lập cho bài thi **Financial Table Retrieval & Text-to-Pandas**.
 Mục tiêu của dự án không chỉ là tạo một số đúng, mà là tạo đồng thời:
 
@@ -21,6 +44,25 @@ Mục tiêu của dự án không chỉ là tạo một số đúng, mà là t�
 5. `solve`: checkpoint theo câu, ghép ZIP và replay lại toàn bộ Pandas query.
 6. `release_audit`: kiểm tra độc lập schema, nguồn, table reference, CSV và thực thi.
 
+Luồng rút gọn:
+
+```text
+OCR reports + questions
+        │
+        ├─ build_index ──> SQLite corpus (document/table/row/cell)
+        │                         │
+        │                         ├─ Direct/Easy retrieval ──> Qwen3-8B selector
+        │                         └─ Note retrieval ─────────> checked expression
+        │
+        └─ build_panel ──> canonical financial panel
+                                  ├─ Hard formulas
+                                  └─ Template registry
+                                           │
+                        SubmissionSolution + evidence CSV + Pandas query
+                                           │
+                           ZIP validation + repeated replay + release audit
+```
+
 Các submission lịch sử không bị ghi đè. Artifact mới nên luôn được dựng song song,
 benchmark và audit trước khi promote.
 
@@ -33,6 +75,12 @@ $env:PYTHONPATH = (Resolve-Path "src").Path
 
 Python 3.11+ được hỗ trợ. Model cục bộ mặc định là Qwen3-8B GGUF tại
 `artifacts/models/Qwen3-8B-GGUF/Qwen3-8B-Q4_K_M.gguf`.
+
+Dataset, model GGUF, SQLite index, panel JSON, run logs và submission ZIP không
+được commit vì dung lượng lớn hoặc có thể tái tạo. Sau khi clone, người dùng cần
+đặt dữ liệu/model đúng layout trong [hướng dẫn tái lập](docs/reproduction.md).
+Không nên chạy full solve trước khi `build_index`, `build_panel` và artifact audit
+đều thành công.
 
 ## Dựng artifact an toàn
 
@@ -118,3 +166,12 @@ hồi quy nhưng không thể cam kết trước một mức điểm leaderboard
 
 Kết quả benchmark, quyết định bật/tắt từng tầng retrieval và promotion gate của
 artifact v2 được ghi tại [`docs/optimization.md`](docs/optimization.md).
+
+## Phạm vi công khai trên GitHub
+
+Repository commit mã nguồn, cấu hình reranker nhỏ, tests, công cụ và tài liệu.
+Các mục sau được chủ động bỏ qua: `data/source`, `external`, `artifacts`, `runs`,
+runtime nhị phân của llama.cpp và `submission*.zip`. Cách này giúp clone nhẹ,
+không phát tán nhầm dataset/model có license riêng và tránh coi generated output
+là source of truth. Mỗi artifact quan trọng đều có manifest/hash hoặc audit report
+để kiểm tra khi tái tạo.
