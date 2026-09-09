@@ -10,7 +10,7 @@ from .submission import _validate_expression
 
 _RESERVED = {"pd", "np", "float", "int", "abs", "round", "min", "max", "sum", "len"}
 _ATTRIBUTES = {
-    "DataFrame", "Series", "Index", "concat", "merge", "where", "nan",
+    "DataFrame", "Series", "Index", "concat", "merge", "where", "asarray", "array", "nan",
     "loc", "iloc", "at", "iat", "columns", "index", "values", "shape", "size", "empty",
     "str", "contains", "startswith", "endswith", "split", "extract", "lower", "strip",
     "sum", "mean", "median", "min", "max", "idxmin", "idxmax", "count", "quantile",
@@ -18,12 +18,16 @@ _ATTRIBUTES = {
     "reset_index", "set_index", "sort_values", "sort_index", "assign", "drop", "dropna",
     "drop_duplicates", "rename", "reindex", "fillna", "astype", "isin", "notna", "isna",
     "abs", "round", "clip", "rank", "head", "tail", "nunique", "unique", "to_numpy",
+    "xs", "all", "any", "div", "mul", "sub", "add", "pow", "between", "diff",
+    "pct_change", "shift", "get_level_values", "to_numeric", "sqrt",
+    "to_dict", "tolist", "to_frame", "squeeze", "combine_first", "apply", "first", "last", "argmax", "argmin", "agg", "aggregate", "T", "copy",
+    "eq", "ne", "lt", "le", "gt", "ge", "std", "var", "prod", "cumprod", "cumsum", "cummax", "cummin",
 }
 
 
 def inline_plan(steps: list[dict[str, str]], expression: str, *, frames: set[str], columns: set[str]) -> str:
     """No execution, imports, IO, lambdas, rebinding or forward references."""
-    if len(steps) > 20:
+    if len(steps) > 40:
         raise ValueError("too many calculation steps")
     bindings: dict[str, ast.AST] = {}
 
@@ -34,6 +38,10 @@ def inline_plan(steps: list[dict[str, str]], expression: str, *, frames: set[str
     def parse(source: str) -> ast.AST:
         tree = _validate_expression(source, frames | set(bindings))
         for node in ast.walk(tree):
+            if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute) and node.func.attr=='merge':
+                validation=next((kw.value for kw in node.keywords if kw.arg=='validate'),None)
+                if not isinstance(validation,ast.Constant) or validation.value not in {'one_to_one','one_to_many','many_to_one','1:1','1:m','m:1'}:
+                    raise ValueError('merge requires validate="one_to_one", "one_to_many", or "many_to_one"; pivot/filter unique metric-year keys before joining')
             if isinstance(node, ast.Attribute) and node.attr not in _ATTRIBUTES | columns:
                 raise ValueError(f"unsupported attribute: {node.attr}")
             if isinstance(node, ast.keyword) and node.arg == "inplace":

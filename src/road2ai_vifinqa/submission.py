@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import ast
+import builtins
 import hashlib
 import json
 import math
@@ -122,13 +123,20 @@ def _validate_expression(expression: str, variable_names: set[str]) -> ast.Expre
     forbidden = (
         ast.Import,
         ast.ImportFrom,
-        ast.Lambda,
         ast.NamedExpr,
         ast.Await,
         ast.Yield,
         ast.YieldFrom,
     )
-    allowed_names = variable_names | {
+    local_names=set()
+    for node in ast.walk(tree):
+        if isinstance(node,ast.Lambda):
+            local_names.update(a.arg for a in node.args.posonlyargs+node.args.args+node.args.kwonlyargs)
+            if node.args.vararg:local_names.add(node.args.vararg.arg)
+            if node.args.kwarg:local_names.add(node.args.kwarg.arg)
+        if isinstance(node,ast.comprehension):
+            local_names.update(n.id for n in ast.walk(node.target) if isinstance(n,ast.Name))
+    allowed_names = variable_names | local_names | {
         "pd",
         "np",
         "float",
@@ -150,10 +158,18 @@ def _validate_expression(expression: str, variable_names: set[str]) -> ast.Expre
     return tree
 
 
+def _numpy_internal_import(name, globals=None, locals=None, fromlist=(), level=0):
+    # NumPy 2.5 ndarray reductions import their internal implementation from C.
+    # Keep expression-level imports forbidden and permit only this exact module.
+    if level or name not in {"numpy._core._methods", "numpy.core._methods"}:
+        raise ImportError(f"query runtime import blocked: {name}")
+    return builtins.__import__(name, globals, locals, fromlist, level)
+
+
 def evaluate_expression(expression: str, frames: dict[str, pd.DataFrame]) -> float | int:
     tree = _validate_expression(expression, set(frames))
     safe_globals = {
-        "__builtins__": {},
+        "__builtins__": {"__import__": _numpy_internal_import},
         "pd": pd,
         "np": np,
         "float": float,
